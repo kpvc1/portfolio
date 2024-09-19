@@ -1095,7 +1095,23 @@ a.download {
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+.btn-visit img{
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;  
+  margin: 5px 0px 0px 5px;
+}
+
+.btn-visit img.arrow{
+  transform: rotate(-45deg);
+  width: 24px;
+  height:24px;
+  
+  
 }
 
 .btn {
@@ -1105,8 +1121,10 @@ a.download {
   background: #fff7d6;
   flex-direction: row;
   padding: 3px 24px;
+  margin:0 12px;
   border-radius: 6px;
   transition: 0.3s ease-in-out !important;
+  text-wrap: nowrap;
 
 }
 
@@ -1383,10 +1401,10 @@ h5.techskills {
 
 .techstack {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 6px;
-  align-content: center;
   flex-wrap: wrap;
+  
 
 }
 
@@ -2678,22 +2696,76 @@ section::after {
   }
 
 
+  /**SVG Scroll **/
+
+.scroll-down {
+  position: absolute;
+  left: 90%;
+  bottom: 0;
+  z-index: 10;
+}
+
+svg.svg-scroll-hover path {
+  stroke: #eeeeee;
+  transition: stroke 0.5s ease;
+  fill:none;
+  stroke-width:22px;
+}
+
+svg.svg-scroll-hover:hover path {
+  stroke: #f9f871;
+}
+
+.scroll-up {
+  position: absolute;
+  left: 90%;
+  bottom: 5vh;
+  z-index: 10;
+}
+
+
 }
 
 @media (min-width: 769px) {
   .navToggle {
     display: none;
   }
+
+  .socialstack {
+    display: flex;
+      flex-direction: column;
+  
+  }
 }
 
 
 @media only screen and (max-width: 768px) {
 
+  .logo-kpvc {
+    display: none;
+  }
+
+  .cta h1.gr1 {
+    padding:0 10vw;
+    color: #fafafa;
+    font: 200 4.5vh/40px "Montserrat", sans-serif;
+    /* text-shadow: 1px 1px 1px #655ec0; */
+    letter-spacing: -1px;
+    margin-bottom: 3vh;
+    
+  }
+
   h4.worktogether {
     font-size: 4em;
     line-height: 1em;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0px !important;
+    color: #fff;;
+  }
+
+  h4.process {
+       text-align: left;
+  
   }
 
   .nav {
@@ -2731,6 +2803,12 @@ section::after {
     display: flex;
   }
 
+  .socialstack {
+    display: none;
+      flex-direction: column;
+  
+  }
+
 }
 
 
@@ -2738,13 +2816,7 @@ section::after {
 @media only screen and (max-width: 700px) {
 
 
-  .techstack {
-    float: left;
-    width: 20%;
-    height: 20%;
-    margin: 0px;
-    padding: 6px;
-  }
+
 
 
   .intro {
@@ -2832,14 +2904,6 @@ section::after {
     margin-bottom: 0px;
   }
 
-  h4.worktogether {
-    font-family: 'Playfair', sans-serif;
-    font-size: 4em;
-    color: #8bf;
-    text-align: left;
-    line-height: 1em;
-    margin-bottom: 0 !important;
-  }
 
   h3 {
     font-size: 26px
@@ -2850,8 +2914,6 @@ section::after {
 
   }
 
-
-
   .leaveamessage {
     vertical-align: bottom;
     color: #fff;
@@ -2861,8 +2923,8 @@ section::after {
     display: flex;
     justify-content: center;
     align-self: center;
-    float: left;
-    margin-top: 5vh;
+    float: none;
+    margin-top: 0vh;
   }
 
   hr.afterfoot {
