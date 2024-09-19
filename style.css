@@ -9,9 +9,8 @@
 
 @font-face {
   font-family: 'Monita Signature';
-  /* Name your font family */
   src: url('uploads/fonts/MonitaSignaturePERSONALUSE-Regular.otf');
-  /* Locate the .ttf file within your directory*/
+
 }
 
 // <uniquifier>: Use a unique and descriptive class name
