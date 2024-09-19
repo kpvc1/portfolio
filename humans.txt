@@ -1,0 +1,41 @@
+ __  __ ______ ___ ___ ______ 
+|  |/  |   __ \   |   |      |
+|     <|    __/   |   |   ---|
+|__|\__|___|   \_____/|______|
+
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+DESIGNER + DEVELOPER | デザイナー ・ デベロパー
+
+Paolo Castro
+Hand crafted design & web development
+github.com/kpvc1
+x.com/hgmurkery
+
+
+Design tools:
+Figma
+Illustrator
+Photoshop
+
+
+_______________________________________________________________________________
+
+TECHNOLOGY | テクノロジー
+
+CSS3
+HTML5
+Javascript
+
+_______________________________________________________________________________
+
+FONTS | フォント
+
+Monita Signature
+Monserrat
+Playfair
+Titillium Web
+
