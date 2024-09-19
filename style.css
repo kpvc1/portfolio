@@ -14,9 +14,6 @@
   /* Locate the .ttf file within your directory*/
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
 .playfair-<uniquifier> {
   font-family: "Playfair", serif;
   font-optical-sizing: auto;
@@ -373,8 +370,8 @@ a.navLink:hover {
 svg.svg-scroll-hover path {
   stroke: #eeeeee;
   transition: stroke 0.5s ease;
-  fill:none;
-  stroke-width:22px;
+  fill: none;
+  stroke-width: 22px;
 }
 
 svg.svg-scroll-hover:hover path {
@@ -866,10 +863,6 @@ hr.aftertech {
   display: ;
 }
 
-.overlaptech {
-  margin-top: ;
-}
-
 .is-style-small-text mark {
   padding: 0px;
 }
@@ -934,7 +927,7 @@ h2.signature {
 .hs-c {
   border-radius: 50%;
   filter: brightness(0.95);
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -942,7 +935,7 @@ h2.signature {
   align-content: center;
   justify-content: center;
   align-items: center;
-  
+
 
 }
 
@@ -1098,20 +1091,20 @@ a.download {
   justify-content: center;
 }
 
-.btn-visit img{
+.btn-visit img {
   display: block;
   height: 100%;
   width: 100%;
-  position: relative;  
+  position: relative;
   margin: 5px 0px 0px 5px;
 }
 
-.btn-visit img.arrow{
+.btn-visit img.arrow {
   transform: rotate(-45deg);
   width: 24px;
-  height:24px;
-  
-  
+  height: 24px;
+
+
 }
 
 .btn {
@@ -1121,7 +1114,7 @@ a.download {
   background: #fff7d6;
   flex-direction: row;
   padding: 3px 24px;
-  margin:0 12px;
+  margin: 0 12px;
   border-radius: 6px;
   transition: 0.3s ease-in-out !important;
   text-wrap: nowrap;
@@ -1333,36 +1326,36 @@ p.profile {
 
 .end {
   position: fixed;
-    left: 3.5vw;
-    bottom: 5vh;
-    transform-origin: left top;
-    display: flex;
-    z-index: 10;
+  left: 3.5vw;
+  bottom: 5vh;
+  transform-origin: left top;
+  display: flex;
+  z-index: 10;
 }
 
 .socialstack {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 
 }
 
 /*SVG Icons*/
-.svg-icon  {
+.svg-icon {
   display: flex;
   width: 24px;
   height: 24px;
   margin: 9px 0px;
-   }
- 
- 
- .svg-hover path {
-   fill: #eeeeee;
-   transition: fill 0.3s ease;
- }
- 
- .svg-hover:hover path {
-   fill: #f9f871;
- }
+}
+
+
+.svg-hover path {
+  fill: #eeeeee;
+  transition: fill 0.3s ease;
+}
+
+.svg-hover:hover path {
+  fill: #f9f871;
+}
 
 
 
@@ -1404,7 +1397,7 @@ h5.techskills {
   justify-content: center;
   gap: 6px;
   flex-wrap: wrap;
-  
+
 
 }
 
@@ -2653,7 +2646,6 @@ section::after {
     width: 100%;
   }
 
-  h2.signature {}
 
   .code {
     font-family: 'Courier Prime', monospace;
@@ -2698,30 +2690,30 @@ section::after {
 
   /**SVG Scroll **/
 
-.scroll-down {
-  position: absolute;
-  left: 90%;
-  bottom: 0;
-  z-index: 10;
-}
+  .scroll-down {
+    position: absolute;
+    left: 90%;
+    bottom: 0;
+    z-index: 10;
+  }
 
-svg.svg-scroll-hover path {
-  stroke: #eeeeee;
-  transition: stroke 0.5s ease;
-  fill:none;
-  stroke-width:22px;
-}
+  svg.svg-scroll-hover path {
+    stroke: #eeeeee;
+    transition: stroke 0.5s ease;
+    fill: none;
+    stroke-width: 22px;
+  }
 
-svg.svg-scroll-hover:hover path {
-  stroke: #f9f871;
-}
+  svg.svg-scroll-hover:hover path {
+    stroke: #f9f871;
+  }
 
-.scroll-up {
-  position: absolute;
-  left: 90%;
-  bottom: 5vh;
-  z-index: 10;
-}
+  .scroll-up {
+    position: absolute;
+    left: 90%;
+    bottom: 5vh;
+    z-index: 10;
+  }
 
 
 }
@@ -2733,8 +2725,8 @@ svg.svg-scroll-hover:hover path {
 
   .socialstack {
     display: flex;
-      flex-direction: column;
-  
+    flex-direction: column;
+
   }
 }
 
@@ -2746,13 +2738,13 @@ svg.svg-scroll-hover:hover path {
   }
 
   .cta h1.gr1 {
-    padding:0 10vw;
+    padding: 0 10vw;
     color: #fafafa;
     font: 200 4.5vh/40px "Montserrat", sans-serif;
     /* text-shadow: 1px 1px 1px #655ec0; */
     letter-spacing: -1px;
     margin-bottom: 3vh;
-    
+
   }
 
   h4.worktogether {
@@ -2760,12 +2752,13 @@ svg.svg-scroll-hover:hover path {
     line-height: 1em;
     text-align: left;
     margin-bottom: 0px !important;
-    color: #fff;;
+    color: #fff;
+    ;
   }
 
   h4.process {
-       text-align: left;
-  
+    text-align: left;
+
   }
 
   .nav {
@@ -2805,8 +2798,8 @@ svg.svg-scroll-hover:hover path {
 
   .socialstack {
     display: none;
-      flex-direction: column;
-  
+    flex-direction: column;
+
   }
 
 }
@@ -2840,7 +2833,6 @@ svg.svg-scroll-hover:hover path {
     overflow: hidden;
     left: 39%;
     z-index: 2;
-    display: ;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: #fff;
@@ -2851,7 +2843,6 @@ svg.svg-scroll-hover:hover path {
 
   }
 
-  h2.signature {}
 
   .code {
     font-family: 'Courier Prime', monospace;
@@ -2930,10 +2921,9 @@ svg.svg-scroll-hover:hover path {
   hr.afterfoot {
     margin-top: 150px;
     margin-bottom: 6em !important;
-    display: ;
+
   }
 
 }
 
 @media only screen and (max-width: 566px) {}
-}
