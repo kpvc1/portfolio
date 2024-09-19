@@ -86,7 +86,7 @@
     </video>
     </div>
 
-    <!--
+
     <div id="logo">
 
       <svg class="loader" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,6 @@
       </svg>
 
     </div>
--->
 
 
     <div class="logo-kpvc">
@@ -1017,47 +1016,14 @@
         easing: 'ease-in-out-sine'
       });
     </script>
+
     <script>
       [].forEach.call(document.querySelectorAll('[lightbox]'), function (el) {
         el.lightbox = new Lightbox(el);
       });
     </script>
 
-    <script>
-      $(document).ready(function () {
-        $('[svg="animated"]').css({
-          opacity: 0,
-          transition: "opacity 400ms ease"
-        });
 
-        $(window).on("load resize scroll", function () {
-          $('[svg="animated"] path').each(function () {
-            var pathLength = this.getTotalLength();
-            $(this).attr({
-              "stroke-dasharray": pathLength,
-              "stroke-dashoffset": pathLength
-            });
-            var svgAnimated = $(this).closest('[svg="animated"]');
-            var svgAnimatedTop = svgAnimated.offset().top;
-            var svgAnimatedHeight = svgAnimated.outerHeight();
-            var windowHeight = $(window).height();
-            var windowScrollTop = $(window).scrollTop();
-            var animationDuration = svgAnimated.attr('svg-animation-time') || 5000;
-
-            if (windowScrollTop + windowHeight > svgAnimatedTop && windowScrollTop < svgAnimatedTop + svgAnimatedHeight) {
-              $(svgAnimated).css("opacity", 1);
-              $(this).css({
-                transition: "stroke-dashoffset " + animationDuration + "ms ease-out",
-                "stroke-dashoffgset": 0
-              });
-            }
-          });
-        });
-      });
-    </script>
-
-
-<!--Disable Loader
     <script>
       // Set a timeout to fade out and hide the SVG Loader after animation
       setTimeout(function () {
@@ -1070,7 +1036,7 @@
         }, 900); // Wait for the opacity transition to complete
       }, 900); // Start fade-out 900 milliseconds after the page loads
     </script>
--->
+
     <script>
       // Rotate Perspective
       let constrain = 180;
