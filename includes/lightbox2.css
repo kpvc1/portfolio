@@ -4,7 +4,12 @@
  * @see {@link https://github.com/squeral/lightbox/blob/master/lightbox.js}
  * passes jshint
  */
- body    {overflow-y:scroll;}
+body    {overflow-y:scroll;}
+
+ pre {
+	background: #111;
+  color: #fff;
+}
 
 .iframe-lightbox,
 .iframe-lightbox .backdrop {
