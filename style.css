@@ -199,7 +199,9 @@ b {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
   background-color: rgb(37, 80, 215);
   background-color: linear-gradient(45deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
   transition: background-color 0.3s ease;
@@ -208,26 +210,21 @@ b {
 }
 
 .contact-form button:hover {
-  background-color: rgb(27, 60, 168);
-  background-color: linear-gradient(45deg, rgb(30, 69, 199) 0%, rgb(131, 134, 233) 100%);
+  background-color: rgb(74, 112, 235);
+  background-color: linear-gradient(45deg, rgb(45, 86, 218) 0%, rgb(131, 134, 233) 100%);
 }
 
 
 .footer {
-  height: 10vh;
-  width: 100%;
+    width: 100%;
   display: flex;
-  margin: 20vh 0 0 0;
   overflow: hidden;
 
 }
 
 .footernote {
-  position: absolute;
   width: 100vw;
-  height: 10vh;
-  bottom: 5vh;
-  margin: 10vh auto 5vh;
+
 }
 
 .footernote p {
@@ -473,6 +470,17 @@ svg.loader:hover path:hover {
   position: relative;
   overflow: hidden;
   background-image: url(uploads/bg-lines-large.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
+
+}
+
+.custom-s2 {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  background-image: url(uploads/bg-paint.jpg);
   background-size: cover;
   background-position: center;
   z-index: 4;
@@ -1958,7 +1966,10 @@ h2.experience {
 
 
 .resume {
-  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .folio {
