@@ -2816,10 +2816,10 @@ section::after {
     background: none;
     z-index: 5;
     display: flex;
-    flex-direction: column-reverse;
     flex-wrap: nowrap;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-between;
 
   }
 }
