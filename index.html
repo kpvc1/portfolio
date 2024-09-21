@@ -15,25 +15,17 @@
 
   <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <script type="application/x-javascript">
-		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){
-			window.scrollTo(0,1);
-		}
-	</script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orbitcss/css/orbit.min.css" />
   <link rel="stylesheet" href="includes/aos.css" />
   <link rel="stylesheet" href="includes/lightbox2.css" />
-  <link rel="stylesheet" href="includes/plaintext.css" />
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
   <style>
     svg.loader {
       width: 50vh;
@@ -45,10 +37,8 @@
       opacity: 1;
       transition: opacity 0.5s ease-in-out;
       /* Smooth transition for fading out */
-      z-index: 11;
       cursor: pointer;
     }
-
 
     #logo {
       width: 100vw;
@@ -67,6 +57,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 100;
     }
   </style>
 
@@ -322,9 +313,7 @@
 
     </div>
 
-    <!--  <div class="sp-20"></div> -->
-
-
+    
     <div class="spacer">
       <div class="mask0"></div>
     </div>
@@ -374,7 +363,8 @@
 
               <h2 class="about text-left aos-item" data-aos="fade-left">Your success is my success!</h2>
               <p class="aos-item" data-aos="fade-up">I love having the opportunity to learn about <B><i>what my clients
-                    are                    passionate about</B></i> and to <B><i>help them visualize</B></i> what they would like to portray to
+                    are passionate about</B></i> and to <B><i>help them visualize</B></i> what they would like to
+                portray to
                 their audiences. I see the
                 happiness of my clients as the utmost importance and I wholeheartedly believe that your success is
                 my success.</p>
@@ -684,7 +674,7 @@
 
           </div>
 
-          
+
 
         </div>
 
@@ -963,7 +953,8 @@
 
       <div class="scroll-up">
         <a href="#top">
-          <img width="50" height="50" src="https://img.icons8.com/FFFFFF/ios-filled/50/up-squared.png" alt="up-squared"/>
+          <img width="50" height="50" src="https://img.icons8.com/FFFFFF/ios-filled/50/up-squared.png"
+            alt="up-squared" />
         </a>
       </div>
 
@@ -1083,41 +1074,41 @@
       });
     </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navToggle = document.querySelector(".navToggle");
-    const navList = document.querySelector(".navList");
-    const navLinks = document.querySelectorAll(".navLink");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.querySelector(".navToggle");
+        const navList = document.querySelector(".navList");
+        const navLinks = document.querySelectorAll(".navLink");
 
-    // Function to check the viewport width
-    function isMobileViewport() {
-      return window.innerWidth <= 768; // Adjust the width threshold as needed
-    }
-
-    // Toggle navigation visibility on click of the hamburger menu icon
-    navToggle.addEventListener("click", function () {
-      if (isMobileViewport()) {
-        navList.style.display = navList.style.display === "flex" ? "none" : "flex";
-      }
-    });
-
-    // Close the navigation when a link is clicked
-    navLinks.forEach(link => {
-      link.addEventListener("click", function () {
-        if (isMobileViewport()) {
-          navList.style.display = "none";
+        // Function to check the viewport width
+        function isMobileViewport() {
+          return window.innerWidth <= 768; // Adjust the width threshold as needed
         }
-      });
-    });
 
-    // Optional: Reset navList to visible if viewport width changes and is above the mobile threshold
-    window.addEventListener("resize", function () {
-      if (!isMobileViewport()) {
-        navList.style.display = "flex"; // Show the nav when viewport is wider than mobile
-      }
-    });
-  });
-</script>
+        // Toggle navigation visibility on click of the hamburger menu icon
+        navToggle.addEventListener("click", function () {
+          if (isMobileViewport()) {
+            navList.style.display = navList.style.display === "flex" ? "none" : "flex";
+          }
+        });
+
+        // Close the navigation when a link is clicked
+        navLinks.forEach(link => {
+          link.addEventListener("click", function () {
+            if (isMobileViewport()) {
+              navList.style.display = "none";
+            }
+          });
+        });
+
+        // Optional: Reset navList to visible if viewport width changes and is above the mobile threshold
+        window.addEventListener("resize", function () {
+          if (!isMobileViewport()) {
+            navList.style.display = "flex"; // Show the nav when viewport is wider than mobile
+          }
+        });
+      });
+    </script>
 
 
 
