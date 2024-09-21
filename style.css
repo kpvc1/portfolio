@@ -76,6 +76,7 @@ body {
   background-color: #111111 !important;
   cursor: crosshair;
   overflow-x: visible;
+
 }
 
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
@@ -96,16 +97,16 @@ body {
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #202020;
+  background-color: #111;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #131E30;
+  background-color: #111;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 0px;
-  background-color: #ECE352;
+  background-color: #f9f871;
 }
 
 *::-webkit-scrollbar-thumb:hover {
@@ -216,7 +217,7 @@ b {
 
 
 .footer {
-    width: 100%;
+  width: 100%;
   display: flex;
   overflow: hidden;
 
@@ -231,7 +232,7 @@ b {
   color: #fff;
   font-size: 12px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 25vh;
 }
 
 a.humans {
@@ -257,7 +258,7 @@ a {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-
+  z-index: 20;
 }
 
 .navToggle {
@@ -289,6 +290,7 @@ a {
   flex-wrap: nowrap;
   flex-direction: column;
   height: 50vh;
+ 
 }
 
 .navLink {
@@ -297,6 +299,7 @@ a {
   justify-content: center;
   align-items: center;
   margin: 10px 20px;
+  display:block;
 
 }
 
@@ -314,6 +317,7 @@ a.navLink {
   cursor: pointer;
   transition: 0.5s ease-in-out;
   transform: rotate(-90deg);
+ 
 
 }
 
@@ -330,10 +334,10 @@ a.navLink:hover {
   content: '';
   position: absolute;
   width: 0%;
-  height: 2px;
+  height: 3px;
   bottom: 50%;
   margin-top: -.5px;
-  background: #f9f871;
+  background: #ffff729d;
 }
 
 .navLink:before {
@@ -383,8 +387,8 @@ svg.svg-scroll-hover:hover path {
 
 .scroll-up {
   position: absolute;
-  left: 95%;
-  bottom: 5vh;
+  right: 0;
+  bottom: 0;
   z-index: 10;
 }
 
@@ -652,7 +656,14 @@ div.back a:hover {
   padding: 30px;
 }
 
-
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 
 img.fit {
@@ -801,17 +812,18 @@ div.leaveamessage a {
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   /* Smooth scaling effect */
-  background: rgb(37, 80, 215);
-  background: linear-gradient(45deg, rgb(83, 87, 201) 0%, rgb(53, 91, 218)100%);
+  background: none;
+  border: 1px #ccc solid;
   /*  text-shadow:1px 1px 3px #15176a; */
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease-in-out;
 
 }
 
 div.leaveamessage a:hover {
 
   color: #fff;
-  transform: scale(1.1);
+  background: #2f17ff;
+  border: 1px #2f17ff solid;
   /* Increase size to 110% on hover */
   text-decoration: none;
 
@@ -2826,14 +2838,6 @@ section::after {
   }
 
 
-  .scroll-up {
-    position: absolute;
-    left: 90%;
-    bottom: 5vh;
-    z-index: 10;
-  }
-
-
 }
 
 @media (min-width: 769px) {
@@ -2874,6 +2878,13 @@ section::after {
     display: none;
   }
 
+  .leaveamessage {
+    display: none;
+  }
+
+
+
+
   h2.signature {
     font-family: 'Montserrat', sans-serif;
     font-weight: 330;
@@ -2912,10 +2923,11 @@ section::after {
 
   .cta h1.gr1 {
     color: #fafafa;
-    font: 200 6vh / 7vh "Montserrat", sans-serif;
+    font: 200 4vh / 5vh "Montserrat", sans-serif;
     /* text-shadow: 1px 1px 1px #655ec0; */
     letter-spacing: -1px;
     margin-bottom: 3vh;
+    padding: 2rem;
 
   }
 
@@ -2949,13 +2961,37 @@ section::after {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: none;
+    height: auto;
     /* Background color for dropdown */
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 100px;
     /* Adjust as needed */
     left: 0;
-    border: 1px solid #ddd;
+    background: rgba(0, 0, 0, 0.397);
+    border-radius: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  a.navLink {
+    color: #ddd;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0);
+    padding: 20px;
+
+
   }
 
   .navList.active {
