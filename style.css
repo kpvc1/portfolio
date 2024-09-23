@@ -31,6 +31,10 @@ body {
 
 }
 
+::selection {
+  background: #5B0A06;
+}
+
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
   {
   scrollbar-width: 20px;
@@ -242,7 +246,7 @@ a {
   flex-wrap: nowrap;
   flex-direction: column;
   height: 50vh;
- 
+
 }
 
 .navLink {
@@ -251,7 +255,7 @@ a {
   justify-content: center;
   align-items: center;
   margin: 10px 20px;
-  display:block;
+  display: block;
 
 }
 
@@ -269,7 +273,7 @@ a.navLink {
   cursor: pointer;
   transition: 0.5s ease-in-out;
   transform: rotate(-90deg);
- 
+
 
 }
 
@@ -318,11 +322,21 @@ a.navLink:hover {
 
 /**SVG Scroll **/
 
-.scroll-down {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
+
+.scroll-up {
   z-index: 10;
+  display: flex;
+  position: absolute;
+  right:0px;
+  bottom: 0px;
+}
+
+.scroll-down {
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 svg.svg-scroll-hover path {
@@ -330,6 +344,7 @@ svg.svg-scroll-hover path {
   transition: stroke 0.5s ease;
   fill: none;
   stroke-width: 8px;
+  scale: 0.7;
 }
 
 svg.svg-scroll-hover:hover path {
@@ -337,14 +352,8 @@ svg.svg-scroll-hover:hover path {
 
 }
 
-.scroll-up {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-}
 
-// Stuff that matters.
+// scroll animation
 @keyframes scroll {
   0% {
     transform: translateY(0);
@@ -460,7 +469,7 @@ hr {
 }
 
 .splash-intro {
-  min-height: 85vh;
+  min-height: 75vh;
   background: none;
   background-size: cover;
   background-repeat: no-repeat;
@@ -685,6 +694,20 @@ hr.afterfoot {
 }
 
 
+.gtext {
+  background: #F8FFE8;
+  background: radial-gradient(ellipse farthest-corner at bottom center, #F8FFE8 0%, #F5F4B6 40%, #F8FFA7 99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gtext2 {
+  background: #F8FFE8;
+  background: radial-gradient(circle farthest-side at bottom center, #F8FFE8 0%, #F5F4B6 40%, #F8FFA7 99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .stay {
   z-index: 10;
   display: flex;
@@ -727,24 +750,22 @@ a.blue-btn:hover {
 
 
 .leaveamessage {
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   color: #fff;
-  display: flex;
-  align-items: center;
+    align-items: center;
   justify-content: center;
   margin: 0;
   z-index: 3;
   border-radius: 0px;
-  color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   font-weight: 400;
   display: flex;
-  padding: 1vw 1vw;
   scale: 1;
+  margin-bottom: 5vh;
 
 }
 
@@ -758,17 +779,15 @@ div.leaveamessage a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   -webkit-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  /* Smooth scaling effect */
+  border-radius: 50px;
   background: none;
-  border: 1px #ccc solid;
-  /*  text-shadow:1px 1px 3px #15176a; */
+  border: 1px #bbb solid;
+  /* text-shadow: 1px 1px 3px #15176a; */
   transition: all 0.3s ease-in-out;
-
 }
 
 div.leaveamessage a:hover {
@@ -1420,7 +1439,7 @@ h4.worktogether {
   height: 2em;
   text-align: right;
   line-height: 8vh;
-  color: #fff7d6;
+  color: #fff;
   line-height: 0.8em;
 }
 
@@ -2707,6 +2726,10 @@ section::after {
 
 @media only screen and (max-width: 992px) {
 
+  .splash-intro {
+    min-height: 70vh;
+}
+
   h2.signature {
     font-family: 'Montserrat', sans-serif;
     font-weight: 330;
@@ -2767,29 +2790,6 @@ section::after {
     font-size: 30px;
   }
 
-
-  /**SVG Scroll **/
-
-  .scroll-down {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    z-index: 10;
-  }
-
-  svg.svg-scroll-hover path {
-    stroke: #fff;
-    transition: stroke 0.5s ease;
-    fill: none;
-    stroke-width: 6px;
-    scale: 0.7;
-  }
-
-  svg.svg-scroll-hover:hover path {
-    stroke: #f9f871;
-  }
-
-
 }
 
 @media (min-width: 769px) {
@@ -2814,7 +2814,7 @@ section::after {
     top: 25vh;
     transform-origin: left top;
     background: none;
-    z-index: 5;
+    z-index: 11;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -2829,11 +2829,6 @@ section::after {
   .logo-kpvc {
     display: none;
   }
-
-  .leaveamessage {
-    display: none;
-  }
-
 
 
 
@@ -2875,12 +2870,11 @@ section::after {
 
   .cta h1.gr1 {
     color: #fafafa;
-    font: 200 4vh / 5vh "Montserrat", sans-serif;
+    font: 200 6vh / 6vh "Montserrat", sans-serif;
     /* text-shadow: 1px 1px 1px #655ec0; */
     letter-spacing: -1px;
     margin-bottom: 3vh;
     padding: 2rem;
-
   }
 
   h4.worktogether {
@@ -2904,7 +2898,7 @@ section::after {
     justify-content: flex-end;
     align-items: center;
     background: none;
-    z-index: 5;
+    z-index: 11;
     display: flex;
     margin-top: 0;
   }
@@ -2919,12 +2913,11 @@ section::after {
     top: 100px;
     /* Adjust as needed */
     left: 0;
-    background: rgba(0, 0, 0, 0.397);
+    background: rgba(0, 0, 0, 0.697);
     border-radius: 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.5px);
     -webkit-backdrop-filter: blur(6.5px);
-    border: 1px solid rgba(255, 255, 255, 1);
   }
 
   a.navLink {
@@ -2941,7 +2934,7 @@ section::after {
     cursor: pointer;
     transition: 0.5s ease-in-out;
     transform: rotate(0);
-    padding: 20px;
+    padding: 10px;
 
 
   }
@@ -3063,19 +3056,6 @@ section::after {
 
   }
 
-  .leaveamessage {
-    vertical-align: bottom;
-    color: #fff;
-    font-family: 'Courier Prime', sans-serif;
-    font-size: 16px;
-    font-weight: 100;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    float: none;
-    margin-top: 0vh;
-    display: none;
-  }
 
   hr.afterfoot {
     margin-top: 150px;
