@@ -88,7 +88,7 @@ p {
   font-style: normal;
   line-height: 21px;
   color: #fff;
-  font-weight: 210;
+  font-weight: 310;
   text-align: left;
 }
 
@@ -110,9 +110,22 @@ b {
 
 /*Contact Form*/
 
+
+.dropmealine {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-style: none;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #fff;
+  text-align: left;
+  line-height: 20px;
+  margin: 40px 0px 20px;
+}
+
 .contact-form-container {
   width: 100%;
-  padding: 20px;
+  padding: 0px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -188,7 +201,7 @@ b {
   color: #fff;
   font-size: 12px;
   text-align: center;
-  margin-top: 25vh;
+  margin-top: 10vh;
 }
 
 a.humans {
@@ -260,7 +273,7 @@ a {
 }
 
 a.navLink {
-  color: #ddd;
+
   font-size: 0.9rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
@@ -273,12 +286,14 @@ a.navLink {
   cursor: pointer;
   transition: 0.5s ease-in-out;
   transform: rotate(-90deg);
-
+  padding: 0 3px 6px;
+  width: 100%;
+  text-align: center;
 
 }
 
 a.navLink:hover {
-  color: #ddd;
+  color: #ebebeb;
 }
 
 .navLink:hover {
@@ -290,48 +305,71 @@ a.navLink:hover {
 .navLink:after {
   content: '';
   position: absolute;
-  width: 0%; /* Hidden initially */
-  height: 3px;
-  bottom: 50%; /* Positioned at the bottom of the link */
+  width: 0%;
+  /* Hidden initially */
+  height: 500%;
+  bottom: 0%;
+  /* Positioned at the bottom of the link */
   background: transparent;
-  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); /* Smooth transition for both */
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* Smooth transition for both */
+  z-index: -1;
+
 }
 
 .navLink:before {
-  left: 0; /* Expand from left */
+  left: 0;
+  /* Expand from left */
 }
 
 .navLink:after {
-  right: 0; /* Expand from right */
-  background: #f9f871;
+  right: 0;
+  /* Expand from right */
+  background: #7e7e7eb6;
 }
 
 /* Hover effect: expand underline from left to right */
 .navLink:hover:before {
-  background: #f9f871; /* Change color on hover */
-  width: 100%; /* Expand fully */
-  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); /* Smooth expansion */
+  background: #7e7e7eb6;
+  /* Change color on hover */
+  width: 100%;
+  /* Expand fully */
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* Smooth expansion */
 }
 
 /* Hover effect: hide right underline */
 .navLink:hover:after {
-  background: transparent; /* Disappear */
-  width: 100%; /* Fully expand, but transparent */
-  transition: 0.5s ease; /* Ensure smooth transition */
+  background: transparent;
+  /* Disappear */
+  width: 100%;
+  /* Fully expand, but transparent */
+  transition: 0.5s ease;
+  /* Ensure smooth transition */
+}
+
+.navLink.active {
+  color: #ebebeb;
 }
 
 /* Active link styling: keep underline when link is active */
 .navLink.active:before {
-  background: #ffff72; /* Different color for active */
-  width: 100%; /* Fully expanded */
+  background: #1a1a1ad5;
+
+
+  /* Different color for active */
+  width: 100%;
+  /* Fully expanded */
   transition: width 0.5s ease;
 }
 
 /* Active right underline also hidden */
 .navLink.active:after {
-  background: transparent; /* Keep transparent */
+  background: transparent;
+  /* Keep transparent */
   width: 100%;
-  transition: 0.5s ease; /* Smooth transition */
+  transition: 0.5s ease;
+  /* Smooth transition */
 }
 
 
@@ -681,9 +719,10 @@ hr.afterfoot {
   /* text-shadow: 1px 1px 1px #655ec0; */
   letter-spacing: -1px;
   margin-bottom: 3vh;
+}
 
-
-
+.cta2 {
+  padding: 2vh 3vw !important;
 }
 
 
@@ -1426,13 +1465,14 @@ div.techstack p {
 
 h4.worktogether {
   font-family: 'Playfair', sans-serif;
-  font-size: 6em;
-  letter-spacing: -0.2rem;
-  height: 2em;
-  text-align: right;
-  line-height: 8vh;
-  color: #fff;
-  line-height: 0.8em;
+    font-size: 6em;
+    letter-spacing: -0.2rem;
+    height: auto;
+    text-align: right;
+    line-height: 8vh;
+    color: #fff;
+    line-height: 0.7em;
+    margin-bottom: 30px;
 }
 
 h2.uses {
@@ -1910,7 +1950,19 @@ h2.about {
   font-size: 1.9em;
   line-height: 1em;
   font-weight: 700;
+  text-align: left;
 }
+
+h2.about-r {
+  color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9em;
+  line-height: 1em;
+  font-weight: 700;
+  text-align: right;
+}
+
+.text-right {text-align: right;}
 
 h2.hello {
   color: #fff;
@@ -2892,8 +2944,8 @@ section::after {
 
   .nav {
     position: fixed;
-    top: 5vh;
-    left: 80vw;
+    top: 1vh;
+    left: 90vw;
     justify-content: flex-end;
     align-items: center;
     background: none;
@@ -2902,7 +2954,7 @@ section::after {
     margin-top: 0;
   }
 
-  
+
   .navList {
     display: none;
     flex-direction: column;
@@ -2935,13 +2987,127 @@ section::after {
     transition: 0.5s ease-in-out;
     transform: rotate(0);
     padding: 10px;
-
-
   }
 
   .navList.active {
     display: flex;
   }
+
+  .navLink.active {
+    color: #ebebeb;
+  }
+
+  /* Active link styling: keep underline when link is active */
+  .navLink.active:before {
+    background: #1a1a1ad5;
+
+
+    /* Different color for active */
+    width: 100%;
+    /* Fully expanded */
+    transition: width 0.5s ease;
+  }
+
+  /* Active right underline also hidden */
+  .navLink.active:after {
+    background: transparent;
+    /* Keep transparent */
+    width: 100%;
+    transition: 0.5s ease;
+    /* Smooth transition */
+  }
+
+  .navLink {
+    color: #ddd;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    display: block;
+
+  }
+
+
+  a.navLink:hover {
+    color: #ebebeb;
+  }
+
+  .navLink:hover {
+    text-decoration: none;
+  }
+
+  /* Default link underline (before and after hidden initially) */
+  .navLink:before,
+  .navLink:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    /* Hidden initially */
+    height: 100%;
+    bottom: 0%;
+    /* Positioned at the bottom of the link */
+    background: transparent;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Smooth transition for both */
+    z-index: -1;
+
+  }
+
+  .navLink:before {
+    left: 0;
+    /* Expand from left */
+  }
+
+  .navLink:after {
+    right: 0;
+    /* Expand from right */
+    background: #7e7e7eb6;
+  }
+
+  /* Hover effect: expand underline from left to right */
+  .navLink:hover:before {
+    background: none;
+    /* Change color on hover */
+    width: 100%;
+    /* Expand fully */
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Smooth expansion */
+  }
+
+  /* Hover effect: hide right underline */
+  .navLink:hover:after {
+    background: transparent;
+    /* Disappear */
+    width: 100%;
+    /* Fully expand, but transparent */
+    transition: 0.5s ease;
+    /* Ensure smooth transition */
+  }
+
+  .navLink.active {
+    color: #ebebeb;
+  }
+
+  /* Active link styling: keep underline when link is active */
+  .navLink.active:before {
+    background: none;
+
+
+    /* Different color for active */
+    width: 100%;
+    /* Fully expanded */
+    transition: width 0.5s ease;
+  }
+
+  /* Active right underline also hidden */
+  .navLink.active:after {
+    background: transparent;
+    /* Keep transparent */
+    width: 100%;
+    transition: 0.5s ease;
+    /* Smooth transition */
+  }
+
 
   .navToggle {
     display: flex;
@@ -2952,6 +3118,9 @@ section::after {
     flex-direction: column;
 
   }
+
+
+
 
 }
 
