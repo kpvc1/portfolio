@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>KPVC Portfolio</title>
+  <title>
+    <kp/>
+  </title>
   <meta name="description" content="">
   <meta name="author" content="">
   <meta http-equiv='cache-control' content='no-cache'>
@@ -76,7 +78,7 @@
 </head>
 
 <body>
-  <<div id="background-video">
+  <div id="background-video">
     <video autoplay loop muted>
       <source src="uploads/network.mp4" type="video/mp4">
     </video>
@@ -243,7 +245,7 @@
 
 
         <a href="https://www.instagram.com/octopolaras/" target="_blank" rel="noopener">
-          <div class="svg-icon ">
+          <div class="svg-icon grow">
             <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
               viewBox="0 0 24 24">
               <path
@@ -267,48 +269,49 @@
     </div>
 
     <!-- Hero // Fixed -->
-    <div class="grid hidden has-centered">
+    <div id="top" class="active">
+      <div class="grid hidden has-centered">
 
-      <div class="column is-full splash-intro" id="ex1">
+        <div class="column is-full splash-intro" id="ex1">
 
-        <div class="grid is-vertical" id="ex1-layer">
-          <div class="column is-full aos-item ex1" data-aos="fade-top">
-            <h2 class="signature aos-item" data-aos="fade-down">Paolo <span class="">Castro</span></h2>
-            <h3 data-aos="fade-left" class="aos-item typehead left line" aria-label="+">Designer</h3>
-            <h3 data-aos="fade-left" class="aos-item typehead2 right"><span class="plus">+</span><span
-                class="typewriter thick"></span></h3>
+          <div class="grid is-vertical" id="ex1-layer">
+            <div class="column is-full aos-item ex1" data-aos="fade-top">
+              <h2 class="signature aos-item" data-aos="fade-down">Paolo <span class="">Castro</span></h2>
+              <h3 data-aos="fade-left" class="aos-item typehead left line" aria-label="+">Designer</h3>
+              <h3 data-aos="fade-left" class="aos-item typehead2 right"><span class="plus">+</span><span
+                  class="typewriter thick"></span></h3>
+            </div>
+
           </div>
-          
-        </div>
-      </div>
-
-
-      <div class="scroll-down">
-        <div class="leaveamessage grow">
-          <a href="#message">Leave a message <img class="view-ico2" width="20" height="20"
-              src="https://img.icons8.com/FFFFFF/material-rounded/20/sent.png" alt="sent" /></a>
         </div>
 
-        <a href="#details">
-          <svg class="svg-scroll-hover" width="27px" height="100%" viewBox="0 0 177 290" version="1.1"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-            <!-- The wheel path -->
-            <path id="wheel" d="M123.359,79.775l0,72.843">
-              <!-- Animate the wheel to move down 10px and up 10px -->
-              <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,40; 0,0" dur="1.4s"
-                repeatCount="indefinite" />
-            </path>
 
-            <!-- The mouse path -->
-            <path id="mouse"
-              d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
-              style="fill:none;" />
-          </svg>
-        </a>
+        <div class="scroll-down">
+          <div class="leaveamessage grow">
+            <a href="#message">Leave a message <img class="view-ico2" width="20" height="20"
+                src="https://img.icons8.com/FFFFFF/material-rounded/20/sent.png" alt="sent" /></a>
+          </div>
+
+          <a href="#details">
+            <svg class="svg-scroll-hover" width="27px" height="100%" viewBox="0 0 177 290" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+              <!-- The wheel path -->
+              <path id="wheel" d="M123.359,79.775l0,72.843">
+                <!-- Animate the wheel to move down 10px and up 10px -->
+                <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,40; 0,0" dur="1.4s"
+                  repeatCount="indefinite" />
+              </path>
+
+              <!-- The mouse path -->
+              <path id="mouse"
+                d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+                style="fill:none;" />
+            </svg>
+          </a>
+        </div>
+
       </div>
-
-    </div>
 
 
 
@@ -318,12 +321,12 @@
     <div class="spacer">
       <div class="mask0"></div>
     </div>
-
+    </div>
 
     <!--Let's Work Together-->
     <div class="custom-s1">
 
-      <div id="details" class="sp-20"></div>
+      <div id="details" class="sp-20 active"></div>
 
       <div class="grid has-centered cta">
         <div class="column is-6 aos-item" data-aos="fade-right">
@@ -462,9 +465,9 @@
       <div class="project-bg"><img src="uploads/tgi-reno.jpg">
       </div>
 
-      <div class="sp-10"></div>
+      <div id="projects" class="sp-10 active"></div>
 
-      <div id="projects" class="container content">
+      <div class="container content">
 
 
         <div class="grid has-centered">
@@ -710,9 +713,11 @@
 
     <div class="custom-s">
 
+      <div id="about" class="active"></div>
+
       <div class="splash-about">
         <div class="container content">
-          <div class="grid has-centered" id="about">
+          <div class="grid has-centered">
 
             <div class="column is-9 aos-item abt" data-aos="fade-down">
 
@@ -915,6 +920,7 @@
     <!-- Footer-->
     <div class="custom-s2">
 
+      <div id="message" class="active"></div>
       <div class="container content tm">
         <div class="grid has-centered">
           <div class="column is-half">
@@ -925,7 +931,7 @@
       <div class="grid has-centered footer">
 
         <div class="column is-12 aos-item " data-aos="">
-          <div id="message" class="grid has-centered">
+          <div class="grid has-centered">
 
             <div class="column is-half">
               <div class="contact-form-container aos-item" data-aos="fade-down">
@@ -958,9 +964,7 @@
 
       <div class="scroll-up">
         <a href="#top">
-          <img width="50" height="50"
-            src="https://img.icons8.com/FFFFFF/external-inkubators-detailed-outline-inkubators/50/external-upload-arrows-inkubators-detailed-outline-inkubators-2.png"
-            alt="external-upload-arrows-inkubators-detailed-outline-inkubators-2" />
+          <img width="50" height="50" src="https://img.icons8.com/FFFFFF/external-global-made-by-made/50/external-Upload-ui-and-ux-global-made-by-made-3.png"/>
         </a>
       </div>
 
@@ -1080,54 +1084,83 @@
       });
     </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navToggle = document.querySelector(".navToggle");
-    const navList = document.querySelector(".navList");
-    const navLinks = document.querySelectorAll(".navLink");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.querySelector(".navToggle");
+        const navList = document.querySelector(".navList");
+        const navLinks = document.querySelectorAll(".navLink");
 
-    // Function to check the viewport width
-    function isMobileViewport() {
-      return window.innerWidth <= 768; // Adjust the width threshold as needed
-    }
-
-    // Toggle navigation visibility on click of the hamburger menu icon
-    navToggle.addEventListener("click", function (event) {
-      if (isMobileViewport()) {
-        navList.style.display = navList.style.display === "flex" ? "none" : "flex";
-        event.stopPropagation(); // Prevent the event from bubbling up
-      }
-    });
-
-    // Close the navigation when a link is clicked
-    navLinks.forEach(link => {
-      link.addEventListener("click", function () {
-        if (isMobileViewport()) {
-          navList.style.display = "none";
+        // Function to check the viewport width
+        function isMobileViewport() {
+          return window.innerWidth <= 768; // Adjust the width threshold as needed
         }
+
+        // Toggle navigation visibility on click of the hamburger menu icon
+        navToggle.addEventListener("click", function (event) {
+          if (isMobileViewport()) {
+            navList.style.display = navList.style.display === "flex" ? "none" : "flex";
+            event.stopPropagation(); // Prevent the event from bubbling up
+          }
+        });
+
+        // Close the navigation when a link is clicked
+        navLinks.forEach(link => {
+          link.addEventListener("click", function () {
+            if (isMobileViewport()) {
+              navList.style.display = "none";
+            }
+          });
+        });
+
+        // Hide navList when clicking outside of it
+        document.addEventListener("click", function (event) {
+          if (isMobileViewport() && navList.style.display === "flex") {
+            const isClickInsideNav = navList.contains(event.target) || navToggle.contains(event.target);
+            if (!isClickInsideNav) {
+              navList.style.display = "none";
+            }
+          }
+        });
+
+        // Optional: Reset navList to visible if viewport width changes and is above the mobile threshold
+        window.addEventListener("resize", function () {
+          if (!isMobileViewport()) {
+            navList.style.display = "flex"; // Show the nav when viewport is wider than mobile
+          }
+        });
       });
-    });
+    </script>
 
-    // Hide navList when clicking outside of it
-    document.addEventListener("click", function (event) {
-      if (isMobileViewport() && navList.style.display === "flex") {
-        const isClickInsideNav = navList.contains(event.target) || navToggle.contains(event.target);
-        if (!isClickInsideNav) {
-          navList.style.display = "none";
-        }
-      }
-    });
+    <!--Active Section-->
 
-    // Optional: Reset navList to visible if viewport width changes and is above the mobile threshold
-    window.addEventListener("resize", function () {
-      if (!isMobileViewport()) {
-        navList.style.display = "flex"; // Show the nav when viewport is wider than mobile
-      }
-    });
-  });
-</script>
+    <script>
+      // Grab all custom sections and navigation links
+      const customSections = document.querySelectorAll(".active");
+      const navLinks = document.querySelectorAll(".navLink");
 
+      // Create an IntersectionObserver to track which custom section is in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.getAttribute("id");
+          const activeLink = document.querySelector(`.navLink[href="#${id}"]`);
 
+          if (entry.isIntersecting) {
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove("active"));
+
+            // Add active class to the current link
+            activeLink.classList.add("active");
+          }
+        });
+      }, {
+        threshold: 0.5 // Trigger when 50% of the section is in view
+      });
+
+      // Observe each custom section
+      customSections.forEach(customSection => {
+        observer.observe(customSection);
+      });
+    </script>
 
 
 </body>

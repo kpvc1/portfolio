@@ -32,7 +32,7 @@ body {
 }
 
 ::selection {
-  background: #5B0A06;
+  background: #000;
 }
 
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
@@ -285,39 +285,57 @@ a.navLink:hover {
   text-decoration: none;
 }
 
+/* Default link underline (before and after hidden initially) */
 .navLink:before,
 .navLink:after {
   content: '';
   position: absolute;
-  width: 0%;
+  width: 0%; /* Hidden initially */
   height: 3px;
-  bottom: 50%;
-  margin-top: -.5px;
-  background: #ffff729d;
+  bottom: 50%; /* Positioned at the bottom of the link */
+  background: transparent;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); /* Smooth transition for both */
 }
 
 .navLink:before {
-  left: -2.5px;
+  left: 0; /* Expand from left */
 }
 
 .navLink:after {
-  right: 2.5px;
+  right: 0; /* Expand from right */
   background: #f9f871;
-  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
+/* Hover effect: expand underline from left to right */
 .navLink:hover:before {
-  background: #f9f871;
-  width: 100%;
-  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  background: #f9f871; /* Change color on hover */
+  width: 100%; /* Expand fully */
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); /* Smooth expansion */
 }
 
+/* Hover effect: hide right underline */
 .navLink:hover:after {
-  background: transparent;
-  width: 100%;
-  transition: 0s;
-
+  background: transparent; /* Disappear */
+  width: 100%; /* Fully expand, but transparent */
+  transition: 0.5s ease; /* Ensure smooth transition */
 }
+
+/* Active link styling: keep underline when link is active */
+.navLink.active:before {
+  background: #ffff72; /* Different color for active */
+  width: 100%; /* Fully expanded */
+  transition: width 0.5s ease;
+}
+
+/* Active right underline also hidden */
+.navLink.active:after {
+  background: transparent; /* Keep transparent */
+  width: 100%;
+  transition: 0.5s ease; /* Smooth transition */
+}
+
+
+
 
 
 /**SVG Scroll **/
@@ -327,7 +345,7 @@ a.navLink:hover {
   z-index: 10;
   display: flex;
   position: absolute;
-  right:0px;
+  right: 0px;
   bottom: 0px;
 }
 
@@ -480,32 +498,7 @@ hr {
   z-index: 2;
 }
 
-/**test**/
-#Fp {
-  background-color: #000;
-  margin: 0 !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: 0 !important;
-  height: 100%;
-  width: 100%;
-}
 
-#Ab {
-  background-color: #000;
-  margin: 0 !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: 0 !important;
-  height: 100%;
-  width: 100%;
-
-  background: url("uploads/Euclidean\ Pattern1.png") no-repeat;
-  background-position: top;
-  background-size: contain;
-  position: relative;
-
-}
 
 
 .m--10 {
@@ -754,7 +747,7 @@ a.blue-btn:hover {
   top: 0;
   right: 0;
   color: #fff;
-    align-items: center;
+  align-items: center;
   justify-content: center;
   margin: 0;
   z-index: 3;
@@ -779,7 +772,7 @@ div.leaveamessage a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 30px;
+  padding: 12px 25px;
   -webkit-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
@@ -2727,7 +2720,8 @@ section::after {
 
   .splash-intro {
     min-height: 70vh;
-}
+  }
+
 
   h2.signature {
     font-family: 'Montserrat', sans-serif;
@@ -2763,6 +2757,13 @@ section::after {
     /* -webkit-background-clip: text; */
     -webkit-text-fill-color: rgba(253, 255, 120, 0.781);
     z-index: -1;
+  }
+
+  .cta h1.gr1 {
+    color: #fafafa;
+    font: 200 5vh / 5vh "Montserrat", sans-serif;
+    letter-spacing: -1px;
+    margin-bottom: 3vh;
   }
 
   h4.worktogether {
@@ -2869,8 +2870,7 @@ section::after {
 
   .cta h1.gr1 {
     color: #fafafa;
-    font: 200 6vh / 6vh "Montserrat", sans-serif;
-    /* text-shadow: 1px 1px 1px #655ec0; */
+    font: 200 4.5vh / 5vh "Montserrat", sans-serif;
     letter-spacing: -1px;
     margin-bottom: 3vh;
     padding: 2rem;
@@ -2902,6 +2902,7 @@ section::after {
     margin-top: 0;
   }
 
+  
   .navList {
     display: none;
     flex-direction: column;
@@ -3100,6 +3101,6 @@ section::after {
     flex-direction: column;
     align-items: center;
     margin-top: -5vh;
-}
+  }
 
 }
