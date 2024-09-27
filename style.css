@@ -2692,7 +2692,7 @@ section::after {
   display: block;
   margin: 0 auto;
   text-align: center;
-  max-width: 50vw;
+  max-width: 60vw;
   border: none;
 }
 
@@ -2730,7 +2730,7 @@ cite {
 
 /*RESPONSIVE*/
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1200px) {
   .landing {
     display: flex;
     margin-top: -30vh;
@@ -2738,6 +2738,27 @@ cite {
     justify-content: center;
     width: 100%;
   }
+
+    /*Blockquote*/
+    .custom-blockquote {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 60vw;
+      border: none;
+    }
+  
+    .custom-paragraph {
+      font-family: Georgia, serif;
+      font-size: 2.4rem;
+      font-style: italic;
+      font-weight: 400;
+      padding-bottom: 2rem;
+      line-height: 2.5rem;
+      color: #fafafa;
+      text-align: center;
+  
+    }
 
 
   .cta h1.gr1 {
