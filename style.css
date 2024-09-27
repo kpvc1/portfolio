@@ -1597,7 +1597,7 @@ section.bg3>div {
 
 h4.process {
   font-family: 'Playfair', sans-serif;
-  font-size: 13vh;
+  font-size: 9rem;
   letter-spacing: -0.2rem;
   color: #fff7d6;
   text-align: left;
@@ -1608,7 +1608,7 @@ h4.process {
   align-content: stretch;
   justify-content: flex-end;
   margin-left: 100px;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 
 .process-container {
@@ -1721,10 +1721,10 @@ h3.recentprojects {
 
 h5.subhead {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
   font-style: italic;
-  line-height: 22px;
-  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  font-weight: 600;
   color: #FFF;
   text-align: left;
   margin: 6px 0px 20px;
@@ -2048,7 +2048,7 @@ h3.center {
 h2.about {
   color: #fafafa;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.9em;
+  font-size: 1.5em;
   line-height: 1em;
   font-weight: 700;
   text-align: left;
@@ -2507,8 +2507,8 @@ h3 {
   left: 0px;
   width: 100%;
   height: 2vh;
-  background: -moz-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgb(42, 39, 60));
-  background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 0%, rgb(42, 39, 60) 100%);
+  background: -moz-linear-gradient(top, rgb(17, 17, 17) 0%, rgb(42, 39, 60));
+  background: linear-gradient(to bottom, rgb(17, 17, 17) 0%, rgb(42, 39, 60) 100%);
   z-index: 4;
 }
 
@@ -2517,13 +2517,11 @@ h3 {
   position: relative;
   bottom: 0px;
   left: 0px;
-  width: 100%;
-  height: 4vh;
-  background: -moz-linear-gradient(top, rgba(30, 29, 27) 0%%, rgb(121, 105, 81) 100%));
-  background: linear-gradient(to bottom, rgb(30, 29, 27) 0%, rgb(121, 105, 81) 100%);
-  z-index: 4;
+  width: 100vw;
+  height: 2vh;
+  background: -moz-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgb(42, 39, 60));
+  background: linear-gradient(to bottom, rgb(43, 43, 33) 0%, rgb(120, 104, 80) 100%);
 }
-
 
 
 #circle-shape-example {
@@ -2694,7 +2692,7 @@ section::after {
   display: block;
   margin: 0 auto;
   text-align: center;
-  max-width: 55vw;
+  max-width: 50vw;
   border: none;
 }
 
@@ -2707,7 +2705,7 @@ cite {
 
 .custom-paragraph {
   font-family: Georgia, serif;
-  font-size: 2.7rem;
+  font-size: 3rem;
   font-style: italic;
   font-weight: 400;
   padding-bottom: 2rem;
@@ -2721,7 +2719,7 @@ cite {
   will-change: opacity, filter;
   opacity: 0;
   filter: blur(10px);
-  transition: all 1.5s ease;
+  transition: all 1.3s ease;
 }
 
 .custom-span.animate {
@@ -2880,7 +2878,7 @@ cite {
 
   h4.process {
     font-family: 'Playfair', sans-serif;
-    font-size: 12vh;
+    font-size: 8rem;
     letter-spacing: -0.2rem;
     color: #fff7d6;
     text-align: left;
@@ -2890,7 +2888,8 @@ cite {
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: flex-end;
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-top: 0px;
   }
 
 
