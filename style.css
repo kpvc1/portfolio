@@ -32,7 +32,8 @@ body {
 }
 
 ::selection {
-  background: #000;
+  background: #0011ff98;
+  color: #ccc;
 }
 
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
@@ -120,7 +121,7 @@ b {
   color: #fff;
   text-align: left;
   line-height: 20px;
-  margin: 40px 0px 20px;
+  margin: 20px 0px;
 }
 
 .contact-form-container {
@@ -128,6 +129,7 @@ b {
   padding: 0px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
 }
 
 .contact-form h2 {
@@ -152,9 +154,11 @@ b {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   border-radius: 4px;
   font-size: 14px;
+  background-color: #64646483;
+  color:#fff;
 }
 
 .contact-form textarea {
@@ -164,24 +168,34 @@ b {
 
 .contact-form button {
   width: 100%;
-  padding: 10px;
+  padding: 10px 30px;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   background-color: rgb(37, 80, 215);
   background-color: linear-gradient(45deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
   /* Smooth scaling effect */
+  background: rgb(37, 80, 215);
+  background: linear-gradient(0deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
+  max-width: 300px;
 
 }
 
 .contact-form button:hover {
   background-color: rgb(74, 112, 235);
-  background-color: linear-gradient(45deg, rgb(45, 86, 218) 0%, rgb(131, 134, 233) 100%);
+  background-color: linear-gradient(45deg, rgb(41, 78, 199) 0%, rgb(119, 122, 211) 100%);
 }
 
 
@@ -189,7 +203,7 @@ b {
   width: 100%;
   display: flex;
   overflow: hidden;
-
+  padding-bottom: 10vh;
 }
 
 .footernote {
@@ -201,7 +215,9 @@ b {
   color: #fff;
   font-size: 12px;
   text-align: center;
-  margin-top: 10vh;
+  padding-top: 10vh;
+  padding-bottom: 3vh;
+  height: 100%;
 }
 
 a.humans {
@@ -354,7 +370,7 @@ a.navLink:hover {
 
 /* Active link styling: keep underline when link is active */
 .navLink.active:before {
-  background: #1a1a1ad5;
+  background: #88888888;
 
 
   /* Different color for active */
@@ -393,6 +409,8 @@ a.navLink:hover {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  margin-top: -20vh;
+  height: 15vh;
 }
 
 svg.svg-scroll-hover path {
@@ -525,7 +543,7 @@ hr {
 }
 
 .splash-intro {
-  min-height: 75vh;
+  min-height: 100vh;
   background: none;
   background-size: cover;
   background-repeat: no-repeat;
@@ -550,12 +568,12 @@ hr {
   width: 100%;
   background: url("uploads/hadouken.jpg") no-repeat;
   background-position: left;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow-y: hidden;
-  padding: 50px 0;
 
 }
 
@@ -715,14 +733,19 @@ hr.afterfoot {
 
 .cta h1.gr1 {
   color: #fafafa;
-  font: 200 6vh/7vh "Montserrat", sans-serif;
+  font: 200 3vw/3vw "Montserrat", sans-serif;
   /* text-shadow: 1px 1px 1px #655ec0; */
   letter-spacing: -1px;
   margin-bottom: 3vh;
+  padding: 0 15vw;
 }
 
 .cta2 {
-  padding: 2vh 3vw !important;
+  padding: 0 3vw !important;
+}
+
+.pl-10 {
+  padding-left: 20px !important;
 }
 
 
@@ -768,8 +791,35 @@ hr.afterfoot {
   transition: transform 0.3s ease;
   /* Smooth scaling effect */
   background: rgb(37, 80, 215);
-  background: linear-gradient(45deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
+  background: linear-gradient(0deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
   max-width: 300px;
+  /*  text-shadow:1px 1px 3px #15176a; */
+}
+
+.btn-container {
+  margin: 30px 15px;
+}
+
+.blue-btn-full {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  -webkit-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+  /* Smooth scaling effect */
+  background: rgb(37, 80, 215);
+  background: linear-gradient(0deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
+  max-width: 300px;
+  width: 100%;
   /*  text-shadow:1px 1px 3px #15176a; */
 }
 
@@ -797,7 +847,7 @@ a.blue-btn:hover {
   font-weight: 400;
   display: flex;
   scale: 1;
-  margin-bottom: 5vh;
+
 
 }
 
@@ -1219,6 +1269,11 @@ a.download {
   margin: 25vh 0 0 0;
 }
 
+.sp-5 {
+  display: block;
+  height: 5vh;
+}
+
 .sp-10 {
   display: block;
   height: 10vh;
@@ -1243,6 +1298,31 @@ a.download {
   display: block;
   height: 50vh;
 }
+
+.mb-10 {
+  margin-bottom: 10vh;
+}
+
+.mb-20 {
+  margin-bottom: 20vh;
+}
+
+.mb-30 {
+  margin-bottom: 30vh;
+}
+
+.mt-10 {
+  margin-top: 10vh;
+}
+
+.mt-20 {
+  margin-top: 20vh;
+}
+
+.mt-30 {
+  margin-top: 30vh;
+}
+
 
 .w-150 {
   min-width: 150%;
@@ -1465,14 +1545,14 @@ div.techstack p {
 
 h4.worktogether {
   font-family: 'Playfair', sans-serif;
-    font-size: 6em;
-    letter-spacing: -0.2rem;
-    height: auto;
-    text-align: right;
-    line-height: 8vh;
-    color: #fff;
-    line-height: 0.7em;
-    margin-bottom: 30px;
+  font-size: 4em;
+  letter-spacing: -0.2rem;
+  height: auto;
+  text-align: right;
+  line-height: 8vh;
+  color: #fff;
+  line-height: 0.7em;
+  margin-bottom: 30px;
 }
 
 h2.uses {
@@ -1507,11 +1587,22 @@ section.bg3>div {
 
 h4.process {
   font-family: 'Playfair', sans-serif;
-  font-size: 64px;
+  font-size: 13vh;
   letter-spacing: -0.2rem;
   color: #fff7d6;
-  text-align: right;
-  line-height: 45px;
+  text-align: left;
+  white-space: nowrap;
+  transform: rotate(-90deg) !important;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  margin-left: 100px;
+  margin-top: -30px;
+}
+
+.process-container {
+  margin: 0 0 30px;
 }
 
 h5.introduction {
@@ -1956,22 +2047,23 @@ h2.about {
 h2.about-r {
   color: #fafafa;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.9em;
+  font-size: 1.4em;
   line-height: 1em;
   font-weight: 700;
   text-align: right;
 }
 
-.text-right {text-align: right;}
+.text {
+  text-align: right;
+}
 
 h2.hello {
   color: #fff;
   font-family: 'Monita Signature', sans-serif;
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: 700;
-  margin-top: -50px;
   text-shadow: 3px 3px 3px #000;
-  text-align: center;
+  text-align: left;
 }
 
 h2.experience {
@@ -2527,37 +2619,31 @@ div#background-video>video {
 }
 
 
+@keyframes sequencePopup {
 
-@media (prefers-reduced-motion) {
-  .typewriter::after {
-    animation: none;
-  }
-
-  @keyframes sequencePopup {
-
-    0%,
-    100% {
-      content: "developer🚀";
-    }
-
-    25% {
-      content: "designer💭";
-    }
-
-    50% {
-      content: "creative🗿";
-    }
-
-    75% {
-      content: "solver🧩";
-    }
-  }
-
-  .typewriter::before {
+  0%,
+  100% {
     content: "developer🚀";
-    animation: sequencePopup 8s linear infinite;
+  }
+
+  25% {
+    content: "designer💭";
+  }
+
+  50% {
+    content: "creative🗿";
+  }
+
+  75% {
+    content: "solver🧩";
   }
 }
+
+.typewriter::before {
+  content: "developer🚀";
+  animation: sequencePopup 8s linear infinite;
+}
+
 
 /**ARROW**/
 
@@ -2710,6 +2796,47 @@ section::after {
   }
 }
 
+
+/*test*/
+.custom-blockquote {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 60vw;
+  border: none;
+}
+
+.custom-paragraph,
+cite {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-paragraph {
+  font-family: Georgia, serif;
+  font-size: 2.7rem;
+  font-style: italic;
+  font-weight: 400;
+  padding-bottom: 2rem;
+  line-height: 3rem;
+  color: #fafafa;
+
+}
+
+.custom-span {
+  will-change: opacity, filter;
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 1.5s ease;
+}
+
+.custom-span.animate {
+  opacity: 1;
+  filter: blur(0);
+}
+
+
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 1199px) {
@@ -2722,13 +2849,12 @@ section::after {
   }
 
 
-  .code {
-    font-family: 'Courier Prime', monospace;
-    font-size: 2vh;
-    margin-top: 0px;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 600px;
+  .cta h1.gr1 {
+    color: #fafafa;
+    font: 200 3vw / 3vw "Montserrat", sans-serif;
+    letter-spacing: -1px;
+    margin-bottom: 3vh;
+    padding: 0 10vw;
     text-align: center;
   }
 
@@ -2748,7 +2874,7 @@ section::after {
 
   h4.worktogether {
     font-family: 'Playfair', sans-serif;
-    font-size: 6em;
+    font-size: 4em;
     text-align: right;
   }
 
@@ -2760,6 +2886,15 @@ section::after {
     font-weight: 700;
   }
 
+  h2.about-r {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    line-height: 1em;
+    font-weight: 700;
+    text-align: right;
+  }
+
 
   .stay {
     display: none;
@@ -2768,7 +2903,7 @@ section::after {
 
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
 
   .splash-intro {
     min-height: 70vh;
@@ -2813,16 +2948,34 @@ section::after {
 
   .cta h1.gr1 {
     color: #fafafa;
-    font: 200 5vh / 5vh "Montserrat", sans-serif;
+    font: 200 4vh / 4vh "Montserrat", sans-serif;
     letter-spacing: -1px;
     margin-bottom: 3vh;
+    padding: 0 5vw;
+    text-align: center;
   }
 
   h4.worktogether {
     font-family: 'Playfair', sans-serif;
-    font-size: 5em;
+    font-size: 4em;
     text-align: right;
   }
+
+  h4.process {
+    font-family: 'Playfair', sans-serif;
+    font-size: 12vh;
+    letter-spacing: -0.2rem;
+    color: #fff7d6;
+    text-align: left;
+    white-space: nowrap;
+    transform: rotate(-90deg) !important;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: flex-end;
+    margin-left: 50px;
+  }
+
 
   h2.hello {
     color: #fff;
@@ -2840,6 +2993,23 @@ section::after {
 
   .typewriter {
     font-size: 30px;
+  }
+
+  h2.about {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    line-height: 1em;
+    font-weight: 700;
+  }
+
+  h2.about-r {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    line-height: 1em;
+    font-weight: 700;
+    text-align: right;
   }
 
 }
@@ -2932,14 +3102,35 @@ section::after {
     font-size: 4em;
     line-height: 1em;
     text-align: left;
-    margin-bottom: 0px !important;
+    margin-bottom: 10px !important;
     color: #fff;
     ;
   }
 
   h4.process {
+    font-family: 'Playfair', sans-serif;
+    font-size: 15vw;
+    letter-spacing: -0.2rem;
+    color: #fff7d6;
     text-align: left;
+    white-space: normal;
+    transform: rotate(0deg) !important;
+    display: flex;
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
 
+  h2.about-r {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    line-height: 1em;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .text {
+    text-align: left;
   }
 
   .nav {
@@ -2965,7 +3156,7 @@ section::after {
     top: 100px;
     /* Adjust as needed */
     left: 0;
-    background: rgba(0, 0, 0, 0.697);
+    background: #88888888;
     border-radius: 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.5px);
