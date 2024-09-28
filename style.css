@@ -82,14 +82,19 @@ header {
   padding: 1em 0;
 }
 
+._fc {
+  display: flex;
+  justify-content: center;
+}
+
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  font-size: 0.85rem;
   font-style: normal;
-  line-height: 21px;
+  line-height: 1.2rem;
   color: #fff;
-  font-weight: 310;
+  font-weight: 250;
   text-align: left;
 }
 
@@ -111,6 +116,114 @@ b {
 
 /*Contact Form*/
 
+.contact-container {
+  padding: 3px;
+  border: none;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.icon-contact {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.hidden-contact {
+  filter: blur(6px);
+  transition: all 0.3s ease;
+  z-index: 1;
+  display: block;
+
+
+}
+
+.contact-container:hover .hidden-contact {
+  filter: blur(0px);
+  display: block;
+}
+
+.show-details {
+  position: absolute;
+  left: 105px;
+  top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  color: #fff;
+  font-weight: 350;
+  text-align: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.hide-details {
+  position: absolute;
+  left: 105px;
+  top: 11px;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  filter: blur(3px);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.contact-container:hover .show-details {
+  opacity: 0;
+}
+
+.click-message {
+  font-size: 12px;
+  color: gray;
+}
+
+
+
+
+.contact-details-container {
+  margin: 0px 0;
+}
+
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+}
+
+
+.contact-details p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem;
+  color: #fff;
+  font-weight: 250;
+  text-align: center;
+}
+
+
+
+
 input::placeholder {
   color: #fff;
 }
@@ -123,14 +236,14 @@ textarea::placeholder {
 
 .dropmealine {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-  font-style: none;
+  font-size: 1.1rem;
+  font-style: italic;
   font-weight: 600;
   letter-spacing: 0px;
   color: #fff;
-  text-align: left;
+  text-align: center;
   line-height: 20px;
-  margin: 20px 0px;
+  margin: 30px 0px 10px;
 }
 
 .contact-form-container {
@@ -166,7 +279,7 @@ textarea::placeholder {
   border: 1px solid #fff;
   border-radius: 4px;
   font-size: 14px;
-  background-color: #64646483;
+  background-color: #99999929;
   color: #fff;
 }
 
@@ -784,6 +897,33 @@ hr.afterfoot {
 
 }
 
+.clear-btn {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: flex;
+  padding: 10px 40px;
+  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  background: none;
+  border: 1px solid #fff;
+}
+
+.clear-btn:hover {
+  color: #fff;
+  background: #2f17ff;
+  transform: scale(1.1);
+  /* Increase size to 110% on hover */
+  text-decoration: none;
+  border: 1px solid #2f17ff;
+}
+
+
+
 .blue-btn {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
@@ -899,6 +1039,7 @@ div.leaveamessage a:hover {
 .staycon {
   float: left;
   display: block;
+  margin-right: 9px;
 }
 
 
@@ -1294,6 +1435,11 @@ a.download {
   height: 20vh;
 }
 
+.sp-25 {
+  display: block;
+  height: 25vh;
+}
+
 .sp-30 {
   display: block;
   height: 30vh;
@@ -1444,6 +1590,32 @@ img.shrink:hover {
   transition: .3s ease-in-out;
 }
 
+p.deco-l {
+  font-family: 'Playfair', sans-serif;
+  font-size: 4em;
+  letter-spacing: -0.2rem;
+  height: auto;
+  text-align: center;
+  line-height: 8vh;
+  color: #fff;
+  line-height: 0.7em;
+  margin-bottom: 30px;
+  transform: rotate(90deg);
+}
+
+p.deco-r {
+  font-family: 'Playfair', sans-serif;
+  font-size: 4em;
+  letter-spacing: -0.2rem;
+  height: auto;
+  text-align: center;
+  line-height: 8vh;
+  color: #fff;
+  line-height: 0.7em;
+  margin-bottom: 30px;
+  transform: rotate(-90deg);
+
+}
 
 .code {
   font-family: 'Courier Prime', monospace;
@@ -1647,11 +1819,15 @@ div.exed {
   text-align: left;
 }
 
-h5.success {
-  color: #05fa86;
-  font-family: 'Playfair', sans-serif;
-  font-size: 22px;
+h2.success {
+  color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-style: oblique;
+  letter-spacing: -1px;
 }
+
 
 h5.folioTitle {
   color: #FFF;
@@ -2064,7 +2240,23 @@ h2.about-r {
 }
 
 .text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem;
+  color: #fff;
+  font-weight: 250;
   text-align: right;
+}
+
+.text-c {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem;
+  color: #fff;
+  font-weight: 250;
+  text-align: center;
 }
 
 h2.hello {
@@ -2692,7 +2884,7 @@ section::after {
   display: block;
   margin: 0 auto;
   text-align: center;
-  max-width: 60vw;
+  max-width: 58vw;
   border: none;
 }
 
@@ -2708,7 +2900,6 @@ cite {
   font-size: 3rem;
   font-style: italic;
   font-weight: 400;
-  padding-bottom: 2rem;
   line-height: 3rem;
   color: #fafafa;
   text-align: center;
@@ -2719,7 +2910,7 @@ cite {
   will-change: opacity, filter;
   opacity: 0;
   filter: blur(10px);
-  transition: all 1.3s ease;
+  transition: all 1.2s ease;
 }
 
 .custom-span.animate {
@@ -2727,6 +2918,42 @@ cite {
   filter: blur(0);
 }
 
+
+/*Border
+blockquote p {
+
+  position: relative;
+  margin: 0;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 40px 25px 60px;
+}
+
+
+blockquote p:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #555;
+  border-radius: 0 30px 0 0;
+  width: 60px;
+  height: 60px;
+  bottom: -60px;
+  left: 50px;
+  border-bottom: none;
+  border-left: none;
+  z-index: 4;
+}
+
+blockquote p:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  border: #111 2px solid;
+  bottom: -2px;
+  left: 50px;
+  z-index: 2;
+}
+*/
 
 /*RESPONSIVE*/
 
@@ -2739,26 +2966,26 @@ cite {
     width: 100%;
   }
 
-    /*Blockquote*/
-    .custom-blockquote {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-      max-width: 60vw;
-      border: none;
-    }
-  
-    .custom-paragraph {
-      font-family: Georgia, serif;
-      font-size: 2.4rem;
-      font-style: italic;
-      font-weight: 400;
-      padding-bottom: 2rem;
-      line-height: 2.5rem;
-      color: #fafafa;
-      text-align: center;
-  
-    }
+  /*Blockquote*/
+  .custom-blockquote {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 60vw;
+    border: none;
+  }
+
+  .custom-paragraph {
+    font-family: Georgia, serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 400;
+    padding-bottom: 2rem;
+    line-height: 2.5rem;
+    color: #fafafa;
+    text-align: center;
+
+  }
 
 
   .cta h1.gr1 {
@@ -2917,9 +3144,9 @@ cite {
   h2.hello {
     color: #fff;
     font-family: 'Monita Signature', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
     margin-top: -50px;
     text-shadow: 3px 3px 3px #000;
   }
@@ -3015,7 +3242,15 @@ cite {
 
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+
+  .mb-10 {
+    margin-bottom: 0vh;
+  }
+
+  .content {
+    padding: 2vh 4vw;
+  }
 
   .logo-kpvc {
     display: none;
@@ -3101,12 +3336,14 @@ cite {
     letter-spacing: -0.2rem;
     color: #fff7d6;
     text-align: left;
-    white-space: normal;
-    transform: rotate(0deg) !important;
+    white-space: nowrap;
+    transform: rotate(-90deg) !important;
     display: flex;
     margin-left: 0;
-    justify-content: space-evenly;
+    justify-content: flex-end;
   }
+
+
 
   h2.about-r {
     color: #fafafa;
@@ -3298,12 +3535,32 @@ cite {
 
   }
 
-
+  .footernote p {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 0vh;
+    padding-bottom: 3vh;
+    height: 100%;
+  }
 
 
 }
 
-
+@media only screen and (max-width: 767px) {
+  h4.process {
+    font-family: 'Playfair', sans-serif;
+    font-size: 15vw;
+    letter-spacing: -0.2rem;
+    color: #fff7d6;
+    text-align: left;
+    white-space: normal;
+    transform: rotate(0deg) !important;
+    display: flex;
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
+}
 
 @media only screen and (max-width: 700px) {
 
