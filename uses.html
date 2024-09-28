@@ -68,8 +68,6 @@
       align-items: center;
       justify-content: center;
     }
-
-    
   </style>
 
   <!-- JS -->
@@ -126,141 +124,164 @@
 
   </div>
 
-   
 
 
 
-<body>
 
-  <!--Uses -->
-  <div id="details" class="container content">
-    <div class="grid">
-      
-      <div class="column is-full aos-item" data-aos="fade-left">
-        <div aria-hidden="true" class="topline">
-          <div class="_divider" style="--primary: #f9f871; --lineWidth: 100%; --lineHeight: 2px; --notchWidth: 64px; --notchHeight: 8px; --collapseDelay: 1000ms;">
-            <div class="_line"></div>
-            <div class="_notch"></div>
-          </div>
-        </div>
-        
-            <h2 class="uses">Uses</h2>
-            <p>A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and code things.</p>
-        </div>
-    
-    
-    <div class="column is-8 aos-item has-spacing" data-aos="fade-up">
+  <body>
 
-      <h2 class="about text-left">Design</h2>
-        <p class="aos-item" data-aos="fade-bottom"><B>Figma</B> is my primary tool for UI design these days. Any print projects and custom graphics are started in with <b>pen and paper</b> and refined in Adobe <B>Photoshop</B> and <B>Illustrator</B>. When designing multi-page layouts, PDFs and documents I use <b>InDesign</b>. Any motion graphics are created in <B>After Effects</B>, so far I haven't found a non-Adobe product that's as good. If anyone has suggestions please <a href="contact.html">message me</a>. For video editing and sound design I use <B>Premiere Pro</B>, and <B>Ableton Live</B>.</p>
+    <!--Uses -->
+    <div id="details" class="container content">
+      <div class="grid">
 
-
-        <h2 class="about text-left">Development</h2>
-        <p class="aos-item" data-aos="fade-bottom">I use <B>Visual Studio Code</B> as my text editor, with the Tokyo Night theme and JetBrains Mono as my typeface of choice. Google <B>Chrome</B> is my main browser for both development and general use. <B>React</B> is my front end <B>Javascript</B> library of choice, the component-centric mental model is the first thing that truly made sense to me as a designer. For 3D effects and image shaders I use <B>Three.js</B>. It has a bit of a learning curve but you can do some really powerful stuff with it.</p>
-        <p class="aos-item" data-aos="fade-bottom">For CSS I've used a myriad pre-processors and css-in-js solutions like styled-components, but these days I'm using <B>vanilla CSS</B> with <B>TailwindCSS</B> to get upcoming CSS features today. For Javascript animations I use <B>Framer Motion</B>, it's a great way to add spring animations to React and three.js.
-        </p>
-      </div>
-
-      
-    
-      <div class="column aos-item has-spacing" data-aos="fade-left">
-        <h2 class="about text-left">Hardware</h2>
-        <div class="grid has-centered">
-                    <div class="role-flex is-full column">
-                      <ul class="hardware-list aos-item" data-aos="fade-down">
-                          <li class="aos-item" data-aos="fade-down">PC - AMD Custom Built</li>
-                          <li class="aos-item" data-aos="fade-down">Operating System - Windows 10</li>
-                          <li class="aos-item" data-aos="fade-down">Monitor - Dual 1080p 144hz MSI Optix G24C6</li>
-                          <li class="aos-item" data-aos="fade-down">Keyboard - Corsair Vengeance K65</li>
-                          <li class="aos-item" data-aos="fade-down">Mouse - Logitech G403</li>
-                          <li class="aos-item" data-aos="fade-down">Laptop - Macbook Pro 13″</li>
-                          <li class="aos-item" data-aos="fade-down">Headphones - Sony MDR-XB500/Panasonic RP-HJE120K</li>
-                          
-                      </ul>
-                    </div>
-
-                                    
-
-        </div>
         <div class="column is-full aos-item" data-aos="fade-left">
+          <div aria-hidden="true" class="topline">
+            <div class="_divider"
+              style="--primary: #f9f871; --lineWidth: 100%; --lineHeight: 2px; --notchWidth: 64px; --notchHeight: 8px; --collapseDelay: 1000ms;">
+              <div class="_line"></div>
+              <div class="_notch"></div>
+            </div>
+          </div>
 
-        
-    </div>
+          <h2 class="uses">Uses</h2>
+          <p>A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and
+            code things.</p>
+
+        </div>
 
 
-    
-</div>
+        <div class="column is-6 aos-item has-spacing" data-aos="fade-up">
 
 
+          <h2 class="about text-left">Design</h2>
+          <p class="aos-item" data-aos="fade-bottom"><B>Figma</B> is my primary tool for UI design these days. Any print
+            projects and custom graphics are started in with <b>pen and paper</b> and refined in Adobe <B>Photoshop</B>
+            and <B>Illustrator</B>. When designing multi-page layouts, PDFs and documents I use <b>InDesign</b>.</p>
 
-<div id="aos-demo" class="aos-all">
-</div>
+          <p>Any motion graphics are created in <B>After Effects</B>, so far I haven't found a non-Adobe product that's
+            as
+            good. If anyone has suggestions please <b>message me</b>. For video editing and sound design I use
+            <B>Premiere Pro</B>, and <B>Ableton Live</B>.
+          </p>
 
-<script src="includes/aos.js"></script>
-<script src="includes/lightbox2.js"></script>
-<script>
-    AOS.init({
-        easing: 'ease-in-out-sine'
-    });
-</script>
-<script>
-    [].forEach.call(document.querySelectorAll('[lightbox]'), function(el) {
-        el.lightbox = new Lightbox(el);
-    });
-</script>
 
-<script>
-$(document).ready(function() {
-  $('[svg="animated"]').css({
-    opacity: 0,
-    transition: "opacity 400ms ease"
-  });
-
-  $(window).on("load resize scroll", function() {
-    $('[svg="animated"] path').each(function() {
-      var pathLength = this.getTotalLength();
-      $(this).attr({
-        "stroke-dasharray": pathLength,
-        "stroke-dashoffset": pathLength
-      });
-      var svgAnimated = $(this).closest('[svg="animated"]');
-      var svgAnimatedTop = svgAnimated.offset().top;
-      var svgAnimatedHeight = svgAnimated.outerHeight();
-      var windowHeight = $(window).height();
-      var windowScrollTop = $(window).scrollTop();
-      var animationDuration = svgAnimated.attr('svg-animation-time') || 5000;
-
-      if (windowScrollTop + windowHeight > svgAnimatedTop && windowScrollTop < svgAnimatedTop + svgAnimatedHeight) {
-        $(svgAnimated).css("opacity", 1);
-        $(this).css({
-          transition: "stroke-dashoffset " + animationDuration + "ms ease-out",
-          "stroke-dashoffgset": 0
-        });
-      }
-    });
-  });
-});
-</script>
+          <h2 class="about text-left">Development</h2>
+          <p class="aos-item" data-aos="fade-bottom">I use <B>Visual Studio Code</B> as my text editor, with the Tokyo
+            Night theme and JetBrains Mono as my typeface of choice. Google <B>Chrome</B> is my main browser for both
+            development and general use.
+          </p>
+          <p><B>React</B> is my front end <B>Javascript</B> library of choice, the
+            component-centric mental model is the first thing that truly made sense to me as a designer. For 3D effects
+            and image shaders I use <B>Three.js</B>. It has a bit of a learning curve but you can do some really
+            powerful stuff with it.</p>
+          <p class="aos-item" data-aos="fade-bottom">For CSS I've used a myriad pre-processors and css-in-js solutions
+            like styled-components, but these days I'm using <B>vanilla CSS</B> with <B>TailwindCSS</B> to get upcoming
+            CSS features today. For Javascript animations I use <B>Framer Motion</B>, it's a great way to add spring
+            animations to React and three.js.
+          </p>
+        </div>
 
 
 
-<script>
-// Set a timeout to fade out and hide the SVG Loader after animation
-setTimeout(function() {
-  const div = document.getElementById("logo");
-  div.style.opacity = "0"; // Fade out the DIV
-  
-  // After fading out, set display to 'none'
-  setTimeout(function() {
-    div.style.display = "none"; 
-  }, 900); // Wait for the opacity transition to complete
-}, 100); // Start fade-out 900 milliseconds after the page loads
+        <div class="column aos-item has-spacing" data-aos="fade-left">
+          <h2 class="about text-left">Hardware</h2>
+          <div class="grid has-centered">
+            <div class="role-flex is-full column">
+              <ul class="hardware-list aos-item" data-aos="fade-down">
+                <li class="aos-item" data-aos="fade-down">PC - AMD Custom Built</li>
+                <li class="aos-item" data-aos="fade-down">Operating System - Windows 10</li>
+                <li class="aos-item" data-aos="fade-down">Monitor - Dual 1080p 144hz MSI Optix G24C6</li>
+                <li class="aos-item" data-aos="fade-down">Keyboard - Corsair Vengeance K65</li>
+                <li class="aos-item" data-aos="fade-down">Mouse - Logitech G403</li>
+                <li class="aos-item" data-aos="fade-down">Laptop - Macbook Pro 13″</li>
+                <li class="aos-item" data-aos="fade-down">Headphones - Sony MDR-XB500/Panasonic RP-HJE120K</li>
+
+              </ul>
+            </div>
 
 
-</script>
+
+          </div>
+          <div class="column is-full aos-item" data-aos="fade-left">
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <div id="aos-demo" class="aos-all">
+        </div>
+
+        <script src="includes/aos.js"></script>
+        <script src="includes/lightbox2.js"></script>
+        <script>
+          AOS.init({
+            easing: 'ease-in-out-sine'
+          });
+        </script>
+        <script>
+          [].forEach.call(document.querySelectorAll('[lightbox]'), function (el) {
+            el.lightbox = new Lightbox(el);
+          });
+        </script>
+
+        <script>
+          $(document).ready(function () {
+            $('[svg="animated"]').css({
+              opacity: 0,
+              transition: "opacity 400ms ease"
+            });
+
+            $(window).on("load resize scroll", function () {
+              $('[svg="animated"] path').each(function () {
+                var pathLength = this.getTotalLength();
+                $(this).attr({
+                  "stroke-dasharray": pathLength,
+                  "stroke-dashoffset": pathLength
+                });
+                var svgAnimated = $(this).closest('[svg="animated"]');
+                var svgAnimatedTop = svgAnimated.offset().top;
+                var svgAnimatedHeight = svgAnimated.outerHeight();
+                var windowHeight = $(window).height();
+                var windowScrollTop = $(window).scrollTop();
+                var animationDuration = svgAnimated.attr('svg-animation-time') || 5000;
+
+                if (windowScrollTop + windowHeight > svgAnimatedTop && windowScrollTop < svgAnimatedTop + svgAnimatedHeight) {
+                  $(svgAnimated).css("opacity", 1);
+                  $(this).css({
+                    transition: "stroke-dashoffset " + animationDuration + "ms ease-out",
+                    "stroke-dashoffgset": 0
+                  });
+                }
+              });
+            });
+          });
+        </script>
+
+
+
+        <script>
+          // Set a timeout to fade out and hide the SVG Loader after animation
+          setTimeout(function () {
+            const div = document.getElementById("logo");
+            div.style.opacity = "0"; // Fade out the DIV
+
+            // After fading out, set display to 'none'
+            setTimeout(function () {
+              div.style.display = "none";
+            }, 900); // Wait for the opacity transition to complete
+          }, 100); // Start fade-out 900 milliseconds after the page loads
+
+
+        </script>
 
 
 
 
-</body>
+  </body>
+
 </html>
