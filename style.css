@@ -641,7 +641,7 @@ svg.loader:hover path:hover {
   background: #111;
   position: relative;
   overflow: hidden;
-  background-image: url(uploads/bg-paint.jpg);
+  background-image: url(uploads/hadouken.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -689,8 +689,8 @@ hr {
 .splash-about {
   height: 100%;
   width: 100%;
-  background: url("uploads/hadouken.jpg") no-repeat;
-  background-position: left;
+  background: url("uploads/bg-paint.jpg") no-repeat;
+  background-position: bottom;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -896,6 +896,39 @@ hr.afterfoot {
   bottom: 35%;
 
 }
+
+.cta-btn {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: flex;
+  padding: 0px 0px;
+  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  background: none;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin: 50px auto;
+}
+
+.cta-btn:hover {
+  color: #fff;
+  background: #2f17ff;
+  transform: scale(1.1);
+  /* Increase size to 110% on hover */
+  text-decoration: none;
+  border: 1px solid #2f17ff;
+}
+
+
 
 .clear-btn {
   color: #fff;
@@ -1455,6 +1488,11 @@ a.download {
   height: 50vh;
 }
 
+
+.mb-5 {
+  margin-bottom: 5vh;
+}
+
 .mb-10 {
   margin-bottom: 10vh;
 }
@@ -1730,7 +1768,7 @@ h4.worktogether {
   font-size: 4em;
   letter-spacing: -0.2rem;
   height: auto;
-  text-align: right;
+  text-align: center;
   line-height: 8vh;
   color: #fff;
   line-height: 0.7em;
@@ -1758,7 +1796,7 @@ section.bg3>div {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(uploads/bg-paint.jpg);
+  background-image: url(uploads/bg-paint2.jpg);
   background-size: cover;
   background-color: #111111;
   background-position: top;
@@ -1879,7 +1917,7 @@ h4.year {
 }
 
 h4.jobtitle {
-  color: #ece352;
+  color: #f9f871;
   font-family: 'Playfair', sans-serif;
   margin-bottom: 0.1em;
   font-size: 20px;
@@ -2246,7 +2284,7 @@ h2.about-r {
   line-height: 1.5rem;
   color: #fff;
   font-weight: 250;
-  text-align: right;
+  text-align: center;
 }
 
 .text-c {
