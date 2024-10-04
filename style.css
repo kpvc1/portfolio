@@ -337,18 +337,26 @@ textarea::placeholder {
   color: #fff;
   font-size: 12px;
   text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 3vh;
+  padding-top: 15vh;
+  padding-bottom: 1vh;
   height: 100%;
 }
 
+._wt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 a.humans {
-  color: #f9f871
+  color: #f9f871;
 }
 
 a {
-  color: #f9f871
+  color: #f9f871;
+  text-decoration: underline;
 }
+
 
 .nav {
 
@@ -427,6 +435,7 @@ a.navLink {
   padding: 0 3px 6px;
   width: 100%;
   text-align: center;
+  text-decoration: none;
 
 }
 
@@ -531,8 +540,11 @@ a.navLink:hover {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  margin-top: -20vh;
-  height: 15vh;
+  height: 10vh;
+  pointer-events: auto;
+  position: absolute;
+  bottom: 0px;
+
 }
 
 svg.svg-scroll-hover path {
@@ -632,7 +644,7 @@ svg.loader:hover path:hover {
   overflow: hidden;
   background-image: url(uploads/bg-lines-large.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   z-index: 4;
 
 }
@@ -643,7 +655,7 @@ svg.loader:hover path:hover {
   overflow: hidden;
   background-image: url(uploads/hadouken.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top 0px left 0px;
   background-attachment: scroll;
   z-index: 4;
 
@@ -666,7 +678,6 @@ hr {
 }
 
 .splash-intro {
-  min-height: 100vh;
   background: none;
   background-size: cover;
   background-repeat: no-repeat;
@@ -675,6 +686,13 @@ hr {
   justify-content: center;
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+  ;
+
+}
+
+._750 {
+  max-width: 100%;
 }
 
 
@@ -700,25 +718,6 @@ hr {
 
 }
 
-
-.mmdlsplash {
-  height: 25vw;
-  background: url("uploads/mmdl-temple.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.splash-img {
-  margin-top: 25vh;
-}
-
-.splash-content {
-  margin-top: 15vh;
-}
 
 .header-dark {
   color: #333;
@@ -897,10 +896,44 @@ hr.afterfoot {
 
 }
 
+.cta-btn-s {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: flex;
+  padding: 9px;
+  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  background: none;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin: 50px auto;
+  text-decoration: none;
+}
+
+.cta-btn-s:hover {
+  color: #fff;
+  background: #2f17ff;
+  transform: scale(1.1);
+  /* Increase size to 110% on hover */
+  text-decoration: none;
+  border: 1px solid #2f17ff;
+}
+
 .cta-btn {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
+  line-height: 3rem;
   letter-spacing: 1px;
   font-weight: 400;
   display: flex;
@@ -917,6 +950,7 @@ hr.afterfoot {
   align-items: center;
   width: 250px;
   margin: 50px auto;
+  text-decoration: none;
 }
 
 .cta-btn:hover {
@@ -937,13 +971,14 @@ hr.afterfoot {
   letter-spacing: 1px;
   font-weight: 400;
   display: flex;
-  padding: 10px 40px;
+  padding: 15px 50px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   transition: all 0.3s ease;
   max-width: 100%;
   background: none;
   border: 1px solid #fff;
+  text-decoration: none;
 }
 
 .clear-btn:hover {
@@ -977,6 +1012,8 @@ hr.afterfoot {
   background: linear-gradient(0deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
   max-width: 300px;
   /*  text-shadow:1px 1px 3px #15176a; */
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .btn-container {
@@ -1004,6 +1041,8 @@ hr.afterfoot {
   max-width: 300px;
   width: 100%;
   /*  text-shadow:1px 1px 3px #15176a; */
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 a.blue-btn:hover {
@@ -1045,9 +1084,6 @@ div.leaveamessage a {
   align-items: center;
   justify-content: center;
   padding: 12px 25px;
-  -webkit-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   background: none;
   border: 1px #bbb solid;
@@ -1253,6 +1289,7 @@ h2.signature {
   /* -webkit-background-clip: text; */
   -webkit-text-fill-color: rgba(253, 255, 120, 0.781);
   z-index: -1;
+
 }
 
 
@@ -1402,6 +1439,7 @@ a.download {
   align-items: center;
   border: 1px solid #bebebe;
   transition: all 0.5s ease;
+  text-decoration: none;
 
 }
 
@@ -1775,6 +1813,10 @@ h4.worktogether {
   margin-bottom: 30px;
 }
 
+.footer-ct {
+  text-align: center;
+}
+
 h2.uses {
   color: #fafafa;
   font-family: 'Montserrat', sans-serif;
@@ -1818,7 +1860,7 @@ h4.process {
   align-content: stretch;
   justify-content: flex-end;
   margin-left: 100px;
-  margin-top: -60px;
+  margin-top: 70px;
 }
 
 .process-container {
@@ -1864,6 +1906,7 @@ h2.success {
   font-weight: 500;
   font-style: oblique;
   letter-spacing: -1px;
+  margin-top: 10vh;
 }
 
 
@@ -2052,8 +2095,9 @@ h5.subhead {
 .project-bg>img {
   min-height: 100vh;
   height: 100%;
-  width: auto;
+  width: 100%;
   object-fit: cover;
+  object-position: bottom 0px right 0px;
 
 }
 
@@ -2277,6 +2321,8 @@ h2.about-r {
   text-align: right;
 }
 
+
+
 .text {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -2300,11 +2346,17 @@ h2.about-r {
 h2.hello {
   color: #fff;
   font-family: 'Monita Signature', sans-serif;
-  font-size: 3.5em;
+  font-size: 5vw;
   font-weight: 700;
   text-shadow: 3px 3px 3px #000;
   text-align: left;
 }
+
+.hello-column {
+  column-count: 2;
+}
+
+
 
 h2.experience {
   color: #fafafa;
@@ -2780,7 +2832,13 @@ h3 {
   shape-outside: circle();
 }
 
+.pe {
+  pointer-events: initial !important;
+}
 
+.pe-0 {
+  pointer-events: none !important;
+}
 
 .hidden {
   overflow: hidden;
@@ -2791,7 +2849,7 @@ h3 {
 /* video background */
 #background-video {
   height: 100vh;
-  width: auto;
+  width: 100vw;
   object-fit: cover;
   position: fixed;
   top: 0px;
@@ -2924,6 +2982,7 @@ section::after {
   text-align: center;
   max-width: 58vw;
   border: none;
+  pointer-events: initial !important;
 }
 
 .custom-paragraph,
@@ -2934,11 +2993,11 @@ cite {
 }
 
 .custom-paragraph {
-  font-family: Georgia, serif;
-  font-size: 3rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 3rem;
+  font-family: Montserrat, serif;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-style: none;
+  font-weight: 600;
   color: #fafafa;
   text-align: center;
 
@@ -2957,41 +3016,49 @@ cite {
 }
 
 
-/*Border
-blockquote p {
+/*Blockquote-s*/
+.custom-blockquote-s {
+  display: block;
+  margin: 50px auto 0px;
+  text-align: center;
+  max-width: 40vw;
+  border: none;
+  pointer-events: initial !important;
+}
 
-  position: relative;
-  margin: 0;
-  border: 1px solid #555;
-  border-radius: 20px;
-  padding: 40px 25px 60px;
+.custom-paragraph-s,
+cite {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-paragraph-s {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.3rem;
+  font-style: none;
+  font-weight: 100;
+  line-height: 1.8rem;
+  letter-spacing: 3px;
+  color: #fff;
+  text-align: center;
+
+}
+
+.custom-span-s {
+  will-change: opacity, filter;
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 1.2s ease;
+}
+
+.custom-span-s.animate {
+  opacity: 1;
+  filter: blur(0);
 }
 
 
-blockquote p:after {
-  content: "";
-  position: absolute;
-  border: 1px solid #555;
-  border-radius: 0 30px 0 0;
-  width: 60px;
-  height: 60px;
-  bottom: -60px;
-  left: 50px;
-  border-bottom: none;
-  border-left: none;
-  z-index: 4;
-}
 
-blockquote p:before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  border: #111 2px solid;
-  bottom: -2px;
-  left: 50px;
-  z-index: 2;
-}
-*/
 
 /*RESPONSIVE*/
 
@@ -3052,7 +3119,7 @@ blockquote p:before {
   h4.worktogether {
     font-family: 'Playfair', sans-serif;
     font-size: 4em;
-    text-align: right;
+    text-align: center;
   }
 
   h2.about {
@@ -3082,15 +3149,32 @@ blockquote p:before {
 
 @media only screen and (max-width: 1024px) {
 
+
   .splash-intro {
     min-height: 100vh;
   }
 
+  .splash-about {
+
+    margin-top: 10vh;
+  }
+
+  .typehead2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 1rem;
+    color: #f78bf0;
+    text-align: left;
+    text-shadow: 6px 5px 6px #111;
+    text-align: center;
+    margin-top: 2vh;
+  }
 
   h2.signature {
     font-family: 'Montserrat', sans-serif;
     font-weight: 330;
-    font-size: 2vw;
+    font-size: 1.2vw;
     letter-spacing: 0.5em;
     margin: 0px;
     padding: 0;
@@ -3101,11 +3185,12 @@ blockquote p:before {
     z-index: 0;
     text-transform: uppercase;
     text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    pointer-events: initial !important
   }
 
   .typehead {
     font-family: 'Monita Signature', sans-serif;
-    font-size: 11vw;
+    font-size: 9vw;
     text-align: left;
     line-height: 0.8em;
     font-weight: 800;
@@ -3121,6 +3206,10 @@ blockquote p:before {
     /* -webkit-background-clip: text; */
     -webkit-text-fill-color: rgba(253, 255, 120, 0.781);
     z-index: -1;
+  }
+
+  .typewriter {
+    font-size: 1.8rem;
   }
 
 
@@ -3145,6 +3234,51 @@ blockquote p:before {
 
   }
 
+  /*Blockquote-s*/
+  .custom-blockquote-s {
+    display: block;
+    margin: 30px auto 0px;
+    text-align: center;
+    max-width: 40vw;
+    border: none;
+    pointer-events: initial !important;
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    font-style: none;
+    font-weight: 100;
+    line-height: 1.5rem;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .cta-btn-s {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    display: flex;
+    padding: 3px;
+    box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    background: none;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 30px auto;
+    text-decoration: none;
+  }
+
 
 
   .cta h1.gr1 {
@@ -3159,6 +3293,10 @@ blockquote p:before {
   h4.worktogether {
     font-family: 'Playfair', sans-serif;
     font-size: 4em;
+    text-align: right;
+  }
+
+  .footer-ct {
     text-align: right;
   }
 
@@ -3182,20 +3320,23 @@ blockquote p:before {
   h2.hello {
     color: #fff;
     font-family: 'Monita Signature', sans-serif;
-    font-size: 2.5em;
+    font-size: 6vw;
     font-weight: 700;
     text-align: left;
-    margin-top: -50px;
+    margin-top: -10px;
     text-shadow: 3px 3px 3px #000;
   }
+
+  .hello-column {
+    column-count: 1;
+  }
+
 
   h3 {
     font-size: 28px;
   }
 
-  .typewriter {
-    font-size: 30px;
-  }
+
 
   h2.about {
     color: #fafafa;
@@ -3253,8 +3394,10 @@ blockquote p:before {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    margin-top: -20vh;
-    height: -10vh;
+    height: 15vh;
+    pointer-events: auto;
+    position: absolute;
+    bottom: 0px;
   }
 
   .leaveamessage {
@@ -3312,6 +3455,15 @@ blockquote p:before {
     line-height: 2.3rem;
     color: #fafafa;
     text-align: center;
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 2rem;
+    color: #fafafa;
+    text-align: center;
 
   }
 
@@ -3330,6 +3482,7 @@ blockquote p:before {
     text-transform: uppercase;
     text-shadow: 3px 3px 3px rgb(0, 0, 0);
   }
+
 
   .typehead {
     font-family: 'Monita Signature', sans-serif;
@@ -3351,6 +3504,40 @@ blockquote p:before {
     z-index: -1;
   }
 
+  .hs-c {
+    border-radius: 50%;
+    filter: brightness(0.95);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    margin: 0 auto;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 70px;
+  }
+
+
+  h2.hello {
+    color: #fff;
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 10vw;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0px;
+    text-shadow: 3px 3px 3px #000;
+    white-space: nowrap;
+    position: absolute;
+    top: 340px;
+
+  }
+
+
   .cta h1.gr1 {
     color: #fafafa;
     font: 200 4.5vh / 5vh "Montserrat", sans-serif;
@@ -3366,6 +3553,10 @@ blockquote p:before {
     margin-bottom: 10px !important;
     color: #fff;
     ;
+  }
+
+  .footer-ct {
+    text-align: left;
   }
 
   h4.process {
@@ -3582,6 +3773,11 @@ blockquote p:before {
     height: 100%;
   }
 
+  .splash-about {
+
+    margin-top: 10vh;
+  }
+
 
 }
 
@@ -3604,8 +3800,6 @@ blockquote p:before {
 
 
 
-
-
   .intro {
     margin-left: 0px !important;
   }
@@ -3617,6 +3811,19 @@ blockquote p:before {
     letter-spacing: 0.01em;
     color: #dadada;
     font-weight: 300;
+  }
+
+  h2.hello {
+    color: #fff;
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 10vw;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0px;
+    text-shadow: 3px 3px 3px #000;
+    white-space: nowrap;
+    position: absolute;
+    top: 32%;
   }
 
 
@@ -3708,7 +3915,47 @@ blockquote p:before {
 
 }
 
-@media only screen and (max-height: 500px) {}
+@media only screen and (max-width: 600px) {
+  h2.hello {
+
+    top: 28%;
+
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h2.hello {
+
+    top: 25%;
+
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h2.hello {
+    color: #fff;
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 10vw;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0px;
+    text-shadow: 3px 3px 3px #000;
+    white-space: nowrap;
+    position: absolute;
+    top: 25%;
+
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    line-height: 2rem;
+    color: #fafafa;
+    text-align: center;
+    padding-bottom: 0rem;
+  }
+}
 
 @media only screen and (max-width: 480px) {
 
@@ -3720,48 +3967,60 @@ blockquote p:before {
     text-shadow: 6px 5px 6px #111;
   }
 
-
-  .plus {
-    font-size: 4vw;
-    padding: 0px;
-    text-shadow: 6px 5px 6px #111;
-  }
-
-  .typehead2 {
-    margin-top: 0px;
-
-  }
-}
-
-@media only screen and (max-height:499px) {
-
-  .scroll-down {
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -20vh;
-    height: -25vh;
-  }
-
-  .leaveamessage {
-    position: relative;
-    top: 0;
-    right: 0;
+  h2.hello {
     color: #fff;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    z-index: 3;
-    border-radius: 0px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    display: flex;
-    scale: 1;
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 10vw;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0px;
+    text-shadow: 3px 3px 3px #000;
+    white-space: nowrap;
+    position: absolute;
+    top: 20%;
+
+
+    .plus {
+      font-size: 4vw;
+      padding: 0px;
+      text-shadow: 6px 5px 6px #111;
+    }
+
+    .typehead2 {
+      margin-top: 0px;
+
+    }
   }
 
+  @media only screen and (max-height:499px) {
 
-}
+    .scroll-down {
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -20vh;
+      height: -25vh;
+    }
+
+    .leaveamessage {
+      position: relative;
+      top: 0;
+      right: 0;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      z-index: 3;
+      border-radius: 0px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: 400;
+      display: flex;
+      scale: 1;
+    }
+
+
+  }
