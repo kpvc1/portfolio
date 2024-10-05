@@ -3462,6 +3462,16 @@ cite {
 
 @media only screen and (max-width: 768px) {
 
+  .project-container-bg {
+    background-image: var(--bg-image);
+    border-radius: 6px;
+    padding: 4vw !important;
+    width: 98% !important;
+    margin: 1% !important;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
   .mb-10 {
     margin-bottom: 0vh;
   }
