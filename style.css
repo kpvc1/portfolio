@@ -87,6 +87,14 @@ header {
   justify-content: center;
 }
 
+h2 {
+  color: #fff;
+  font-family: 'Montserrat', serif;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 200;
+}
+
 
 p {
   font-family: "Montserrat", sans-serif;
@@ -101,6 +109,19 @@ p {
 b {
   font-weight: 600;
 }
+
+
+.project-container-bg {
+  background-image: var(--bg-image);
+  border-radius: 6px;
+  padding: 2vw !important;
+  width: 48% !important;
+  margin: 1% !important;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+
+}
+
 
 .project-container p {
   font-family: "Montserrat", sans-serif;
@@ -933,11 +954,11 @@ hr.afterfoot {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   letter-spacing: 1px;
   font-weight: 400;
   display: flex;
-  padding: 0px 0px;
+  padding: 3px 0px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   transition: all 0.3s ease;
@@ -950,6 +971,7 @@ hr.afterfoot {
   align-items: center;
   width: 250px;
   margin: 50px auto;
+  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -1404,7 +1426,7 @@ a.download {
 
 .btn-visit {
   display: flex;
-  margin: 30px auto 15px auto;
+  margin: 10px auto 15px auto;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
@@ -1431,7 +1453,7 @@ a.download {
   color: #fff;
   font: 300 normal 0.8rem 'Montserrat', sans-serif;
   display: flex;
-  padding: 8px 24px;
+  padding: 9px 42px;
   margin: 0 12px;
   border-radius: 20px;
   transition: 0.3s ease-in-out !important;
@@ -1860,7 +1882,7 @@ h4.process {
   align-content: stretch;
   justify-content: flex-end;
   margin-left: 100px;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 
 .process-container {
@@ -1906,7 +1928,8 @@ h2.success {
   font-weight: 500;
   font-style: oblique;
   letter-spacing: -1px;
-  margin-top: 10vh;
+  margin-top: 0vh;
+  text-align: left;
 }
 
 
@@ -1968,12 +1991,14 @@ h4.jobtitle {
 
 h3.recentprojects {
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  line-height: 34px;
-  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 550;
+  font-style: none;
   color: #FFF;
   text-align: left;
-  margin-bottom: 3px;
+  margin-bottom: 15px;
+  letter-spacing: 0.05rem;
 }
 
 h5.subhead {
@@ -2084,11 +2109,12 @@ h5.subhead {
   position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(50%);
+  filter: brightness(100%);
   overflow: hidden;
   width: 100%;
   min-height: 100vh;
   height: 100%;
+  
 
 }
 
@@ -2097,7 +2123,8 @@ h5.subhead {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: bottom 0px right 0px;
+  object-position: center;
+  
 
 }
 
@@ -2188,7 +2215,7 @@ h5.rolehead {
 h5.rolehead::before {
   content: "";
   display: block;
-  width: 40%;
+  width: 35%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2199,7 +2226,7 @@ h5.rolehead::before {
 h5.rolehead::after {
   content: "";
   display: block;
-  width: 40%;
+  width: 35%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2229,7 +2256,7 @@ ul.role-list li {
   font-weight: 200;
   letter-spacing: 0.15em;
   text-align: center;
-  max-width: 70%;
+  max-width: 90%;
   margin: 0 auto;
 
 }
@@ -2993,11 +3020,11 @@ cite {
 }
 
 .custom-paragraph {
-  font-family: Montserrat, serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 4rem;
   line-height: 4rem;
   font-style: none;
-  font-weight: 600;
+  font-weight: 300;
   color: #fafafa;
   text-align: center;
 
@@ -3035,10 +3062,9 @@ cite {
 
 .custom-paragraph-s {
   font-family: 'Titillium Web', sans-serif;
-  font-size: 1.3rem;
-  font-style: none;
+  font-size: 1.1rem;
   font-weight: 100;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   letter-spacing: 3px;
   color: #fff;
   text-align: center;
@@ -3090,6 +3116,16 @@ cite {
     color: #fafafa;
     text-align: center;
 
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 1.4rem;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: center;
   }
 
 
@@ -3246,10 +3282,10 @@ cite {
 
   .custom-paragraph-s {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-style: none;
     font-weight: 100;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     letter-spacing: 3px;
     color: #fff;
     text-align: center;
@@ -3277,6 +3313,7 @@ cite {
     width: 250px;
     margin: 30px auto;
     text-decoration: none;
+    white-space: nowrap;
   }
 
 
@@ -3457,11 +3494,20 @@ cite {
     text-align: center;
   }
 
+  .custom-blockquote-s {
+    display: block;
+    margin: 30px auto 0px;
+    text-align: center;
+    max-width: 80vw;
+    border: none;
+    pointer-events: initial !important;
+  }
+
   .custom-paragraph-s {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     font-weight: 200;
-    line-height: 2rem;
+    line-height: 1.3rem;
     color: #fafafa;
     text-align: center;
 
@@ -3522,6 +3568,16 @@ cite {
     padding-bottom: 70px;
   }
 
+  h3.recentprojects {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 650;
+    color: #FFF;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
 
   h2.hello {
     color: #fff;
@@ -3572,6 +3628,20 @@ cite {
     justify-content: flex-end;
   }
 
+  h2.success {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+    font-style: oblique;
+    letter-spacing: -1px;
+    margin-top: 0vh;
+  }
+
+  .mb-5 {
+    margin-bottom: 0vh;
+  }
+
 
 
   h2.about-r {
@@ -3605,21 +3675,20 @@ cite {
     flex-direction: column;
     width: 100%;
     height: auto;
-    /* Background color for dropdown */
     position: fixed;
-    top: 100px;
-    /* Adjust as needed */
+    top: 0px;
     left: 0;
     background: #88888888;
     border-radius: 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.5px);
     -webkit-backdrop-filter: blur(6.5px);
+    z-index: -1;
   }
 
   a.navLink {
     color: #ddd;
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     float: left;
@@ -3921,6 +3990,31 @@ cite {
     top: 28%;
 
   }
+
+  h4.process {
+    font-family: 'Playfair', sans-serif;
+    font-size: 15vw;
+    letter-spacing: -0.2rem;
+    color: #fff7d6;
+    text-align: left;
+    white-space: nowrap;
+    transform: rotate(0deg) !important;
+    display: flex;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+
+  h2.success {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    font-style: oblique;
+    letter-spacing: -1px;
+    margin-top: 0vh;
+  }
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -3948,9 +4042,9 @@ cite {
 
   .custom-paragraph-s {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 200;
-    line-height: 2rem;
+    line-height: 1.1rem;
     color: #fafafa;
     text-align: center;
     padding-bottom: 0rem;
