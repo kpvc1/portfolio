@@ -87,14 +87,6 @@ header {
   justify-content: center;
 }
 
-h2 {
-  color: #fff;
-  font-family: 'Montserrat', serif;
-  font-size: 4rem;
-  text-align: center;
-  font-weight: 200;
-}
-
 
 p {
   font-family: "Montserrat", sans-serif;
@@ -109,19 +101,6 @@ p {
 b {
   font-weight: 600;
 }
-
-
-.project-container-bg {
-  background-image: var(--bg-image);
-  border-radius: 6px;
-  padding: 2vw !important;
-  width: 48% !important;
-  margin: 1% !important;
-  height: 100%;
-  transition: all 0.5s ease-in-out;
-
-}
-
 
 .project-container p {
   font-family: "Montserrat", sans-serif;
@@ -562,7 +541,6 @@ a.navLink:hover {
   flex-direction: column;
   align-items: center;
   height: 10vh;
-  pointer-events: auto;
   position: absolute;
   bottom: 0px;
 
@@ -897,6 +875,7 @@ hr.afterfoot {
   background: radial-gradient(ellipse farthest-corner at bottom center, #F8FFE8 0%, #F5F4B6 40%, #F8FFA7 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow:none !important;
 }
 
 .gtext2 {
@@ -904,6 +883,7 @@ hr.afterfoot {
   background: radial-gradient(circle farthest-side at bottom center, #F8FFE8 0%, #F5F4B6 40%, #F8FFA7 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow:none !important;
 }
 
 .stay {
@@ -944,7 +924,7 @@ hr.afterfoot {
 .cta-btn-s:hover {
   color: #fff;
   background: #2f17ff;
-  transform: scale(1.1);
+  transform: scale(1.04);
   /* Increase size to 110% on hover */
   text-decoration: none;
   border: 1px solid #2f17ff;
@@ -1006,7 +986,7 @@ hr.afterfoot {
 .clear-btn:hover {
   color: #fff;
   background: #2f17ff;
-  transform: scale(1.1);
+  transform: scale(1.04);
   /* Increase size to 110% on hover */
   text-decoration: none;
   border: 1px solid #2f17ff;
@@ -1069,7 +1049,7 @@ hr.afterfoot {
 
 a.blue-btn:hover {
   color: #fff;
-  transform: scale(1.2);
+  transform: scale(1.1);
   /* Increase size to 110% on hover */
   text-decoration: none;
 }
@@ -1316,15 +1296,9 @@ h2.signature {
 
 
 .typehead2 {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 3em;
-  font-weight: 800;
   letter-spacing: 1rem;
-  color: #f78bf0;
-  text-align: left;
-  text-shadow: 6px 5px 6px #111;
   text-align: center;
-  margin-top: 5vh;
+  line-height: 6rem;
 
 }
 
@@ -1332,7 +1306,7 @@ h2.signature {
 .typewriter {
   --caret: currentcolor;
   font-family: 'Titillium Web', 'Honk', sans-serif;
-  font-size: 2.4vw;
+  font-size: 2.5vw;
   font-weight: 200;
   font-style: normal;
   text-align: center;
@@ -1426,7 +1400,7 @@ a.download {
 
 .btn-visit {
   display: flex;
-  margin: 10px auto 15px auto;
+  margin: 30px auto 15px auto;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
@@ -1453,7 +1427,7 @@ a.download {
   color: #fff;
   font: 300 normal 0.8rem 'Montserrat', sans-serif;
   display: flex;
-  padding: 9px 42px;
+  padding: 9px 45px;
   margin: 0 12px;
   border-radius: 20px;
   transition: 0.3s ease-in-out !important;
@@ -1462,6 +1436,7 @@ a.download {
   border: 1px solid #bebebe;
   transition: all 0.5s ease;
   text-decoration: none;
+  justify-content: center;
 
 }
 
@@ -1564,6 +1539,12 @@ a.download {
 .mb-30 {
   margin-bottom: 30vh;
 }
+
+
+.mt-5 {
+  margin-top: 5vh;
+}
+
 
 .mt-10 {
   margin-top: 10vh;
@@ -1682,9 +1663,9 @@ img.shrink:hover {
 }
 
 .grow:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
   transition: .3s ease-in-out;
 }
 
@@ -1828,7 +1809,7 @@ h4.worktogether {
   font-size: 4em;
   letter-spacing: -0.2rem;
   height: auto;
-  text-align: center;
+  text-align: right;
   line-height: 8vh;
   color: #fff;
   line-height: 0.7em;
@@ -1836,7 +1817,7 @@ h4.worktogether {
 }
 
 .footer-ct {
-  text-align: center;
+  text-align: right;
 }
 
 h2.uses {
@@ -1882,7 +1863,7 @@ h4.process {
   align-content: stretch;
   justify-content: flex-end;
   margin-left: 100px;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 .process-container {
@@ -1928,8 +1909,7 @@ h2.success {
   font-weight: 500;
   font-style: oblique;
   letter-spacing: -1px;
-  margin-top: 0vh;
-  text-align: left;
+  margin-top: 10vh;
 }
 
 
@@ -1991,14 +1971,12 @@ h4.jobtitle {
 
 h3.recentprojects {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  line-height: 2rem;
-  font-weight: 550;
-  font-style: none;
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 700;
   color: #FFF;
   text-align: left;
-  margin-bottom: 15px;
-  letter-spacing: 0.05rem;
+  margin-bottom: 12px;
 }
 
 h5.subhead {
@@ -2109,12 +2087,11 @@ h5.subhead {
   position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(100%);
+  filter: brightness(80%);
   overflow: hidden;
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  
 
 }
 
@@ -2123,8 +2100,7 @@ h5.subhead {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center;
-  
+  object-position: center bottom;
 
 }
 
@@ -2215,7 +2191,7 @@ h5.rolehead {
 h5.rolehead::before {
   content: "";
   display: block;
-  width: 35%;
+  width: 40%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2226,7 +2202,7 @@ h5.rolehead::before {
 h5.rolehead::after {
   content: "";
   display: block;
-  width: 35%;
+  width: 40%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2256,7 +2232,7 @@ ul.role-list li {
   font-weight: 200;
   letter-spacing: 0.15em;
   text-align: center;
-  max-width: 90%;
+  max-width: 70%;
   margin: 0 auto;
 
 }
@@ -2373,10 +2349,11 @@ h2.about-r {
 h2.hello {
   color: #fff;
   font-family: 'Monita Signature', sans-serif;
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: 700;
   text-shadow: 3px 3px 3px #000;
   text-align: left;
+  white-space: nowrap;
 }
 
 .hello-column {
@@ -3007,9 +2984,11 @@ section::after {
   display: block;
   margin: 0 auto;
   text-align: center;
-  max-width: 58vw;
+  max-width: 75vw;
   border: none;
-  pointer-events: initial !important;
+  padding:20px;
+
+  
 }
 
 .custom-paragraph,
@@ -3027,7 +3006,8 @@ cite {
   font-weight: 300;
   color: #fafafa;
   text-align: center;
-
+  text-shadow: 3px 3px 3px #111;
+  letter-spacing: 1px;
 }
 
 .custom-span {
@@ -3050,7 +3030,7 @@ cite {
   text-align: center;
   max-width: 40vw;
   border: none;
-  pointer-events: initial !important;
+  
 }
 
 .custom-paragraph-s,
@@ -3155,7 +3135,17 @@ cite {
   h4.worktogether {
     font-family: 'Playfair', sans-serif;
     font-size: 4em;
-    text-align: center;
+    letter-spacing: -0.2rem;
+    height: auto;
+    text-align: right;
+    line-height: 8vh;
+    color: #fff;
+    line-height: 0.7em;
+    margin-bottom: 30px;
+  }
+  
+  .footer-ct {
+    text-align: right;
   }
 
   h2.about {
@@ -3221,7 +3211,7 @@ cite {
     z-index: 0;
     text-transform: uppercase;
     text-shadow: 3px 3px 3px rgb(0, 0, 0);
-    pointer-events: initial !important
+    
   }
 
   .typehead {
@@ -3277,7 +3267,7 @@ cite {
     text-align: center;
     max-width: 40vw;
     border: none;
-    pointer-events: initial !important;
+    
   }
 
   .custom-paragraph-s {
@@ -3432,7 +3422,7 @@ cite {
     flex-direction: column;
     align-items: center;
     height: 15vh;
-    pointer-events: auto;
+    
     position: absolute;
     bottom: 0px;
   }
@@ -3461,16 +3451,6 @@ cite {
 
 
 @media only screen and (max-width: 768px) {
-
-  .project-container-bg {
-    background-image: var(--bg-image);
-    border-radius: 6px;
-    padding: 4vw !important;
-    width: 98% !important;
-    margin: 1% !important;
-    height: 100%;
-    transition: all 0.5s ease-in-out;
-}
 
   .mb-10 {
     margin-bottom: 0vh;
@@ -3510,7 +3490,7 @@ cite {
     text-align: center;
     max-width: 80vw;
     border: none;
-    pointer-events: initial !important;
+    
   }
 
   .custom-paragraph-s {
@@ -3580,9 +3560,9 @@ cite {
 
   h3.recentprojects {
     font-family: 'Montserrat', sans-serif;
-    font-size: 21px;
-    line-height: 23px;
-    font-weight: 650;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 700;
     color: #FFF;
     text-align: left;
     margin-bottom: 12px;
