@@ -82,9 +82,26 @@ header {
   padding: 1em 0;
 }
 
+
+h4,h5,h6 {
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  color: #fff;
+  font-weight: 400;
+  text-align: left;
+
+}
+
 ._fc {
   display: flex;
   justify-content: center;
+}
+
+._fs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 
@@ -686,7 +703,7 @@ hr {
   position: relative;
   z-index: 2;
   min-height: 100vh;
-  ;
+  flex-direction: column;
 
 }
 
@@ -707,6 +724,7 @@ hr {
   height: 100%;
   width: 100%;
   background: url("uploads/bg-paint.jpg") no-repeat;
+  background-color: #111;
   background-position: bottom;
   background-size: cover;
   display: flex;
@@ -875,7 +893,7 @@ hr.afterfoot {
   background: radial-gradient(ellipse farthest-corner at bottom center, #F8FFE8 0%, #F5F4B6 40%, #F8FFA7 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow:none !important;
+  text-shadow: none !important;
 }
 
 .gtext2 {
@@ -883,7 +901,7 @@ hr.afterfoot {
   background: radial-gradient(circle farthest-side at bottom center, #F8FFE8 0%, #F5F4B6 40%, #F8FFA7 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow:none !important;
+  text-shadow: none !important;
 }
 
 .stay {
@@ -901,11 +919,9 @@ hr.afterfoot {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
-  line-height: 2rem;
   letter-spacing: 1px;
-  font-weight: 400;
-  display: flex;
-  padding: 9px;
+  font-weight: 500;
+  padding: 12px 28px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   transition: all 0.3s ease;
@@ -916,9 +932,16 @@ hr.afterfoot {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  margin: 50px auto;
+  width: fit-content;
+  margin: 9px;
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.cta-bg {
+  background-color: #fff;
+  border: 3px solid #fff;
+  color: #111;
 }
 
 .cta-btn-s:hover {
@@ -1020,6 +1043,10 @@ hr.afterfoot {
 
 .btn-container {
   margin: 30px 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .blue-btn-full {
@@ -1137,7 +1164,7 @@ div.leaveamessage a:hover {
 
 .educationicon {
   float: left;
-  margin-right: 10px;
+  margin-right: 20px;
   max-height: 35px;
   width: 35px;
 }
@@ -1257,6 +1284,7 @@ h2.signature {
   align-content: center;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 
 
 }
@@ -1480,7 +1508,7 @@ a.download {
 }
 
 .content {
-  padding: 5vh 12vw 5vh;
+  padding: 2vw;
 }
 
 
@@ -1763,13 +1791,12 @@ ul.code li {
 
 h5.techskills {
   font-family: 'Montserrat', monospace;
-  font-size: 20px;
+  font-size: .9rem;
   color: #fff;
-  font-weight: 100px;
-  font-style: none;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 10px;
+  font-weight: 400;
+  text-align: left;
+  margin: 30px 0 10px 0;
+
 }
 
 .techstack {
@@ -1777,24 +1804,142 @@ h5.techskills {
   justify-content: center;
   gap: 6px;
   flex-wrap: wrap;
+  width: 100%;
+  /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+
+}
+
+
+
+
+
+
+:root {
+  --marquee-width: 100%;
+  --marquee-height: 10vh;
+  /* --marquee-elements: 12; */
+  /* defined with JavaScript */
+  --marquee-elements-displayed: 8;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
 
 
 }
 
-.techstack>div {
-  margin: 0px;
-  max-width: 60px;
-  height: auto;
-  transform: scale(0.9);
-  transition: transform 1s ease-in-out, filter 0.5s ease;
+
+.marquee-content li img.marquee-icon {
+  width: 60px;
+  border: none;
 }
 
 
-.techstack>div:hover {
-  transform: scale(1.1);
-  /* Scales the div slightly */
-
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  background-color: none;
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
 }
+
+.marquee:before,
+.marquee:after {
+  position: absolute;
+  top: 0;
+  width: 7rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #111 0%, transparent 50%);
+}
+
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #111 0%, transparent 50%);
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+}
+
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height)*3/4);
+  /* 5rem; */
+  white-space: nowrap;
+}
+
+.marquee-content li p {
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+
+
+.marquee-content li img {
+  width: 100%;
+  /* height: 100%; */
+  border: 2px solid #eee;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+
+  .marquee:before,
+  .marquee:after {
+    width: 5rem;
+  }
+}
+
+
+
+
+
+
+
 
 div.techstack p {
   font-family: 'Montserrat', monospace;
@@ -1920,8 +2065,8 @@ h5.folioTitle {
 }
 
 h6 {
-  font-size: 0.7em;
-  color: #fff;
+  font-size: 0.65em;
+  color: #9edce3;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: .15em;
@@ -1956,17 +2101,20 @@ h4.view {
 }
 
 h4.year {
-  color: #fff;
-  font-family: 'Playfair', sans-serif;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 h4.jobtitle {
   color: #f9f871;
-  font-family: 'Playfair', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 0.1em;
-  font-size: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
 h3.recentprojects {
@@ -2087,22 +2235,34 @@ h5.subhead {
   position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(80%);
+  filter: brightness(75%);
   overflow: hidden;
   width: 100%;
-  min-height: 100vh;
   height: 100%;
-
 }
 
 .project-bg>img {
-  min-height: 100vh;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center;
+  opacity: 1;
 
 }
+
+
+.project-bg:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 1) inset;
+}
+
+
 
 
 
@@ -2191,7 +2351,7 @@ h5.rolehead {
 h5.rolehead::before {
   content: "";
   display: block;
-  width: 40%;
+  width: 30%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2202,7 +2362,7 @@ h5.rolehead::before {
 h5.rolehead::after {
   content: "";
   display: block;
-  width: 40%;
+  width: 30%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2354,6 +2514,20 @@ h2.hello {
   text-shadow: 3px 3px 3px #000;
   text-align: left;
   white-space: nowrap;
+  margin-bottom: 15px;
+}
+
+
+h2.hello2 {
+  font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    letter-spacing: -0.2rem;
+    font-weight: 200;
+    color: #fff;
+    text-align: left;
+    white-space: nowrap;
+    
+  
 }
 
 .hello-column {
@@ -2364,17 +2538,23 @@ h2.hello {
 
 h2.experience {
   color: #fafafa;
-  font-family: 'Playfair', sans-serif;
-  font-size: 2em;
-  font-weight: 700;
-  ;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 450;
 
+}
+
+h2.experience2 {
+  color: #fafafa;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 450;
+  margin: 0px 0 0 16px
 }
 
 .is-style-decor2:before {
   content: "|";
-  padding-right: .5em;
-  font-weight: 500;
+  padding: 0 1rem 0 0;
   color: #fff;
 }
 
@@ -2897,6 +3077,67 @@ div#background-video>video {
 }
 
 
+/*test*/
+
+.td-0 {
+  text-decoration: none;
+}
+
+.availability-box {
+  display: flex;
+  width: auto;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.pulsing-circle {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 50%;
+  border: 1px solid #004d00;
+  /* Green border for visibility */
+  animation: pulse 1.5s infinite;
+  margin-right: 10px
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.3);
+    /* Increased scale for visibility */
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+h3.available {
+  margin-top: 12px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-style: none;
+  font-weight: 300;
+  color: #fafafa;
+  letter-spacing: 1px;
+
+}
+
+
 @media (prefers-reduced-motion) {
   .typewriter::after {
     animation: none;
@@ -2986,9 +3227,9 @@ section::after {
   text-align: center;
   max-width: 75vw;
   border: none;
-  padding:20px;
+  padding: 20px;
 
-  
+
 }
 
 .custom-paragraph,
@@ -3030,7 +3271,7 @@ cite {
   text-align: center;
   max-width: 40vw;
   border: none;
-  
+
 }
 
 .custom-paragraph-s,
@@ -3041,11 +3282,11 @@ cite {
 }
 
 .custom-paragraph-s {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 1.5rem;
-  letter-spacing: 3px;
+  letter-spacing: 0.1rem;
   color: #fff;
   text-align: center;
 
@@ -3143,7 +3384,7 @@ cite {
     line-height: 0.7em;
     margin-bottom: 30px;
   }
-  
+
   .footer-ct {
     text-align: right;
   }
@@ -3211,7 +3452,7 @@ cite {
     z-index: 0;
     text-transform: uppercase;
     text-shadow: 3px 3px 3px rgb(0, 0, 0);
-    
+
   }
 
   .typehead {
@@ -3267,7 +3508,7 @@ cite {
     text-align: center;
     max-width: 40vw;
     border: none;
-    
+
   }
 
   .custom-paragraph-s {
@@ -3422,7 +3663,7 @@ cite {
     flex-direction: column;
     align-items: center;
     height: 15vh;
-    
+
     position: absolute;
     bottom: 0px;
   }
@@ -3490,7 +3731,7 @@ cite {
     text-align: center;
     max-width: 80vw;
     border: none;
-    
+
   }
 
   .custom-paragraph-s {
