@@ -115,7 +115,12 @@ h6 {
 }
 
 ._sb {
+  display: flex;
   justify-content: space-between;
+}
+
+.explore {
+  min-width: 100%;
 }
 
 ._f-se {
@@ -958,8 +963,7 @@ hr.afterfoot {
 .cta-splash {
   display: flex;
   padding: 0 8vw;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: flex-end;
 }
 
 .cta {
@@ -1039,23 +1043,22 @@ hr.afterfoot {
 
 
 .btn-connect {
-  color: #111;
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   line-height: 2rem;
   letter-spacing: 1px;
-  font-weight: 600;
-  padding: 20px 30px;
+  font-weight: 500;
+  padding: 5px 25px;
   border-radius: 0;
   transition: all 0.3s ease;
-  background: none;
-  border: 1px solid #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
   white-space: nowrap;
   width: fit-content;
-  background: #fff;
+  background: none;
+  filter: invert(1);
 }
 
 .btn-connect:hover {
@@ -1690,7 +1693,7 @@ a.download {
 }
 
 .pl-10 {
-  padding-left: 7vw;
+  padding-left: 8vw;
 }
 
 
@@ -1761,7 +1764,7 @@ a.download {
 .bt-1 {
   border-top: 1px solid #ddd;
   animation: draw-border 7s forwards;
-
+  max-width: 60%;
 }
 
 
@@ -2472,7 +2475,7 @@ h5.subhead {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom right;
   opacity: 1;
 
 }
@@ -3177,11 +3180,13 @@ cite {
   font-family: 'Montserrat', sans-serif;
   font-size: .8rem;
   color: #111;
+  line-height: 0;
   text-align: left;
   letter-spacing: 1px;
   font-weight: 600;
-  margin: 15px 30px;
-
+  margin: 0px 0px;
+  background: #fff;
+  padding: 20px 50px;
 }
 
 .custom-paragraph-s3 {
@@ -3192,7 +3197,7 @@ cite {
   text-align: left;
   letter-spacing: 1px;
   margin: 25px 0;
-
+  max-width: 60%;
 }
 
 .questions {
@@ -3231,7 +3236,7 @@ cite {
 }
 
 .explore {
-  min-width: 40%;
+  min-width: 60%;
 }
 
 
@@ -3377,14 +3382,43 @@ cite {
     text-shadow: 6px 5px 6px #111;
   }
 
+
 }
 
 @media only screen and (max-width: 1024px) {
 
+  ._fc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bt-1 {
+    border-top: 1px solid #ddd;
+    animation: draw-border 7s forwards;
+    max-width: 80%;
+  }
+
+
+  .custom-paragraph-s3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 25px 0;
+    max-width: 80%;
+  }
 
   .splash-about {
 
     margin-top: 10vh;
+  }
+
+  .pl-10 {
+    padding-left: 10vw;
   }
 
   .abt-r {
@@ -3423,6 +3457,24 @@ cite {
 
   }
 
+  a.navLink {
+    font-size: 0.75em;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    padding: 0 3px 6px;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+  }
 
 
   /*Blockquote*/
@@ -3446,6 +3498,17 @@ cite {
 
   }
 
+  .custom-paragraph-s2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    color: #111;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0px 0px;
+    padding: 20px 40px;
+  }
+
   /*Blockquote-s*/
   .custom-blockquote-s {
     display: block;
@@ -3464,6 +3527,43 @@ cite {
     color: #fff;
     text-align: left;
   }
+
+  .btn-connect {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 5px 25px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    width: fit-content;
+    background: none;
+    filter: invert(1);
+  }
+
+  .cta-splash {
+    display: flex;
+    padding: 0 10vw;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .invert {
+    width: fit-content;
+    opacity: 0;
+    max-width: fit-content;
+    backdrop-filter: invert(1) blur(10px);
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
 
   .cta-btn-s {
     color: #fff;
@@ -3605,6 +3705,11 @@ cite {
     min-width: 80%;
   }
 
+  .explore {
+    min-width: 100%;
+  }
+
+
 }
 
 @media (min-width: 769px) {
@@ -3683,7 +3788,7 @@ cite {
     min-width: 80%;
     padding: 0 !important;
     margin: 0 !important;
-}
+  }
 
   ._fe {
     display: flex;
@@ -3905,13 +4010,13 @@ cite {
     position: fixed;
     top: 0px;
     left: 0;
-    background: #88888888;
+    background: #232323b5;
     border-radius: 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.5px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(6.5px);
     z-index: -1;
-  }
+}
 
   a.navLink {
     color: #ddd;
@@ -4147,6 +4252,15 @@ cite {
     gap: 35px;
   }
 
+  .cta-splash {
+    display: flex;
+    padding: 0 10vw;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
 
 }
 
@@ -4177,6 +4291,8 @@ cite {
     height: 100%;
   }
 
+
+
   .splash-intro {
     display: flex;
     position: relative;
@@ -4204,10 +4320,22 @@ cite {
     text-align: left;
   }
 
+  .custom-paragraph-s2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    color: #111;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 10px 30px;
+    padding: 10px;
+    display: none;
+  }
+
   .custom-paragraph-s3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: .9rem;
-    line-height: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     color: #fff;
     text-align: left;
     letter-spacing: 1px;
@@ -4351,24 +4479,23 @@ cite {
   }
 
   .btn-connect {
-    color: #111;
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     line-height: 2rem;
     letter-spacing: 1px;
-    font-weight: 600;
-    padding: 10px 30px;
+    font-weight: 500;
+    padding: 7px 36px;
     border-radius: 0;
     transition: all 0.3s ease;
-    background: none;
-    border: 1px solid #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
     white-space: nowrap;
     width: fit-content;
-    background: #fff;
-  }
+    background: none;
+    filter: invert(1);
+}
 
 
   ._fc {
@@ -4386,9 +4513,13 @@ cite {
     align-content: flex-end;
   }
 
-  ._qs {
-    margin-top: -70px;
-    flex-direction: column;
+  .qs {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
   }
 
 }
@@ -4424,18 +4555,76 @@ cite {
     margin-top: 0vh;
   }
 
+  .custom-paragraph-s3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 20px 0 20px;
+  }
+
 }
 
 @media only screen and (max-width: 550px) {
+
+  .cta-splash {
+    display: flex;
+    padding: 0 0vw;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
+  .custom-paragraph-s3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 20px 0 20px;
+    min-width: 100%;
+  }
+
   h2.hello {
 
     top: 25%;
 
   }
 
+  .pl-10 {
+    padding-left: 3vw;
+  }
+
   ._fc {
     flex-direction: column;
   }
+
+  .splash-intro {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10vw;
+  }
+
+  .explore {
+    min-width: 80%;
+    max-width: 100%;
+  }
+
+  .bt-1 {
+    border-top: 1px solid #ddd;
+    animation: draw-border 7s forwards;
+    max-width: 100%;
+  }
+
+
 
   .cta-btn-s {
     color: #fff;
@@ -4464,7 +4653,7 @@ cite {
     display: block;
     margin: 20px auto 0px;
     text-align: center;
-    width: 90vw;
+    width: 80vw;
     border: none;
   }
 
@@ -4515,7 +4704,7 @@ cite {
 
   ._fc {
     flex-direction: column;
-}
+  }
 
 
 }
@@ -4542,6 +4731,24 @@ cite {
 }
 
 @media only screen and (max-width: 480px) {
+
+  .custom-blockquote-s {
+    display: block;
+    margin: 20px auto 0px;
+    text-align: center;
+    width: 80vw;
+    border: none;
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 3.5rem;
+    color: #fafafa;
+    text-align: left;
+  }
+
 
   .typewriter {
     font-family: 'Titillium Web', 'Honk', sans-serif;
