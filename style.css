@@ -83,7 +83,9 @@ header {
 }
 
 
-h4,h5,h6 {
+h4,
+h5,
+h6 {
 
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -93,14 +95,35 @@ h4,h5,h6 {
 
 }
 
+
+._vc {
+  align-items: center;
+}
+
+._fe {
+  display: flex;
+  flex-direction: column;
+}
+
 ._fc {
   display: flex;
-  justify-content: center;
+  align-items: center;
+}
+
+._f-se {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 ._fs {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+}
+
+._cc {
+  flex-direction: column;
   align-items: center;
 }
 
@@ -552,14 +575,15 @@ a.navLink:hover {
 }
 
 .scroll-down {
-  z-index: 10;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   height: 10vh;
-  position: absolute;
-  bottom: 0px;
+  width: 100%;
+  position: fixed;
+  bottom: 0vh;
 
 }
 
@@ -597,7 +621,7 @@ svg #wheel {
 .logo-kpvc {
   position: fixed;
   top: 35px;
-  left: 2.25vw;
+  left: 2vw;
   height: 84.667px;
   width: 76px;
   z-index: 5;
@@ -646,12 +670,31 @@ svg.loader:hover path:hover {
   }
 }
 
+.recent {
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  background-color: rgba(151, 0, 0, 0.356);
+}
+
+.hero-splash {
+  position: relative;
+  overflow: hidden;
+  height: 110vh;
+  width: auto;
+  
+}
+
 .custom-s {
   background: #111;
   position: relative;
   overflow: hidden;
   z-index: 4;
-
 }
 
 .custom-s1 {
@@ -694,16 +737,13 @@ hr {
 }
 
 .splash-intro {
-  background: none;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 2;
-  min-height: 100vh;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 
 }
 
@@ -860,6 +900,17 @@ hr.afterfoot {
   bottom: 0px;
 }
 
+.cta-1 {
+  margin-top: 20px;
+}
+
+.cta-splash {
+  display: flex;
+  padding: 0 8vw;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .cta {
   display: flex;
   flex-flow: row wrap;
@@ -883,9 +934,6 @@ hr.afterfoot {
   padding: 0 3vw !important;
 }
 
-.pl-10 {
-  padding-left: 20px !important;
-}
 
 
 .gtext {
@@ -918,30 +966,64 @@ hr.afterfoot {
 .cta-btn-s {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  line-height: 2rem;
   letter-spacing: 1px;
-  font-weight: 500;
-  padding: 12px 28px;
+  font-weight: 400;
+  display: flex;
+  padding: 6px 35px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   transition: all 0.3s ease;
-  max-width: 100%;
   background: none;
   border: 1px solid #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  margin: 9px;
+  margin: 30px 0px;
   text-decoration: none;
   white-space: nowrap;
+  width: fit-content;
 }
 
-.cta-bg {
-  background-color: #fff;
-  border: 3px solid #fff;
+
+.btn-connect {
   color: #111;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 6px 30px;
+  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  transition: all 0.3s ease;
+  background: none;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+  width: fit-content;
+  background: #fffffff0;
+}
+
+.btn-connect:hover {
+  color: #111;
+  background: #f9f871;
+  transform: scale(1);
+  /* Increase size to 110% on hover */
+  text-decoration: none;
+  border: 1px solid #f9f871;
+}
+
+
+.cta-bg {
+  background-color: #dadada;
+  border: 1px solid #fff;
+  color: #111;
+  width: fit-content;
 }
 
 .cta-btn-s:hover {
@@ -957,11 +1039,11 @@ hr.afterfoot {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
-  line-height: 2.5rem;
+  line-height: normal;
   letter-spacing: 1px;
   font-weight: 400;
   display: flex;
-  padding: 3px 0px;
+  padding: 12px 40px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   transition: all 0.3s ease;
@@ -996,7 +1078,7 @@ hr.afterfoot {
   letter-spacing: 1px;
   font-weight: 400;
   display: flex;
-  padding: 15px 50px;
+  padding: 12px 40px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   transition: all 0.3s ease;
@@ -1227,8 +1309,8 @@ hr.aftertech {
 h2.signature {
 
   font-family: 'Montserrat', sans-serif;
-  font-weight: 330;
-  font-size: 1vw;
+  font-weight: 200;
+  font-size: 1.5vw;
   letter-spacing: 0.5em;
   margin: 0px;
   padding: 0;
@@ -1239,6 +1321,7 @@ h2.signature {
   z-index: 0;
   text-transform: uppercase;
   text-shadow: 3px 3px 3px rgb(0, 0, 0);
+  align-self: end;
 
 }
 
@@ -1324,7 +1407,7 @@ h2.signature {
 
 
 .typehead2 {
-  letter-spacing: 1rem;
+  letter-spacing: 0.8rem;
   text-align: center;
   line-height: 6rem;
 
@@ -1333,12 +1416,12 @@ h2.signature {
 
 .typewriter {
   --caret: currentcolor;
-  font-family: 'Titillium Web', 'Honk', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 2.5vw;
   font-weight: 200;
   font-style: normal;
   text-align: center;
-  color: #fff;
+  color: #eee;
   text-shadow: 6px 5px 6px #111;
   z-index: -1;
 
@@ -1509,6 +1592,7 @@ a.download {
 
 .content {
   padding: 2vw;
+  padding-left: clamp(100px, 5vw, 100px)
 }
 
 
@@ -1552,6 +1636,20 @@ a.download {
 }
 
 
+.pl-5 {
+  padding-left: 5vw;
+}
+
+.pl-10 {
+  padding-left: 7vw;
+}
+
+
+.pb-10 {
+  padding-bottom: 10vh;
+  ;
+}
+
 .mb-5 {
   margin-bottom: 5vh;
 }
@@ -1590,6 +1688,47 @@ a.download {
 .w-150 {
   min-width: 150%;
 }
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.bt-1 {
+  border-top: 1px solid #ddd;
+  animation: draw-border 7s forwards;
+  
+}
+
+@keyframes draw-border {
+  0% {
+    width: 0;
+    border-top-width: 1px;
+    opacity: 0;
+  }
+
+  50% {
+    width: 0;
+    border-top-width: 1px;
+    opacity: 0;
+  }
+
+
+  100% {
+    width: 100%;
+    border-top-width: 1px;
+    opacity: 1;
+  }
+}
+
+
 
 .lang-flex {
   display: flex;
@@ -2012,7 +2151,8 @@ h4.process {
 }
 
 .process-container {
-  margin: 0 0 30px;
+  margin: 0px;
+  padding: 6px;
 }
 
 h5.introduction {
@@ -2520,14 +2660,14 @@ h2.hello {
 
 h2.hello2 {
   font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    letter-spacing: -0.2rem;
-    font-weight: 200;
-    color: #fff;
-    text-align: left;
-    white-space: nowrap;
-    
-  
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+  font-weight: 200;
+  color: #fff;
+  text-align: left;
+  white-space: nowrap;
+
+
 }
 
 .hello-column {
@@ -2960,9 +3100,8 @@ h3 {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  height: 20vh;
-  background: -moz-linear-gradient(top, rgba(17, 17, 17, 0) 0%, rgb(17, 17, 17));
-  background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 0%, rgb(17, 17, 17) 100%);
+  height: 10vh;
+
   z-index: 4;
 }
 
@@ -3032,23 +3171,18 @@ h3 {
 
 /* video background */
 #background-video {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
-  ;
-  z-index: -0;
-  background: inherit;
-
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  background-position: bottom center;
+  background-size: cover;
+  overflow: hidden;
 }
 
-div#background-video>video {
-  min-height: 100vh;
-  width: auto;
-
-}
+div#background-video>video {}
 
 
 .hidden-of {
@@ -3091,7 +3225,7 @@ div#background-video>video {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  position: fixed;
+  position: relative;
   bottom: 20px;
   right: 20px;
 }
@@ -3223,13 +3357,10 @@ section::after {
 /*Blockquote*/
 .custom-blockquote {
   display: block;
-  margin: 0 auto;
+  margin: 0px auto 0px;
   text-align: center;
-  max-width: 75vw;
+  max-width: 100%;
   border: none;
-  padding: 20px;
-
-
 }
 
 .custom-paragraph,
@@ -3267,10 +3398,9 @@ cite {
 /*Blockquote-s*/
 .custom-blockquote-s {
   display: block;
-  margin: 50px auto 0px;
   text-align: center;
-  max-width: 40vw;
   border: none;
+  width: 80vw;
 
 }
 
@@ -3283,13 +3413,53 @@ cite {
 
 .custom-paragraph-s {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.5rem;
-  letter-spacing: 0.1rem;
+  font-size: 7.5vw;
+  font-weight: 650;
+  line-height: 6.5vw;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  letter-spacing: -0.2rem;
+  text-shadow: 5px 5px 5px #121212;
 
+}
+
+._ql {
+  display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.custom-paragraph-s2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 1px;
+  font-weight: 200;
+  margin-top:10px
+
+}
+
+.custom-paragraph-s3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  line-height: 1.4rem;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-top: 25px;
+
+}
+
+.questions {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0px 20px 0 0;
 }
 
 .custom-span-s {
@@ -3305,11 +3475,29 @@ cite {
 }
 
 
+.custom-span-s2 {
+  will-change: opacity, filter;
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 1.2s ease;
+}
+
+.custom-span-s2.animate {
+  opacity: 1;
+  filter: blur(0);
+}
+
 
 
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 1200px) {
+
+  .content {
+    padding: 2vw 4vh 2vh 10vw;
+  }
+
+
   .landing {
     display: flex;
     margin-top: -30vh;
@@ -3340,7 +3528,7 @@ cite {
   }
 
   .custom-paragraph-s {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     font-weight: 100;
     line-height: 1.4rem;
@@ -3368,7 +3556,8 @@ cite {
     text-align: left;
     text-shadow: 6px 5px 6px #111;
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 0vh;
+    line-height: 1;
 
   }
 
@@ -3426,6 +3615,11 @@ cite {
     margin-top: 10vh;
   }
 
+  .abt-r {
+    margin-left: 12% !important;
+    width: 30% !important;
+  }
+
   .typehead2 {
     font-family: 'Titillium Web', sans-serif;
     font-size: 2em;
@@ -3440,8 +3634,8 @@ cite {
 
   h2.signature {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 330;
-    font-size: 1.2vw;
+    font-weight: 300;
+    font-size: 1.5vw;
     letter-spacing: 0.5em;
     margin: 0px;
     padding: 0;
@@ -3452,12 +3646,14 @@ cite {
     z-index: 0;
     text-transform: uppercase;
     text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    align-self: end;
+
 
   }
 
   .typehead {
     font-family: 'Monita Signature', sans-serif;
-    font-size: 9vw;
+    font-size: 7em;
     text-align: left;
     line-height: 0.8em;
     font-weight: 800;
@@ -3506,13 +3702,13 @@ cite {
     display: block;
     margin: 30px auto 0px;
     text-align: center;
-    max-width: 40vw;
+    max-width: 50vw;
     border: none;
 
   }
 
   .custom-paragraph-s {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     font-style: none;
     font-weight: 100;
@@ -3525,27 +3721,26 @@ cite {
   .cta-btn-s {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 2rem;
     letter-spacing: 1px;
     font-weight: 400;
     display: flex;
-    padding: 3px;
+    padding: 6px 35px;
     box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
     transition: all 0.3s ease;
-    max-width: 100%;
     background: none;
     border: 1px solid #fff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    margin: 30px auto;
+    margin: 30px 10px;
     text-decoration: none;
     white-space: nowrap;
   }
+
 
 
 
@@ -3657,13 +3852,13 @@ cite {
   }
 
   .scroll-down {
-    z-index: 10;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     height: 15vh;
-
+    width: 100%;
     position: absolute;
     bottom: 0px;
   }
@@ -3705,6 +3900,24 @@ cite {
     display: none;
   }
 
+  .availability-box {
+    display: flex;
+    width: auto;
+    height: fit-content;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    justify-content: flex-start;
+    top: 10px;
+    left: 20px;
+  }
+
+
+  .abt-r {
+    margin-left: 1% !important;
+    width: 100% !important;
+  }
+
   /*Blockquote*/
   .custom-blockquote {
     display: block;
@@ -3735,7 +3948,7 @@ cite {
   }
 
   .custom-paragraph-s {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     font-weight: 200;
     line-height: 1.3rem;
@@ -3758,6 +3971,7 @@ cite {
     z-index: 0;
     text-transform: uppercase;
     text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    align-self: end;
   }
 
 
@@ -3795,8 +4009,8 @@ cite {
     width: 55%;
     margin: 0 auto;
     position: relative;
-    z-index: -1;
-    padding-bottom: 70px;
+    z-index: 0;
+    padding-bottom: 30px;
   }
 
   h3.recentprojects {
@@ -4254,6 +4468,43 @@ cite {
     top: 25%;
 
   }
+
+  ._fc {
+    flex-direction: column;
+  }
+
+  .cta-btn-s {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    display: flex;
+    padding: 6px 35px;
+    box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: none;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 9px 9px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.4rem;
+    color: #fafafa;
+    text-align: center;
+  }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -4272,7 +4523,7 @@ cite {
   }
 
   .custom-paragraph-s {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     font-weight: 200;
     line-height: 1.1rem;
@@ -4320,7 +4571,7 @@ cite {
   @media only screen and (max-height:499px) {
 
     .scroll-down {
-      z-index: 10;
+      z-index: 1;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
