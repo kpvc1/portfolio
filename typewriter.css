@@ -1,0 +1,124 @@
+/* Typewriter effect 1 */
+@keyframes typing {
+
+    1.8%,  11.9% {    content: "";  }
+    2.0%,  11.8% {    content: "d";  }
+    2.2%,  11.7% {    content: "de";  }
+    2.4%,  11.6% {    content: "dev";  }
+    2.6%,  11.5% {    content: "deve";  }
+    2.8%,  11.4% {    content: "devel";  }
+    3.0%,  11.3% {    content: "develo";  }
+    3.2%,  11.2% {    content: "develop";  }
+    3.4%,  11.1% {    content: "develope";  }
+    3.6%,  11.0% {    content: "developer";  }
+    4.0%,  9.0% {    content: "developer🚀";  }
+  
+       
+    14.9%,  24.4% {    content: "";  }
+    15.1%,  24.3% {    content: "t";  }
+    15.3%,  24.2% {    content: "th";  }
+    15.5%,  24.1% {    content: "thi";  }
+    15.7%,  24.0% {    content: "thin";  }
+    15.9%,  23.9% {    content: "think";  }
+    16.1%,  23.8% {    content: "thinke";  }
+    16.3%,  23.7% {    content: "thinker";  }
+    16.7%,  21.7% {    content: "thinker🧠";  }
+    
+    27.4%,  35.7% {    content: "";  }
+    27.6%,  35.6% {    content: "e";  }
+    27.8%,  35.5% {    content: "ed";  }
+    28.0%,  35.4% {    content: "edi";  }
+    28.2%,  35.3% {    content: "edit";  }
+    28.4%,  35.2% {    content: "edito";  }
+    28.6%,  35.1% {    content: "editor";  }
+    29.0%,  33.0% {    content: "editor🎞️";  }
+
+    38.8%,  47.7% {    content: "";  }
+    39.0%,  47.6% {    content: "c";  }
+    39.2%,  47.5% {    content: "cr";    }
+    39.4%,  47.4% {    content: "cre";  }
+    39.6%,  47.3% {    content: "crea";  }
+    39.8%,  47.2% {    content: "creat";  }
+    40.0%,  47.1% {    content: "creati";  }
+    40.2%,  47.0% {    content: "creativ";  }
+    40.4%,  46.9% {    content: "creative";  }
+    40.8%,  44.8% {    content: "creative💡";  }
+    
+    50.8%,  60.2% {    content: "";  }
+    51.0%,  60.1% {    content: "s";  }
+    51.2%,  60.0% {    content: "st";  }
+    51.4%,  59.9% {    content: "str";  }
+    51.6%,  59.8% {    content: "stra";  }
+    51.8%,  59.7% {    content: "strat";  }
+    52.0%,  59.6% {    content: "strate";  }
+    52.2%,  59.5% {    content: "strateg";  }
+    52.4%,  59.4% {    content: "strategi";  }
+    52.6%,  59.3% {    content: "strategis";  }
+    52.8%,  59.2% {    content: "strategist";  }
+    53.2%,  57.2% {    content: "strategist♞";  }
+  
+    63.2%,  71.4% {    content: "";  }
+    63.4%,  71.3% {    content: "a";  }
+    63.6%,  71.2% {    content: "ar";  }  
+    63.8%,  71.1% {    content: "art";  }
+    64.0%,  71.0% {    content: "arti";  }
+    64.2%,  70.9% {    content: "artis";  }
+    64.4%,  70.8% {    content: "artist";  }
+    64.8%,  68.8% {    content: "artist🖌️";  }
+
+    74.4%,  84.3% {    content: "";  }
+    74.6%,  84.2% {    content: "i";  }
+    74.8%,  84.1% {    content: "il";  }
+    75.0%,  84.0% {    content: "ill";  }
+    75.2%,  83.9% {    content: "illu";  }
+    75.4%,  83.8% {    content: "illus";  }
+    75.6%,  83.7% {    content: "illust";  }
+    75.8%,  83.6% {    content: "illustr";  }
+    76.0%,  83.5% {    content: "illustra";  }
+    76.2%,  83.4% {    content: "illustrat";  }
+    76.4%,  83.3% {    content: "illustrato";  }
+    76.8%,  83.2% {    content: "illustrator";  }
+    77.2%,  81.2% {    content: "illustrator✒️";  }
+    
+    88.2%,  97.1% {    content: "";  }
+    88.4%,  97.0% {    content: "h";  }
+    88.6%,  96.9% {    content: "hu";  }
+    88.8%,  96.8% {    content: "hum";  }
+    89.0%,  96.7% {    content: "huma";  }
+    89.2%,  96.6% {    content: "human";  }
+    89.4%,  94.5% {    content: "human❤️";  }
+  
+  }
+  
+  @keyframes blink {
+  
+    0%,  100% {    opacity: 1;  }
+    50% {    opacity: 0;  }
+  }
+
+
+
+
+
+  @media (prefers-reduced-motion) {
+    .typewriter::after {
+      animation: none;
+    }
+  
+    @keyframes sequencePopup {  
+      
+        0%,      100% {        content: "developer🚀";      }
+        15% {        content: "thinker🧠";      }
+        30% {        content: "analyst📈";      }
+        45% {        content: "creative💡";      }
+        60% {        content: "strategist♞";      }
+        75% {        content: "artist🖌️";      }
+        80% {        content: "human❤️";
+      }
+    }
+  
+    .typewriter::before {
+      content: "developer🚀";
+      animation: sequencePopup 8s linear infinite;
+    }
+  }
