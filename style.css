@@ -100,14 +100,22 @@ h6 {
   align-items: center;
 }
 
+
+
+
 ._fe {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 ._fc {
   display: flex;
   align-items: center;
+}
+
+._sb {
+  justify-content: space-between;
 }
 
 ._f-se {
@@ -118,14 +126,44 @@ h6 {
 
 ._fs {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 ._cc {
   flex-direction: column;
   align-items: center;
 }
+
+.invert {
+  width: fit-content;
+  opacity: 0;
+  max-width: fit-content;
+  backdrop-filter: invert(1) blur(10px);
+
+}
+
+.fadein {
+  animation: fadein 1s forwards;
+  animation-delay: 5s;
+
+}
+
+@keyframes fadein {
+  0% {
+
+    opacity: 0;
+    filter: blur(15px);
+  }
+
+  100% {
+
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+
 
 
 p {
@@ -582,7 +620,7 @@ a.navLink:hover {
   align-items: center;
   height: 10vh;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0vh;
 
 }
@@ -685,9 +723,10 @@ svg.loader:hover path:hover {
 .hero-splash {
   position: relative;
   overflow: hidden;
-  height: 110vh;
+  height: 101vh;
   width: auto;
-  
+  display: flex;
+
 }
 
 .custom-s {
@@ -695,13 +734,16 @@ svg.loader:hover path:hover {
   position: relative;
   overflow: hidden;
   z-index: 4;
+  width: 90vw;
+  margin: 5vh 7vw;
+  border-radius: 40px;
 }
 
 .custom-s1 {
   background: #111;
   position: relative;
   overflow: hidden;
-  background-image: url(uploads/bg-lines-large.jpg);
+  background-image: url(uploads/bg-paint.jpg);
   background-size: cover;
   background-position: top;
   z-index: 4;
@@ -713,6 +755,17 @@ svg.loader:hover path:hover {
   position: relative;
   overflow: hidden;
   background-image: url(uploads/hadouken.jpg);
+  background-size: cover;
+  background-position: top 0px left 0px;
+  background-attachment: scroll;
+  z-index: 4;
+
+}
+
+.custom-s3 {
+  background: #111;
+  position: relative;
+  overflow: hidden;
   background-size: cover;
   background-position: top 0px left 0px;
   background-attachment: scroll;
@@ -743,8 +796,6 @@ hr {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-
 }
 
 ._750 {
@@ -763,9 +814,9 @@ hr {
 .splash-about {
   height: 100%;
   width: 100%;
-  background: url("uploads/bg-paint.jpg") no-repeat;
+  background: url("uploads/bg-lines-large.jpg") no-repeat;
   background-color: #111;
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -907,8 +958,8 @@ hr.afterfoot {
 .cta-splash {
   display: flex;
   padding: 0 8vw;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .cta {
@@ -981,7 +1032,6 @@ hr.afterfoot {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 30px 0px;
   text-decoration: none;
   white-space: nowrap;
   width: fit-content;
@@ -995,8 +1045,7 @@ hr.afterfoot {
   line-height: 2rem;
   letter-spacing: 1px;
   font-weight: 600;
-  padding: 6px 30px;
-  box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
   border-radius: 0;
   transition: all 0.3s ease;
   background: none;
@@ -1006,14 +1055,12 @@ hr.afterfoot {
   text-decoration: none;
   white-space: nowrap;
   width: fit-content;
-  background: #fffffff0;
+  background: #fff;
 }
 
 .btn-connect:hover {
   color: #111;
   background: #f9f871;
-  transform: scale(1);
-  /* Increase size to 110% on hover */
   text-decoration: none;
   border: 1px solid #f9f871;
 }
@@ -1310,7 +1357,7 @@ h2.signature {
 
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  font-size: 1.5vw;
+  font-size: .7vw;
   letter-spacing: 0.5em;
   margin: 0px;
   padding: 0;
@@ -1384,32 +1431,36 @@ h2.signature {
   position: relative;
 }
 
+
+.f-type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .typehead {
   font-family: 'Monita Signature', sans-serif;
-  font-size: 8vw;
+  font-size: 3vw;
   text-align: left;
   line-height: 0.8em;
   font-weight: 800;
-  color: #f9f871;
+  color: #fff;
   position: relative;
   padding-bottom: 20px;
   margin: 0;
   text-shadow: 6px 5px 6px #111111;
-  background: -webkit-linear-gradient(rgba(252, 251, 227, 0.9) 0%, rgb(236 227 86 / 60%) 49%, rgb(19, 19, 19, 0) 0%, rgb(232, 225, 125, 90%) 100%);
-  background-clip: border-box;
-  background-clip: border-box;
-  background-clip: border-box;
-  /* -webkit-background-clip: text; */
-  -webkit-text-fill-color: rgba(253, 255, 120, 0.781);
   z-index: -1;
 
 }
 
 
 .typehead2 {
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.5rem;
   text-align: center;
-  line-height: 6rem;
+  line-height: 2.5rem;
+  margin-right: 15px;
 
 }
 
@@ -1417,20 +1468,19 @@ h2.signature {
 .typewriter {
   --caret: currentcolor;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 2.5vw;
+  font-size: 1.5rem;
   font-weight: 200;
   font-style: normal;
   text-align: center;
   color: #eee;
   text-shadow: 6px 5px 6px #111;
-  z-index: -1;
 
 }
 
 /*2 second each word*/
 .typewriter::before {
   content: "";
-  animation: typing 18s infinite;
+  animation: typing 40s infinite;
 
 }
 
@@ -1452,7 +1502,7 @@ h2.signature {
 
 .plus {
   font-family: 'Titillium Web', 'Honk', sans-serif;
-  font-size: 2vw;
+  font-size: 1vw;
   font-weight: 200;
   font-style: normal;
   text-align: center;
@@ -1592,7 +1642,6 @@ a.download {
 
 .content {
   padding: 2vw;
-  padding-left: clamp(100px, 5vw, 100px)
 }
 
 
@@ -1666,6 +1715,14 @@ a.download {
   margin-bottom: 30vh;
 }
 
+.mt_3 {
+  margin-top: -5vh;
+}
+
+.mt-3 {
+  margin-top: 3vh;
+}
+
 
 .mt-5 {
   margin-top: 5vh;
@@ -1704,8 +1761,11 @@ a.download {
 .bt-1 {
   border-top: 1px solid #ddd;
   animation: draw-border 7s forwards;
-  
+
 }
+
+
+
 
 @keyframes draw-border {
   0% {
@@ -1938,17 +1998,44 @@ h5.techskills {
 
 }
 
+
+
+.techstack-content li img.techstack-icon {
+  width: 80px;
+  border: none;
+}
+
 .techstack {
   display: flex;
   justify-content: center;
   gap: 6px;
   flex-wrap: wrap;
   width: 100%;
+  height: 100%;
   /* Adjust as needed */
   overflow: hidden;
   position: relative;
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+  margin-top: 80px;
 
 }
+
+
+
+.techstack-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
 
 
 
@@ -2375,7 +2462,7 @@ h5.subhead {
   position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(75%);
+  filter: brightness(90%);
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -2689,7 +2776,10 @@ h2.experience2 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 1.75rem;
   font-weight: 450;
-  margin: 0px 0 0 16px
+  margin: 0px 0 0 50px;
+  line-height: 0;
+  letter-spacing: 1px;
+  ;
 }
 
 .is-style-decor2:before {
@@ -2732,354 +2822,6 @@ h2.experience2 {
 }
 
 
-
-/* Typewriter effect 1 */
-@keyframes typing {
-
-  0%,
-  11.7% {
-    content: "";
-  }
-
-  0.4%,
-  11.4% {
-    content: "d";
-  }
-
-  0.8%,
-  11.1% {
-    content: "de";
-  }
-
-  1.2%,
-  10.8% {
-    content: "dev";
-  }
-
-  1.6%,
-  10.5% {
-    content: "deve";
-  }
-
-  2%,
-  10.2% {
-    content: "devel";
-  }
-
-  2.4%,
-  9.9% {
-    content: "develo";
-  }
-
-  2.8%,
-  9.6% {
-    content: "develop";
-  }
-
-  3.2%,
-  9.3% {
-    content: "develope";
-  }
-
-  3.6%,
-  9% {
-    content: "developer";
-  }
-
-  4%,
-  7% {
-    content: "developer🚀";
-  }
-
-  15%,
-  25.3% {
-    content: "";
-  }
-
-  15.4%,
-  25% {
-    content: "t";
-  }
-
-  15.8%,
-  24.7% {
-    content: "th";
-  }
-
-  16.2%,
-  24.4% {
-    content: "thi";
-  }
-
-  16.6%,
-  24.1% {
-    content: "thin";
-  }
-
-  17%,
-  23.8% {
-    content: "think";
-  }
-
-  17.4%,
-  23.5% {
-    content: "thinke";
-  }
-
-  17.8%,
-  23.2% {
-    content: "thinker";
-  }
-
-  18.2%,
-  21.2% {
-    content: "thinker🧠";
-  }
-
-  28.6%,
-  38.3% {
-    content: "";
-  }
-
-  29%,
-  38% {
-    content: "a";
-  }
-
-  29.4%,
-  37.7% {
-    content: "an";
-  }
-
-  29.8%,
-  37.4% {
-    content: "ana";
-  }
-
-  30.2%,
-  37.1% {
-    content: "anal";
-  }
-
-  30.6%,
-  36.8% {
-    content: "analy";
-  }
-
-  31%,
-  36.5% {
-    content: "analys";
-  }
-
-  31.4%,
-  36.2% {
-    content: "analyst";
-  }
-
-  31.8%,
-  34.2% {
-    content: "analyst📈";
-  }
-
-  41.6%,
-  52.6% {
-    content: "";
-  }
-
-  42%,
-  52.3% {
-    content: "c";
-  }
-
-  42.4%,
-  52% {
-    content: "cr";
-  }
-
-  42.8%,
-  51.7% {
-    content: "cre";
-  }
-
-  43.2%,
-  51.4% {
-    content: "crea";
-  }
-
-  43.6%,
-  51.1% {
-    content: "creat";
-  }
-
-  44%,
-  50.8% {
-    content: "creati";
-  }
-
-  44.4%,
-  50.5% {
-    content: "creativ";
-  }
-
-  44.8%,
-  50.2% {
-    content: "creative";
-  }
-
-  45.2%,
-  48.2% {
-    content: "creative💡";
-  }
-
-  55.9%,
-  68.3% {
-    content: "";
-  }
-
-  56.4%,
-  68.1% {
-    content: "s";
-  }
-
-  56.8%,
-  67.8% {
-    content: "st";
-  }
-
-  57.2%,
-  67.5% {
-    content: "str";
-  }
-
-  57.6%,
-  67.2% {
-    content: "stra";
-  }
-
-  58%,
-  66.9% {
-    content: "strat";
-  }
-
-  58.4%,
-  66.6% {
-    content: "strate";
-  }
-
-  58.8%,
-  66.3% {
-    content: "strateg";
-  }
-
-  59.2%,
-  66% {
-    content: "strategi";
-  }
-
-  59.6%,
-  65.7% {
-    content: "strategis";
-  }
-
-  60%,
-  65.4% {
-    content: "strategist";
-  }
-
-  60.4%,
-  63.4% {
-    content: "strategist♞";
-  }
-
-  71.6%,
-  81.3% {
-    content: "";
-  }
-
-  72%,
-  81% {
-    content: "a";
-  }
-
-  72.4%,
-  80.7% {
-    content: "ar";
-  }
-
-  72.8%,
-  80.4% {
-    content: "art";
-  }
-
-  73.2%,
-  80.1% {
-    content: "arti";
-  }
-
-  73.6%,
-  79.8% {
-    content: "artis";
-  }
-
-  74%,
-  79.5% {
-    content: "artist";
-  }
-
-  74.4%,
-  77.5% {
-    content: "artist🖌️";
-  }
-
-
-  85%,
-  94% {
-    content: "";
-  }
-
-  85.4%,
-  93.7% {
-    content: "h";
-  }
-
-  85.8%,
-  93.4% {
-    content: "hu";
-  }
-
-  86.2%,
-  93.1% {
-    content: "hum";
-  }
-
-  86.6%,
-  92.8% {
-    content: "huma";
-  }
-
-  87%,
-  92.5% {
-    content: "human";
-  }
-
-  87.4%,
-  90.5% {
-    content: "human❤️";
-  }
-
-}
-
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
 
 h3 {
   font-family: 'Courier Prime', sans-serif;
@@ -3413,31 +3155,32 @@ cite {
 
 .custom-paragraph-s {
   font-family: 'Montserrat', sans-serif;
-  font-size: 7.5vw;
+  font-size: 6vw;
   font-weight: 650;
   line-height: 6.5vw;
   color: #fff;
   text-align: left;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.1rem;
   text-shadow: 5px 5px 5px #121212;
 
 }
 
+
 ._ql {
   display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-around;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
 }
 
 .custom-paragraph-s2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: .8rem;
+  color: #111;
   text-align: left;
   letter-spacing: 1px;
-  font-weight: 200;
-  margin-top:10px
+  font-weight: 600;
+  margin: 15px 30px;
 
 }
 
@@ -3448,7 +3191,7 @@ cite {
   color: #fff;
   text-align: left;
   letter-spacing: 1px;
-  margin-top: 25px;
+  margin: 25px 0;
 
 }
 
@@ -3487,11 +3230,15 @@ cite {
   filter: blur(0);
 }
 
+.explore {
+  min-width: 40%;
+}
+
 
 
 /*RESPONSIVE*/
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
 
   .content {
     padding: 2vw 4vh 2vh 10vw;
@@ -3529,13 +3276,15 @@ cite {
 
   .custom-paragraph-s {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: 7vw;
     font-weight: 100;
-    line-height: 1.4rem;
+    line-height: 7vw;
     letter-spacing: 3px;
     color: #fff;
-    text-align: center;
+    text-align: left;
   }
+
+
 
 
   .cta h1.gr1 {
@@ -3547,19 +3296,7 @@ cite {
     text-align: center;
   }
 
-  .typehead2 {
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 3em;
-    font-weight: 800;
-    letter-spacing: 1rem;
-    color: #f78bf0;
-    text-align: left;
-    text-shadow: 6px 5px 6px #111;
-    text-align: center;
-    margin-top: 0vh;
-    line-height: 1;
 
-  }
 
 
   h4.worktogether {
@@ -3601,14 +3338,49 @@ cite {
   }
 
 
+  .typehead {
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 0.8em;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0;
+    text-shadow: 6px 5px 6px #111111;
+    z-index: -1;
+  }
+
+
+  .typehead2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: .5em;
+    color: #f78bf0;
+    text-align: left;
+    text-shadow: 6px 5px 6px #111;
+    text-align: center;
+    margin-top: 0vh;
+    line-height: 1;
+  }
+
+  .typewriter {
+    --caret: currentcolor;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    color: #eee;
+    text-shadow: 6px 5px 6px #111;
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {
 
-
-  .splash-intro {
-    min-height: 100vh;
-  }
 
   .splash-about {
 
@@ -3620,17 +3392,17 @@ cite {
     width: 30% !important;
   }
 
-  .typehead2 {
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 2em;
-    font-weight: 800;
-    letter-spacing: 1rem;
-    color: #f78bf0;
-    text-align: left;
-    text-shadow: 6px 5px 6px #111;
-    text-align: center;
-    margin-top: 2vh;
+
+  h2.success {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+    font-style: oblique;
+    letter-spacing: -1px;
+    margin-top: 0vh;
   }
+
 
   h2.signature {
     font-family: 'Montserrat', sans-serif;
@@ -3651,29 +3423,6 @@ cite {
 
   }
 
-  .typehead {
-    font-family: 'Monita Signature', sans-serif;
-    font-size: 7em;
-    text-align: left;
-    line-height: 0.8em;
-    font-weight: 800;
-    color: #f9f871;
-    position: relative;
-    padding-bottom: 20px;
-    margin: 0;
-    text-shadow: 6px 5px 6px #111111;
-    background: -webkit-linear-gradient(rgba(252, 251, 227, 0.9) 0%, rgb(236 227 86 / 60%) 49%, rgb(19, 19, 19, 0) 0%, rgb(232, 225, 125, 90%) 100%);
-    background-clip: border-box;
-    background-clip: border-box;
-    background-clip: border-box;
-    /* -webkit-background-clip: text; */
-    -webkit-text-fill-color: rgba(253, 255, 120, 0.781);
-    z-index: -1;
-  }
-
-  .typewriter {
-    font-size: 1.8rem;
-  }
 
 
   /*Blockquote*/
@@ -3702,20 +3451,18 @@ cite {
     display: block;
     margin: 30px auto 0px;
     text-align: center;
-    max-width: 50vw;
+    width: 100vw;
     border: none;
-
   }
 
   .custom-paragraph-s {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    font-style: none;
+    font-size: 7vw;
     font-weight: 100;
-    line-height: 1.2rem;
+    line-height: 7vw;
     letter-spacing: 3px;
     color: #fff;
-    text-align: center;
+    text-align: left;
   }
 
   .cta-btn-s {
@@ -3818,6 +3565,46 @@ cite {
     text-align: right;
   }
 
+  .typewriter {
+    --caret: currentcolor;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    color: #eee;
+    text-shadow: 6px 5px 6px #111;
+  }
+
+  .typehead2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: .4em;
+    color: #f78bf0;
+    text-align: left;
+    text-shadow: 6px 5px 6px #111;
+    text-align: center;
+    margin-top: 0vh;
+    line-height: 1;
+  }
+
+  .techstack-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .stack-r {
+    min-width: 80%;
+  }
+
 }
 
 @media (min-width: 769px) {
@@ -3888,6 +3675,22 @@ cite {
 
 @media only screen and (max-width: 768px) {
 
+  .exed {
+    min-width: 100%;
+  }
+
+  .r-foot {
+    min-width: 80%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+  ._fe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .mb-10 {
     margin-bottom: 0vh;
   }
@@ -3942,19 +3745,18 @@ cite {
     display: block;
     margin: 30px auto 0px;
     text-align: center;
-    max-width: 80vw;
+    width: 100vw;
     border: none;
-
   }
 
   .custom-paragraph-s {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 200;
-    line-height: 1.3rem;
-    color: #fafafa;
-    text-align: center;
-
+    font-size: 7vw;
+    font-weight: 100;
+    line-height: 7vw;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: left;
   }
 
   h2.signature {
@@ -3974,26 +3776,6 @@ cite {
     align-self: end;
   }
 
-
-  .typehead {
-    font-family: 'Monita Signature', sans-serif;
-    font-size: 15vw;
-    text-align: left;
-    line-height: 0.8em;
-    font-weight: 800;
-    color: #f9f871;
-    position: relative;
-    padding-bottom: 20px;
-    margin: 0;
-    text-shadow: 6px 5px 6px #111111;
-    background: -webkit-linear-gradient(rgba(252, 251, 227, 0.9) 0%, rgb(236 227 86 / 60%) 49%, rgb(19, 19, 19, 0) 0%, rgb(232, 225, 125, 90%) 100%);
-    background-clip: border-box;
-    background-clip: border-box;
-    background-clip: border-box;
-    /* -webkit-background-clip: text; */
-    -webkit-text-fill-color: rgba(253, 255, 120, 0.781);
-    z-index: -1;
-  }
 
   .hs-c {
     border-radius: 50%;
@@ -4076,7 +3858,7 @@ cite {
   h2.success {
     color: #fafafa;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
+    font-size: 1.8em;
     font-weight: 500;
     font-style: oblique;
     letter-spacing: -1px;
@@ -4293,6 +4075,79 @@ cite {
   }
 
 
+  .typehead {
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.8em;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0;
+    text-shadow: 6px 5px 6px #111111;
+    z-index: -1;
+  }
+
+
+  .typehead2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: .7em;
+    color: #f78bf0;
+    text-align: left;
+    text-shadow: 6px 5px 6px #111;
+    text-align: center;
+    margin-top: 0vh;
+    line-height: 1;
+  }
+
+  .typewriter {
+    --caret: currentcolor;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    color: #eee;
+    text-shadow: 6px 5px 6px #111;
+  }
+
+  .f-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .plus {
+    font-family: 'Titillium Web', 'Honk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    text-shadow: 6px 5px 6px #111;
+  }
+
+  .techstack-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+  }
+
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -4312,7 +4167,52 @@ cite {
 
 @media only screen and (max-width: 700px) {
 
+  ._f-se {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
 
+  .splash-intro {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .custom-blockquote-s {
+    display: block;
+    margin: 20px auto 0px;
+    text-align: center;
+    width: 100vw;
+    border: none;
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7vw;
+    font-weight: 100;
+    line-height: 8vw;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: left;
+  }
+
+  .custom-paragraph-s3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 20px 0 20px;
+  }
 
   .intro {
     margin-left: 0px !important;
@@ -4427,6 +4327,70 @@ cite {
 
   }
 
+  .cta-btn-s {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    display: flex;
+    padding: 6px 35px;
+    box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: none;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-connect {
+    color: #111;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    background: none;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    width: fit-content;
+    background: #fff;
+  }
+
+
+  ._fc {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  .qs {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+
+  ._qs {
+    margin-top: -70px;
+    flex-direction: column;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -4496,14 +4460,63 @@ cite {
     white-space: nowrap;
   }
 
+  .custom-blockquote-s {
+    display: block;
+    margin: 20px auto 0px;
+    text-align: center;
+    width: 90vw;
+    border: none;
+  }
+
   .custom-paragraph-s {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 4rem;
     font-weight: 200;
-    line-height: 1.4rem;
+    line-height: 4rem;
     color: #fafafa;
-    text-align: center;
+    text-align: left;
   }
+
+  ._fc {
+    flex-direction: row;
+
+  }
+
+  ._f-se {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .qs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+
+  ._qs {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .explore {
+    min-width: 40%;
+    max-width: 90%;
+  }
+
+  .invert {
+    display: none;
+  }
+
+  ._fc {
+    flex-direction: column;
+}
+
 
 }
 
@@ -4519,18 +4532,13 @@ cite {
     white-space: nowrap;
     position: absolute;
     top: 25%;
-
   }
 
-  .custom-paragraph-s {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 200;
-    line-height: 1.1rem;
-    color: #fafafa;
-    text-align: center;
-    padding-bottom: 0rem;
-  }
+
+
+
+
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -4600,3 +4608,4 @@ cite {
 
 
   }
+}
