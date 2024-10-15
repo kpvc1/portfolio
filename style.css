@@ -111,6 +111,8 @@ h6 {
 
 ._fc {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
@@ -952,8 +954,8 @@ hr.afterfoot {
 
 .cta-splash {
   display: flex;
-  padding: 0 8vw;
   align-items: flex-end;
+  width: 80vw;
 }
 
 .cta {
@@ -2273,7 +2275,7 @@ h4.process {
   font-weight: 600;
   line-height: 2rem;
   color: #fff;
-  opacity: 0.1;
+  opacity: 0.03;
 }
 
 .process-sq h5 {
@@ -2371,6 +2373,13 @@ h6 {
   float: right;
   width: 20px;
   height: 20px;
+}
+
+.view-ico3 {
+  margin: 0 0 0 6px;
+  float: right;
+  width: 30px;
+  height: 30px;
 }
 
 h4.view {
@@ -4045,7 +4054,9 @@ cite {
   .navToggle {
     display: flex;
   }
-
+.socialstack {
+  display: none;
+}
 
 }
 
