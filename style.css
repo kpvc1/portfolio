@@ -140,13 +140,7 @@ h6 {
   align-items: center;
 }
 
-.invert {
-  width: fit-content;
-  opacity: 0;
-  max-width: fit-content;
-  backdrop-filter: invert(1) blur(10px);
 
-}
 
 .fadein {
   animation: fadein 1s forwards;
@@ -373,10 +367,9 @@ textarea::placeholder {
 
 .contact-form button {
   width: 100%;
-  padding: 10px 30px;
+  padding: 12px 30px;
   color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 400;
@@ -442,20 +435,18 @@ a {
 
 
 .nav {
-
   position: fixed;
   height: 80vh;
-  width: 8vw;
+  width: 7vw;
   left: 0;
   top: 15vh;
   transform-origin: left top;
   background: none;
-  z-index: 5;
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   z-index: 20;
 }
 
@@ -638,10 +629,7 @@ svg.svg-scroll-hover path {
   scale: 0.7;
 }
 
-svg.svg-scroll-hover:hover path {
-  stroke: #f9f871;
-
-}
+svg.svg-scroll-hover:hover path {}
 
 
 // scroll animation
@@ -739,9 +727,11 @@ svg.loader:hover path:hover {
   position: relative;
   overflow: hidden;
   z-index: 4;
-  width: 90vw;
-  margin: 5vh 7vw;
-  border-radius: 40px;
+  width: 100%;
+  margin: 3vh 0;
+  border-radius: 0px;
+  overflow: hidden;
+  padding: 5vh 0 0 0;
 }
 
 .custom-s1 {
@@ -1028,7 +1018,7 @@ hr.afterfoot {
   display: flex;
   padding: 6px 35px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
+  border-radius: 0px;
   transition: all 0.3s ease;
   background: none;
   border: 1px solid #fff;
@@ -1043,13 +1033,13 @@ hr.afterfoot {
 
 
 .btn-connect {
-  color: #fff;
+  color: #111;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   line-height: 2rem;
   letter-spacing: 1px;
-  font-weight: 500;
-  padding: 5px 25px;
+  font-weight: 600;
+  padding: 7px 25px;
   border-radius: 0;
   transition: all 0.3s ease;
   display: flex;
@@ -1057,15 +1047,20 @@ hr.afterfoot {
   text-decoration: none;
   white-space: nowrap;
   width: fit-content;
-  background: none;
-  filter: invert(1);
+
+
+}
+
+.invert {
+  backdrop-filter: invert(1);
 }
 
 .btn-connect:hover {
-  color: #111;
-  background: #f9f871;
+  background: #f9f971ce;
+  font-weight: 600;
   text-decoration: none;
-  border: 1px solid #f9f871;
+  border: none;
+
 }
 
 
@@ -1162,7 +1157,7 @@ hr.afterfoot {
   -webkit-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 0px;
   transition: transform 0.3s ease;
   /* Smooth scaling effect */
   background: rgb(37, 80, 215);
@@ -1174,7 +1169,6 @@ hr.afterfoot {
 }
 
 .btn-container {
-  margin: 30px 15px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1440,12 +1434,12 @@ h2.signature {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .typehead {
   font-family: 'Monita Signature', sans-serif;
-  font-size: 3vw;
+  font-size: 3.3vw;
   text-align: left;
   line-height: 0.8em;
   font-weight: 800;
@@ -1644,7 +1638,7 @@ a.download {
 }
 
 .content {
-  padding: 2vw;
+  padding: 2vw 6vw;
 }
 
 
@@ -2003,10 +1997,7 @@ h5.techskills {
 
 
 
-.techstack-content li img.techstack-icon {
-  width: 80px;
-  border: none;
-}
+
 
 .techstack {
   display: flex;
@@ -2025,21 +2016,29 @@ h5.techskills {
 
 }
 
-
-
 .techstack-content {
   list-style: none;
   height: 100%;
   display: flex;
   margin: 0;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 80px;
+  gap: 40px 80px;
+  justify-content: space-evenly;
+}
+
+.techstack-content li img.techstack-icon {
+  width: 70px;
+  border: none;
+  margin: auto;
 }
 
 
+
+.techstack-content li {
+  width: 90px;
+  border: none;
+  text-align: center;
+}
 
 
 
@@ -2226,9 +2225,9 @@ section.bg3>div {
 
 h4.process {
   font-family: 'Playfair', sans-serif;
-  font-size: 9rem;
+  font-size: 7rem;
   letter-spacing: -0.2rem;
-  color: #fff7d6;
+  color: transparent;
   text-align: left;
   white-space: nowrap;
   transform: rotate(-90deg) !important;
@@ -2236,13 +2235,66 @@ h4.process {
   flex-wrap: nowrap;
   align-content: stretch;
   justify-content: flex-end;
-  margin-left: 100px;
-  margin-top: 70px;
+  margin-left: 0;
+  margin-top: 0;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.white-outline {
+  font-family: 'Playfair', sans-serif;
+  font-size: 7rem;
+  letter-spacing: -0.2rem;
+  color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  transform: rotate(-90deg) !important;
+  margin-left: 0;
+  margin-top: 0;
+  -webkit-text-stroke: 30px #ffffff0e;
+  margin-top: 150px;
+  margin-left: -30px;
+}
+
+
+.process-sq {
+  background: none;
+  width: 100%;
+  height: auto;
+  /*aspect-ratio: 1 / 1 !important;*/
+  margin: 20px 0;
+}
+
+.process-sq h5 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: #fff;
+  opacity: 0.1;
+}
+
+.process-sq h5 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: #fff;
 }
 
 .process-container {
   margin: 0px;
   padding: 6px;
+}
+
+.process-container p{
+font-size:0.9rem;
+font-weight: 200;
 }
 
 h5.introduction {
@@ -2280,11 +2332,11 @@ div.exed {
 h2.success {
   color: #fafafa;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5em;
-  font-weight: 500;
-  font-style: oblique;
-  letter-spacing: -1px;
-  margin-top: 10vh;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 5vh;
+  font-style: ;
+  text-align: left;
 }
 
 
@@ -2349,12 +2401,15 @@ h4.jobtitle {
 
 h3.recentprojects {
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  line-height: 34px;
-  font-weight: 700;
-  color: #FFF;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.01rem;
+  font-weight: 200;
+  color: #fff7d6;
   text-align: left;
-  margin-bottom: 12px;
+  margin-bottom: 1px;
+  opacity: 0.5;
+  margin-right: 20px;
 }
 
 h5.subhead {
@@ -2373,7 +2428,8 @@ h5.subhead {
   position: relative;
   width: var(--lineWidth);
   height: var(--lineHeight);
-  margin-bottom: 4vh;
+  margin-bottom: 1vh;
+  opacity: 0.6;
 }
 
 ._line {
@@ -2409,19 +2465,42 @@ h5.subhead {
 }
 
 
+.project-id {
+  position: relative;
+}
+
+h5.num {
+  font-family: 'Playfair', sans-serif;
+  font-size: 20vw;
+  color: #fff7d6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0.1;
+  line-height: 50%;
+}
+
+h5.num-r {
+  font-family: 'Playfair', sans-serif;
+  font-size: 20vw;
+  color: #fff7d6;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  line-height: 50%;
+}
+
+
+
+
 .project-container {
   width: 100%;
   max-width: none !important;
   height: 100%;
-  /* Adjust the height as needed */
   position: relative;
-  /* Position relative to contain the child div */
   overflow: hidden;
-  /* Optional: ensures no overflow outside the container */
-  border: 0px solid #111;
-  /* Optional: border to visualize the container */
-  border-radius: 9px;
-  padding: 33px !important;
+  padding: 0px;
 }
 
 .project-1 {
@@ -2490,6 +2569,25 @@ h5.subhead {
   top: 0;
   left: 0;
   box-shadow: 0 0 100px rgba(0, 0, 0, 1) inset;
+}
+
+
+.project-bg-pro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.project-bg-pro>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+  opacity: 1;
+
 }
 
 
@@ -2699,9 +2797,9 @@ h3.center {
 h2.about {
   color: #fafafa;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 1em;
-  font-weight: 700;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -3164,8 +3262,7 @@ cite {
   color: #fff;
   text-align: left;
   letter-spacing: -0.1rem;
-  text-shadow: 5px 5px 5px #121212;
-
+  text-shadow: 4px 4px 8px #000000ba
 }
 
 
@@ -3186,7 +3283,7 @@ cite {
   font-weight: 600;
   margin: 0px 0px;
   background: #fff;
-  padding: 20px 50px;
+  padding: 23px 40px;
 }
 
 .custom-paragraph-s3 {
@@ -3198,6 +3295,7 @@ cite {
   letter-spacing: 1px;
   margin: 25px 0;
   max-width: 60%;
+  text-shadow: 1px 1px 2px #111;
 }
 
 .questions {
@@ -3215,6 +3313,7 @@ cite {
   opacity: 0;
   filter: blur(10px);
   transition: all 1.2s ease;
+  min-width: 180px;
 }
 
 .custom-span-s.animate {
@@ -3243,7 +3342,7 @@ cite {
 
 /*RESPONSIVE*/
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1200px) {
 
   .content {
     padding: 2vw 4vh 2vh 10vw;
@@ -3385,11 +3484,27 @@ cite {
 
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 922px) {
+
+  .hs-c {
+    border-radius: 50%;
+    filter: brightness(0.95);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 
   ._fc {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -3421,7 +3536,7 @@ cite {
     padding-left: 10vw;
   }
 
-  .abt-r {
+  .abt-responsive {
     margin-left: 12% !important;
     width: 30% !important;
   }
@@ -3435,6 +3550,7 @@ cite {
     font-style: oblique;
     letter-spacing: -1px;
     margin-top: 0vh;
+    text-align: center;
   }
 
 
@@ -3506,7 +3622,7 @@ cite {
     letter-spacing: 1px;
     font-weight: 600;
     margin: 0px 0px;
-    padding: 20px 40px;
+    padding: 23px 23px;
   }
 
   /*Blockquote-s*/
@@ -3535,7 +3651,7 @@ cite {
     line-height: 2rem;
     letter-spacing: 1px;
     font-weight: 500;
-    padding: 5px 25px;
+    padding: 7px 25px;
     border-radius: 0;
     transition: all 0.3s ease;
     display: flex;
@@ -3545,6 +3661,15 @@ cite {
     width: fit-content;
     background: none;
     filter: invert(1);
+    back
+  }
+
+  .btn-connect:hover {
+    background: #030073;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+
   }
 
   .cta-splash {
@@ -3558,7 +3683,7 @@ cite {
     width: fit-content;
     opacity: 0;
     max-width: fit-content;
-    backdrop-filter: invert(1) blur(10px);
+    backdrop-filter: invert(1);
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -3624,7 +3749,10 @@ cite {
     justify-content: flex-end;
     margin-left: 30px;
     margin-top: 0px;
+
+
   }
+
 
 
   h2.hello {
@@ -3665,10 +3793,24 @@ cite {
     text-align: right;
   }
 
+  .typehead {
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 6vw;
+    text-align: center;
+    line-height: 0.8em;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0;
+    text-shadow: 6px 5px 6px #111111;
+    z-index: -1;
+  }
+
   .typewriter {
     --caret: currentcolor;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 0.8rem;
+    font-size: 2.5rem;
     font-weight: 100;
     font-style: normal;
     text-align: center;
@@ -3676,11 +3818,16 @@ cite {
     text-shadow: 6px 5px 6px #111;
   }
 
+  .plus {
+    font-size: 1.2rem;
+  }
+
+
   .typehead2 {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1em;
     font-weight: 800;
-    letter-spacing: .4em;
+    letter-spacing: .3em;
     color: #f78bf0;
     text-align: left;
     text-shadow: 6px 5px 6px #111;
@@ -3699,6 +3846,7 @@ cite {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    justify-content: space-evenly;
   }
 
   .stack-r {
@@ -3724,58 +3872,182 @@ cite {
   }
 }
 
-@media only screen and (max-height:768px) {
+
+@media only screen and (orientation: landscape) and (max-height: 600px) {
+  /* Your styles for landscape mode with a max height of 600px */
 
   .nav {
     position: fixed;
-    height: 70vh;
-    width: 8vw;
-    left: 0;
-    top: 25vh;
-    transform-origin: left top;
+    top: 1vh;
+    left: 90vw;
+    justify-content: flex-end;
+    align-items: center;
     background: none;
     z-index: 11;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    flex-direction: column-reverse;
-    align-items: center;
-
+    margin-top: 0;
   }
 
-  .scroll-down {
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
+
+  .navList {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    height: 15vh;
     width: 100%;
-    position: absolute;
-    bottom: 0px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    background: #232323b5;
+    border-radius: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(6.5px);
+    z-index: -1;
   }
 
-  .leaveamessage {
-    position: relative;
-    top: 0;
-    right: 0;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    z-index: 3;
-    border-radius: 0px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
+  a.navLink {
+    color: #ddd;
+    font-size: 8vh;
     font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0);
+    padding: 0px;
+  }
+
+  .navList.active {
     display: flex;
-    scale: 1;
+  }
+
+  .navLink.active {
+    color: #ebebeb;
+  }
+
+  /* Active link styling: keep underline when link is active */
+  .navLink.active:before {
+    background: #1a1a1ad5;
+
+
+    /* Different color for active */
+    width: 100%;
+    /* Fully expanded */
+    transition: width 0.5s ease;
+  }
+
+  /* Active right underline also hidden */
+  .navLink.active:after {
+    background: transparent;
+    /* Keep transparent */
+    width: 100%;
+    transition: 0.5s ease;
+    /* Smooth transition */
+  }
+
+  .navLink {
+    color: #ddd;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    display: block;
+
+  }
+
+
+  a.navLink:hover {
+    color: #ebebeb;
+  }
+
+  .navLink:hover {
+    text-decoration: none;
+  }
+
+  /* Default link underline (before and after hidden initially) */
+  .navLink:before,
+  .navLink:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    /* Hidden initially */
+    height: 100%;
+    bottom: 0%;
+    /* Positioned at the bottom of the link */
+    background: transparent;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Smooth transition for both */
+    z-index: -1;
+
+  }
+
+  .navLink:before {
+    left: 0;
+    /* Expand from left */
+  }
+
+  .navLink:after {
+    right: 0;
+    /* Expand from right */
+    background: #7e7e7eb6;
+  }
+
+  /* Hover effect: expand underline from left to right */
+  .navLink:hover:before {
+    background: none;
+    /* Change color on hover */
+    width: 100%;
+    /* Expand fully */
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Smooth expansion */
+  }
+
+  /* Hover effect: hide right underline */
+  .navLink:hover:after {
+    background: transparent;
+    /* Disappear */
+    width: 100%;
+    /* Fully expand, but transparent */
+    transition: 0.5s ease;
+    /* Ensure smooth transition */
+  }
+
+  .navLink.active {
+    color: #ebebeb;
+  }
+
+  /* Active link styling: keep underline when link is active */
+  .navLink.active:before {
+    background: none;
+
+
+    /* Different color for active */
+    width: 100%;
+    /* Fully expanded */
+    transition: width 0.5s ease;
+  }
+
+  /* Active right underline also hidden */
+  .navLink.active:after {
+    background: transparent;
+    /* Keep transparent */
+    width: 100%;
+    transition: 0.5s ease;
+    /* Smooth transition */
+  }
+
+
+  .navToggle {
+    display: flex;
   }
 
 
 }
-
 
 
 @media only screen and (max-width: 768px) {
@@ -3960,6 +4232,8 @@ cite {
     justify-content: flex-end;
   }
 
+
+
   h2.success {
     color: #fafafa;
     font-family: 'Montserrat', sans-serif;
@@ -4006,7 +4280,7 @@ cite {
     display: none;
     flex-direction: column;
     width: 100%;
-    height: auto;
+    height: 100%;
     position: fixed;
     top: 0px;
     left: 0;
@@ -4016,11 +4290,11 @@ cite {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(6.5px);
     z-index: -1;
-}
+  }
 
   a.navLink {
     color: #ddd;
-    font-size: 3rem;
+    font-size: 8vh;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     float: left;
@@ -4032,7 +4306,7 @@ cite {
     cursor: pointer;
     transition: 0.5s ease-in-out;
     transform: rotate(0);
-    padding: 10px;
+    padding: 0px;
   }
 
   .navList.active {
@@ -4182,13 +4456,13 @@ cite {
 
   .typehead {
     font-family: 'Monita Signature', sans-serif;
-    font-size: 10vw;
+    font-size: 12vw;
     text-align: center;
     line-height: 0.8em;
     font-weight: 800;
     color: #fff;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     margin: 0;
     text-shadow: 6px 5px 6px #111111;
     z-index: -1;
@@ -4200,8 +4474,6 @@ cite {
     font-size: 1em;
     font-weight: 800;
     letter-spacing: .7em;
-    color: #f78bf0;
-    text-align: left;
     text-shadow: 6px 5px 6px #111;
     text-align: center;
     margin-top: 0vh;
@@ -4211,7 +4483,7 @@ cite {
   .typewriter {
     --caret: currentcolor;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     font-weight: 200;
     font-style: normal;
     text-align: center;
@@ -4224,7 +4496,7 @@ cite {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .plus {
@@ -4248,8 +4520,8 @@ cite {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     gap: 35px;
+    justify-content: space-evenly;
   }
 
   .cta-splash {
@@ -4269,7 +4541,8 @@ cite {
     font-family: 'Playfair', sans-serif;
     font-size: 15vw;
     letter-spacing: -0.2rem;
-    color: #fff7d6;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
     text-align: left;
     white-space: normal;
     transform: rotate(0deg) !important;
@@ -4277,6 +4550,23 @@ cite {
     margin-left: 0;
     justify-content: space-evenly;
   }
+
+  .white-outline {
+    position: absolute;
+    font-family: 'Playfair', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    color: transparent;
+    text-align: left;
+    white-space: nowrap;
+    transform: rotate(0deg) !important;
+    display: flex;
+    -webkit-text-stroke: 30px #ffffff1f;
+    top: 110px;
+    left: 0px;
+  }
+
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -4495,7 +4785,7 @@ cite {
     width: fit-content;
     background: none;
     filter: invert(1);
-}
+  }
 
 
   ._fc {
@@ -4546,10 +4836,10 @@ cite {
 
   h2.success {
     color: #fafafa;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair', sans-serif;
     font-size: 2rem;
     line-height: 2rem;
-    font-weight: 500;
+    font-weight: 400;
     font-style: oblique;
     letter-spacing: -1px;
     margin-top: 0vh;
@@ -4815,4 +5105,356 @@ cite {
 
 
   }
+}
+
+
+@media only screen and (max-height:500px) {
+
+  .exed {
+    min-width: 100%;
+  }
+
+  .r-foot {
+    min-width: 80%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  ._fe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .mb-10 {
+    margin-bottom: 0vh;
+  }
+
+  .content {
+    padding: 2vh 4vw;
+  }
+
+  .logo-kpvc {
+    display: none;
+  }
+
+  .availability-box {
+    display: flex;
+    width: auto;
+    height: fit-content;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    justify-content: flex-start;
+    top: 10px;
+    left: 20px;
+  }
+
+
+  .abt-r {
+    margin-left: 1% !important;
+    width: 100% !important;
+  }
+
+  /*Blockquote*/
+  .custom-blockquote {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 80vw;
+    border: none;
+  }
+
+  .custom-paragraph {
+    font-family: Georgia, serif;
+    font-size: 2.3rem;
+    font-style: italic;
+    font-weight: 400;
+    padding-bottom: 2.3rem;
+    line-height: 2.3rem;
+    color: #fafafa;
+    text-align: center;
+  }
+
+  .custom-blockquote-s {
+    display: block;
+    margin: 30px auto 0px;
+    text-align: center;
+    width: 100vw;
+    border: none;
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7vw;
+    font-weight: 100;
+    line-height: 7vw;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: left;
+  }
+
+  h2.signature {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 330;
+    font-size: 2vw;
+    letter-spacing: 0.5em;
+    margin: 0px;
+    padding: 0;
+    text-align: right;
+    text-shadow: 6px 6px 9px #000;
+    cursor: crosshair;
+    color: #fff;
+    z-index: 0;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    align-self: end;
+  }
+
+
+  .hs-c {
+    border-radius: 50%;
+    filter: brightness(0.95);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 30px;
+  }
+
+  h3.recentprojects {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 700;
+    color: #FFF;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+
+  h2.hello {
+    color: #fff;
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 10vw;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0px;
+    text-shadow: 3px 3px 3px #000;
+    white-space: nowrap;
+    position: absolute;
+    top: 340px;
+
+  }
+
+
+  .cta h1.gr1 {
+    color: #fafafa;
+    font: 200 4.5vh / 5vh "Montserrat", sans-serif;
+    letter-spacing: -1px;
+    margin-bottom: 3vh;
+    padding: 2rem;
+  }
+
+  h4.worktogether {
+    font-size: 4em;
+    line-height: 1em;
+    text-align: left;
+    margin-bottom: 10px !important;
+    color: #fff;
+    ;
+  }
+
+  .footer-ct {
+    text-align: left;
+  }
+
+  h4.process {
+    font-family: 'Playfair', sans-serif;
+    font-size: 15vw;
+    letter-spacing: -0.2rem;
+    color: #fff7d6;
+    text-align: left;
+    white-space: nowrap;
+    transform: rotate(-90deg) !important;
+    display: flex;
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+
+
+
+  h2.success {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 500;
+    font-style: oblique;
+    letter-spacing: -1px;
+    margin-top: 0vh;
+  }
+
+  .mb-5 {
+    margin-bottom: 0vh;
+  }
+
+
+
+  h2.about-r {
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    line-height: 1em;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .text {
+    text-align: left;
+  }
+
+
+
+  .socialstack {
+    display: none;
+    flex-direction: column;
+
+  }
+
+  .footernote p {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 0vh;
+    padding-bottom: 3vh;
+    height: 100%;
+  }
+
+  .splash-about {
+
+    margin-top: 10vh;
+  }
+
+
+  .typehead {
+    font-family: 'Monita Signature', sans-serif;
+    font-size: 12vw;
+    text-align: center;
+    line-height: 0.8em;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    padding-bottom: 40px;
+    margin: 0;
+    text-shadow: 6px 5px 6px #111111;
+    z-index: -1;
+  }
+
+
+  .typehead2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    letter-spacing: .7em;
+    text-shadow: 6px 5px 6px #111;
+    text-align: center;
+    margin-top: 0vh;
+    line-height: 1;
+  }
+
+  .typewriter {
+    --caret: currentcolor;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    color: #eee;
+    text-shadow: 6px 5px 6px #111;
+  }
+
+  .f-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .plus {
+    font-family: 'Titillium Web', 'Honk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    text-shadow: 6px 5px 6px #111;
+  }
+
+  .techstack-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+    justify-content: space-evenly;
+  }
+
+  .cta-splash {
+    display: flex;
+    padding: 0 10vw;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+  h4.process {
+    font-family: 'Playfair', sans-serif;
+    font-size: 15vw;
+    letter-spacing: -0.2rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-align: left;
+    white-space: normal;
+    transform: rotate(0deg) !important;
+    display: flex;
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
+
+  .white-outline {
+    position: absolute;
+    font-family: 'Playfair', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    color: transparent;
+    text-align: left;
+    white-space: nowrap;
+    transform: rotate(0deg) !important;
+    display: flex;
+    -webkit-text-stroke: 30px #ffffff1f;
+    top: 110px;
+    left: 0px;
+  }
+
+
 }
