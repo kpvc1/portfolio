@@ -626,7 +626,7 @@ a.navLink:hover {
   height: 10vh;
   width: 100%;
   position: absolute;
-  bottom: 0vh;
+  bottom: 5vh;
 
 }
 
@@ -725,7 +725,7 @@ svg.loader:hover path:hover {
 .hero-splash {
   position: relative;
   overflow: hidden;
-  height: 101vh;
+  height: 105vh;
   width: auto;
   display: flex;
 
@@ -737,10 +737,12 @@ svg.loader:hover path:hover {
   overflow: hidden;
   z-index: 4;
   width: 100%;
-  margin: 3vh 0;
+  margin: 0;
   border-radius: 0px;
   overflow: hidden;
-  padding: 5vh 0 0 0;
+  padding: 1vh 0 0 1vh;
+  min-height: 100vh;
+  ;
 }
 
 .custom-s1 {
@@ -790,7 +792,7 @@ hr {
 }
 
 hr.gv {
- display: none;
+  display: none;
 }
 
 .hero {
@@ -1084,7 +1086,7 @@ hr.afterfoot {
   text-decoration: none;
   white-space: nowrap;
   width: fit-content;
-  margin:12px;
+  margin: 12px;
 }
 
 .cta-btn-s:hover {
@@ -1661,7 +1663,7 @@ a.download {
 }
 
 .content {
-  padding: 2vw 6vw;
+  padding: 9vh 6vw;
 }
 
 
@@ -2246,22 +2248,44 @@ section.bg3>div {
   height: 100vh;
 }
 
+.ps {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.psvg1 {
+  display: block;
+}
+
+.psvg2 {
+  display: none;
+}
+
 h4.process {
   font-family: 'Playfair', sans-serif;
   font-size: 7rem;
   letter-spacing: -0.2rem;
   color: transparent;
-  text-align: left;
   white-space: nowrap;
   transform: rotate(-90deg) !important;
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  justify-content: flex-end;
-  margin-left: 0;
-  margin-top: 30px;
   -webkit-text-stroke: 1px #ffffff;
+  line-height: 5rem;
 }
+
+h2.success {
+  color: #fafafa;
+  font-family: 'Playfair', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transform: rotate(-90deg) !important;
+  white-space: nowrap;
+  line-height: 1rem;
+  margin-left: 150px;
+}
+
+
+
 
 .white-outline {
   font-family: 'Playfair', sans-serif;
@@ -2296,15 +2320,15 @@ h4.process {
   font-weight: 600;
   line-height: 2rem;
   color: #fff;
-  opacity: 0.03;
+  opacity: 0.3;
 }
 
 .process-sq h5 {
   position: absolute;
   top: 0px;
-  left: 0px;
+  right: 0px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 2rem;
   color: #fff;
@@ -2352,13 +2376,6 @@ div.exed {
   text-align: left;
 }
 
-h2.success {
-  color: #fafafa;
-  font-family: 'Playfair', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: left;
-}
 
 
 h5.folioTitle {
@@ -2501,10 +2518,10 @@ h5.subhead {
 
 .down {
   position: absolute;
-  right:1vw;
+  right: 1vw;
   bottom: 50%;
   z-index: 5;
-  margin:0 auto;
+  margin: 0 auto;
   opacity: 0.8;
 }
 
@@ -2516,7 +2533,7 @@ h5.num {
   position: absolute;
   right: 0;
   bottom: 0;
-  opacity: 0.1;
+  opacity: 0.;
   line-height: 50%;
 }
 
@@ -3508,6 +3525,15 @@ cite {
 
 @media only screen and (max-width: 922px) {
 
+  .down {
+    position: absolute;
+    right: 1vw;
+    bottom: 1vw;
+    z-index: 5;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
   .hs-c {
     border-radius: 50%;
     filter: brightness(0.95);
@@ -3655,7 +3681,7 @@ cite {
     text-align: center;
     width: 80vw;
     border: none;
-}
+  }
 
   .custom-paragraph-s {
     font-family: 'Montserrat', sans-serif;
@@ -3708,7 +3734,7 @@ cite {
     flex-direction: row;
     margin: 0;
     padding: 0px 12px;
-}
+  }
 
 
   .cta h1.gr1 {
@@ -4016,12 +4042,25 @@ cite {
 
 @media only screen and (max-width: 768px) {
 
+  .psvg1 {
+    display: none;
+  }
+
+  .psvg2 {
+    display: block;
+  }
+
+  .ps {
+    display: flex;
+    justify-content: center;
+  }
+
   .btn-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-}
+  }
 
 
   hr.gv {
@@ -4485,7 +4524,7 @@ cite {
 
   .cta-splash {
     display: flex;
-  flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: flex-end;
