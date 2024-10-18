@@ -374,17 +374,18 @@ textarea::placeholder {
   resize: vertical;
 }
 
+
 .contact-form button {
   width: 100%;
   padding: 12px 30px;
   color: white;
   border: none;
+
+  background: rgba(37, 80, 215, 1);
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
-  background-color: rgb(37, 80, 215);
-  background-color: linear-gradient(45deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
   transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
@@ -393,7 +394,6 @@ textarea::placeholder {
   -moz-box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  /* Smooth scaling effect */
   background: rgb(37, 80, 215);
   background: linear-gradient(0deg, rgba(37, 80, 215, 1) 0%, rgba(148, 152, 255, 1) 100%);
   max-width: 300px;
@@ -402,7 +402,7 @@ textarea::placeholder {
 
 .contact-form button:hover {
   background-color: rgb(74, 112, 235);
-  background-color: linear-gradient(45deg, rgb(41, 78, 199) 0%, rgb(119, 122, 211) 100%);
+
 }
 
 
@@ -740,8 +740,9 @@ svg.loader:hover path:hover {
   margin: 0;
   border-radius: 0px;
   overflow: hidden;
-  padding: 1vh 0 0 1vh;
-  min-height: 100vh;
+  padding: 3vh 0;
+  display: flex;
+  align-items: center;
   ;
 }
 
@@ -1087,6 +1088,7 @@ hr.afterfoot {
   white-space: nowrap;
   width: fit-content;
   margin: 12px;
+
 }
 
 .cta-btn-s:hover {
@@ -1422,12 +1424,11 @@ h2.signature {
 
 
 .hs-c img {
-  border-radius: 50%;
+  border-radius: 1%;
 }
 
 .hs-c {
   border-radius: 50%;
-  filter: brightness(0.95);
   transition: all 0.3s ease-in-out;
   text-align: center;
   display: flex;
@@ -1437,15 +1438,22 @@ h2.signature {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  clip-path: polygon(93% 7%, 50% 95%, 7% 7%);
 
+
+
+
+  transition: clip-path 0.5s ease-in-out;
 
 }
 
 .hs-c:hover {
-  filter: brightness(1);
-  transition: all 0.5s ease-in-out;
-}
+  clip-path: polygon(50% 95%, 5% 3%, 95% 3%);
 
+
+
+
+}
 
 
 
@@ -1464,7 +1472,7 @@ h2.signature {
 
 .typehead {
   font-family: 'Monita Signature', sans-serif;
-  font-size: 3.3vw;
+  font-size: 3.3rem;
   text-align: left;
   line-height: 0.8em;
   font-weight: 800;
@@ -1782,13 +1790,13 @@ a.download {
 
 .bt-1 {
   border-top: 1px solid #ddd;
-  animation: draw-border 9s forwards ease-out;
+ 
   max-width: 60%;
 }
 
 
 
-
+ 
 @keyframes draw-border {
   0% {
     width: 0;
@@ -1808,6 +1816,11 @@ a.download {
     border-top-width: 1px;
     opacity: 1;
   }
+}
+
+.start-animation {
+  opacity: 1;
+  animation: draw-border 6s forwards ease-out;
 }
 
 
@@ -2262,15 +2275,69 @@ section.bg3>div {
   display: none;
 }
 
+
+
+/* Blinking underscore */
+.caret {
+  display: inline-block;
+  width: 0.5em;
+  /* Adjust the width of the underscore */
+  border-bottom: 0.05em solid black;
+  animation: blinkCaret 1s step-end infinite;
+}
+
+@keyframes blinkCaret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #fff;
+  }
+}
+
+
+.h-container {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+
+}
+
+h1.process {
+  font-family: 'Playfair', sans-serif;
+  font-size: 6rem;
+  line-height: 5rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  border-bottom: 4px solid #fff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+h2.steps {
+  font-family: 'Playfair', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+  }
+
 h4.process {
   font-family: 'Playfair', sans-serif;
   font-size: 7rem;
   letter-spacing: -0.2rem;
-  color: transparent;
+  color: #fff;
   white-space: nowrap;
-  transform: rotate(-90deg) !important;
+  transform: rotate(-0deg) !important;
   -webkit-text-stroke: 1px #ffffff;
-  line-height: 5rem;
+  line-height: 9rem;
 }
 
 h2.success {
@@ -2311,27 +2378,22 @@ h2.success {
   margin: 3px 0;
 }
 
-.process-sq h5 {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
-  font-weight: 600;
-  line-height: 2rem;
-  color: #fff;
-  opacity: 0.3;
-}
+
 
 .process-sq h5 {
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 0px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 2rem;
-  color: #fff;
+  opacity: 1;
+  background: #fff;
+  aspect-ratio: 1 / 1;
+  width: 33px;
+  color: #111;
+  text-align: center;
 }
 
 .process-container {
@@ -2435,6 +2497,22 @@ h4.year {
   font-weight: 500;
 }
 
+summary.jobtitle {
+  cursor: pointer;
+  color: #f9f871;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.1em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+details {
+  height: calc-size(auto);
+  min-height: 100%;
+}
+
 h4.jobtitle {
   color: #f9f871;
   font-family: 'Montserrat', sans-serif;
@@ -2533,7 +2611,7 @@ h5.num {
   position: absolute;
   right: 0;
   bottom: 0;
-  opacity: 0.;
+  opacity: 0.1;
   line-height: 50%;
 }
 
@@ -2625,7 +2703,7 @@ h5.num-r {
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 1) inset;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9) inset;
 }
 
 
@@ -2854,9 +2932,9 @@ h3.center {
 h2.about {
   color: #fafafa;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.4em;
+  font-size: 1.3em;
   line-height: 1em;
-  font-weight: 400;
+  font-weight: 500;
   text-align: left;
 }
 
@@ -2913,9 +2991,10 @@ h2.hello2 {
 
 h2.experience {
   color: #fafafa;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.75rem;
-  font-weight: 450;
+  font-weight: 500;
+  letter-spacing: 1px;
 
 }
 
@@ -3525,6 +3604,12 @@ cite {
 
 @media only screen and (max-width: 922px) {
 
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .down {
     position: absolute;
     right: 1vw;
@@ -3532,7 +3617,7 @@ cite {
     z-index: 5;
     margin: 0 auto;
     opacity: 0.8;
-}
+  }
 
   .hs-c {
     border-radius: 50%;
@@ -4751,6 +4836,12 @@ cite {
 }
 
 @media only screen and (max-width: 480px) {
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 
 
