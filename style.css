@@ -90,11 +90,24 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   color: #fff;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
 
 }
 
+.lh-x1 {
+  font-size: .9rem;
+  line-height: 1.3rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.lh-x2 {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
 
 ._vc {
   align-items: center;
@@ -126,6 +139,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 !important;
 }
 
 .explore {
@@ -405,6 +419,72 @@ textarea::placeholder {
 
 }
 
+.custom-s2 {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  background-image: url(uploads/hadouken.jpg);
+  background-size: cover;
+  background-position: top 0px left 0px;
+  background-attachment: scroll;
+  z-index: 4;
+
+}
+
+.crafted {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.breadcrumbs {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.bc-home {
+  color:#fff;
+}
+
+.bc-btn {
+  aspect-ratio: 1/1;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background:#111;
+  transition: all 0.4s ease-in-out;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.bc-btn-prev {
+  aspect-ratio: 1/1;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background:#111;
+  transition: all 0.4s ease-in-out;
+  clip-path: polygon(0 1%, 75% 0, 100% 100%, 25% 100%);
+
+}
+
+.bc-btn:hover {
+  background: #414141
+}
+
+.bc-btn-prev:hover {
+  background: #414141
+}
+
+.bc-btn img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
 
 .footer {
   width: 100%;
@@ -415,8 +495,8 @@ textarea::placeholder {
 
 .footernote {
   width: 100vw;
-
 }
+
 
 .footernote p {
   color: #fff;
@@ -731,6 +811,22 @@ svg.loader:hover path:hover {
 
 }
 
+.project-hero {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+  width: 100%;
+  margin: 0;
+  border-radius: 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  ;
+}
+
+
+
 .custom-s {
   background: #111;
   position: relative;
@@ -769,6 +865,8 @@ svg.loader:hover path:hover {
 
 }
 
+
+
 .custom-s3 {
   background: #111;
   position: relative;
@@ -798,6 +896,35 @@ hr.gv {
 
 .hero {
   padding: 0 !important;
+}
+
+.splash-img {
+  position: relative;
+  min-height: 60vh;
+
+}
+
+.splash-img-bg1 {
+  width: 100vw;
+  height: 60vh;
+  background: url("uploads/decadance-hero3.jpg") no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.splash-img-bg2 {
+  width: 100vw;
+  height: 60vh;
+  background: url("uploads/bg-intra.jpg") no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.splash-img-logo {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  max-width: 30vw;
 }
 
 .splash-intro {
@@ -1034,7 +1161,7 @@ hr.afterfoot {
   line-height: 2rem;
   letter-spacing: 1px;
   font-weight: 600;
-  padding: 7px 25px;
+  padding: 20px 60px;
   border-radius: 0;
   transition: all 0.3s ease;
   display: flex;
@@ -1074,7 +1201,7 @@ hr.afterfoot {
   letter-spacing: 1px;
   font-weight: 400;
   display: flex;
-  padding: 6px 35px;
+  padding: 16px 60px;
   box-shadow: 4px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 0px;
   transition: all 0.3s ease;
@@ -1087,7 +1214,7 @@ hr.afterfoot {
   text-decoration: none;
   white-space: nowrap;
   width: fit-content;
-  margin: 12px;
+  margin: 12px 0;
 
 }
 
@@ -1167,6 +1294,10 @@ hr.afterfoot {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.btn-container2 a {
+  margin: 10px;
 }
 
 
@@ -1618,9 +1749,9 @@ a.download {
   color: #fff;
   font: 300 normal 0.8rem 'Montserrat', sans-serif;
   display: flex;
-  padding: 9px 45px;
+  padding: 15px 60px;
   margin: 0 12px;
-  border-radius: 20px;
+  border-radius: 50px;
   transition: 0.3s ease-in-out !important;
   white-space: nowrap;
   align-items: center;
@@ -1729,6 +1860,11 @@ a.download {
   ;
 }
 
+
+.mb-s {
+  margin-bottom: 2vh;
+}
+
 .mb-5 {
   margin-bottom: 5vh;
 }
@@ -1763,6 +1899,10 @@ a.download {
   margin-top: 10vh;
 }
 
+.mt-15 {
+  margin-top: 15vh;
+}
+
 .mt-20 {
   margin-top: 20vh;
 }
@@ -1790,13 +1930,13 @@ a.download {
 
 .bt-1 {
   border-top: 1px solid #ddd;
- 
+
   max-width: 60%;
 }
 
 
 
- 
+
 @keyframes draw-border {
   0% {
     width: 0;
@@ -2282,7 +2422,7 @@ section.bg3>div {
   display: inline-block;
   width: 0.5em;
   /* Adjust the width of the underscore */
-  border-bottom: 0.05em solid black;
+  border-bottom: 1px solid #fff;
   animation: blinkCaret 1s step-end infinite;
 }
 
@@ -2309,25 +2449,38 @@ section.bg3>div {
 }
 
 h1.process {
-  font-family: 'Playfair', sans-serif;
-  font-size: 6rem;
-  line-height: 5rem;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6vw;
+  letter-spacing: 12px;
+  line-height: 6vw;
+  font-weight: 100;
   color: #fff;
   white-space: nowrap;
-  border-bottom: 4px solid #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 3vh;
   position: relative;
+  text-transform: uppercase;
+}
+
+h1.process::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  position: absolute;
+  bottom: -10%;
+  right: 0px;
+  transform: translateY(100%);
 }
 
 h2.steps {
-  font-family: 'Playfair', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6vw;
+  letter-spacing: 6px;
+  font-weight: 150;
   color: #fff;
   white-space: nowrap;
   position: relative;
-  }
+}
 
 h4.process {
   font-family: 'Playfair', sans-serif;
@@ -2382,16 +2535,16 @@ h2.success {
 
 .process-sq h5 {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 15px;
+  right: 5px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 800;
-  line-height: 2rem;
+  line-height: 3rem;
   opacity: 1;
-  background: #fff;
+  background: #fffffff1;
   aspect-ratio: 1 / 1;
-  width: 33px;
+  width: 50px;
   color: #111;
   text-align: center;
 }
@@ -2440,10 +2593,34 @@ div.exed {
 
 
 
+
 h5.folioTitle {
   color: #FFF;
   font-family: 'Playfair', sans-serif;
   font-size: 22px;
+}
+
+
+h3.h-folio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+
+}
+
+h3.c-folio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+div.b-folio {
+  border-bottom: 1px solid #fff;
 }
 
 h6 {
@@ -2814,7 +2991,7 @@ h5.rolehead {
 h5.rolehead::before {
   content: "";
   display: block;
-  width: 30%;
+  width: 40%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2825,7 +3002,7 @@ h5.rolehead::before {
 h5.rolehead::after {
   content: "";
   display: block;
-  width: 30%;
+  width: 40%;
   border-bottom: 1px solid #a5a5a5;
   position: absolute;
   bottom: 50%;
@@ -2849,7 +3026,7 @@ ul.role-list li:first-child {
 
 ul.role-list li {
   border-top: solid #aaaaaa 1px;
-  padding: 9px 0;
+  padding: 18px 0;
   color: #ffffff;
   font-size: 12px;
   font-weight: 200;
@@ -3383,7 +3560,7 @@ cite {
   font-family: 'Montserrat', sans-serif;
   font-size: 6vw;
   font-weight: 650;
-  line-height: 6.5vw;
+  line-height: 6vw;
   color: #fff;
   text-align: left;
   letter-spacing: -0.1rem;
@@ -3408,7 +3585,7 @@ cite {
   font-weight: 600;
   margin: 0px 0px;
   background: #fff;
-  padding: 23px 40px;
+  padding: 36px 70px;
 }
 
 .custom-paragraph-s3 {
@@ -3604,6 +3781,26 @@ cite {
 
 @media only screen and (max-width: 922px) {
 
+
+  h2.steps {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2vw;
+    letter-spacing: 6px;
+    font-weight: 150;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    white-space: normal;
+}
+
+
+  .splash-img-logo {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    max-width: 50vw;
+}
+
   .btn-container {
     display: flex;
     flex-direction: row;
@@ -3785,7 +3982,7 @@ cite {
     line-height: 2rem;
     letter-spacing: 1px;
     font-weight: 600;
-    padding: 7px 25px;
+    padding: 20px 60px;
     border-radius: 0;
     transition: all 0.3s ease;
     display: flex;
@@ -4337,6 +4534,10 @@ cite {
     margin-top: 0vh;
   }
 
+
+
+
+
   .mb-5 {
     margin-bottom: 0vh;
   }
@@ -4647,6 +4848,8 @@ cite {
     top: 110px;
     left: 0px;
   }
+
+
 
 
 }
@@ -5151,6 +5354,8 @@ cite {
     padding-bottom: 3vh;
     height: 100%;
   }
+
+
 
   .splash-about {
 

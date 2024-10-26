@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <kp />
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/orbitcss/css/orbit.min.css" />
+    <link rel="stylesheet" href="includes/aos.css" />
+    <link rel="stylesheet" href="includes/lightbox2.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="typewriter.css">
+
+    <style>
+        svg.loader {
+            width: 50vh;
+            /* Full viewport width */
+            height: 50vh;
+            /* Full viewport height */
+            background: none;
+            /* SVG background color */
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            /* Smooth transition for fading out */
+            cursor: pointer;
+        }
+
+        #logo {
+            width: 100vw;
+            /* Full viewport width */
+            height: 100vh;
+            /* Full viewport height */
+            background: #111;
+            /* SVG background color */
+            opacity: 1;
+            transition: opacity 1s ease-out;
+            /* Smooth transition for fading out */
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 11;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+    </style>
+
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/25fb8fb3cd.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Analytics -->
+
+
+</head>
+
+<body>
+
+
+
+
+    <div id="logo">
+
+        <svg class="loader" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="47px"
+            viewBox="0 19.333 75 47" enable-background="new 0 19.333 75 47" xml:space="preserve">
+            <g>
+                <path fill="#FFFFFF" d="M33.328,54.836c0-0.901,0-5.19,0-5.19c-0.319-0.36-3.797-4.26-4.422-5.141
+     c-0.626-0.881-0.499-0.933-0.499-0.933s-0.127-0.34,0.552-0.978c0.679-0.636,4.275-4.169,5.453-4.89
+     c1.176-0.722,1.39-1.029,3.756-1.348c0.053-0.233,0.031-0.371-0.033-0.552c-0.764,0.064-3.818,0.382-8.709,0.382
+     c-0.084,0.276-0.063,0.446,0.021,0.541c0.509,0.074,1.729,0.213,2.016,0.34s0.817,0.509,0.286,1.199
+     c-0.53,0.69-1.517,1.846-2.843,3.236c-1.327,1.39-2.578,2.886-4.36,2.855c-0.786-0.021-0.934-0.15-1.061-0.329
+     c-0.127-0.181-0.149-0.914-0.149-2.068c0-1.157-0.032-19.882,0.159-21.4c0,0,0.011-0.053-0.084-0.053c0,0-1.771,0.849-2.557,1.114
+     c-0.784,0.265-2.408,0.806-2.599,0.88c-0.021,0.127-0.074,0.35,0.021,0.403c0.096,0.054,1.39,0.754,1.708,1.316
+     c0.319,0.562,0.424,0.764,0.424,4.011c0,3.246,0.021,21.484,0.011,21.887c-0.009,0.403,0.139,2.875-0.636,3.532
+     c-0.774,0.658-1.57,0.478-2.504,0.7c-0.054,0.159-0.064,0.392,0.031,0.553c0.18-0.012,3.237-0.308,9.199,0
+     c0.063-0.116,0.171-0.382,0.053-0.553c-0.381-0.041-2.196-0.137-2.674-0.818c0,0-0.647-0.604-0.53-3.543v-3.861
+     c0,0,0-1.135,0.795-1.167c0.796-0.033,1.474-0.084,2.196,0.742c0.722,0.829,5.453,6.208,5.878,6.844
+     c0.423,0.637,0.382,1.136,0.105,1.317c-0.275,0.179-1.346,0.424-2.089,0.486c-0.053,0.224-0.032,0.351,0.084,0.541
+     C31.717,54.829,32.473,54.8,33.328,54.836z" />
+                <path fill="#FFFFFF" d="M50.122,40.187c-1.161-1.74-3.58-3.353-6.522-3.027c-2.941,0.325-5.191,1.81-5.488,1.98
+     c-0.297,0.169-0.566,0.268-0.849,0.084c-0.283-0.183-0.372-0.947-0.313-1.347c0,0-0.461,0.028-1.024,0.333
+     c-0.57,0.309-1.54,1.044-2.651,2.185c0.287,0.213,0.887-0.188,0.929,0.979c0.043,1.167,0.046,17.002,0.017,18.814
+     c0,0,0.174,3.763-0.675,4.282c-0.848,0.521-1.41,0.479-2.259,0.615c-0.052,0.233-0.042,0.34,0.043,0.478
+     c1.039-0.053,3.606-0.115,4.445-0.115c0.839,0,4.806,0.095,4.965,0.137c0.074-0.191,0.116-0.319,0.043-0.499
+     c-0.351-0.063-2.197-0.202-2.813-0.53c-0.614-0.329-0.964-1.4-0.955-4.425v-2.694c0,0-0.096-1.21,0.997-1.433
+     c0.743,0.106,2.535,0.382,4.668,0.032c2.133-0.351,3.767-1.178,4.754-1.984c0.986-0.806,3.14-2.514,3.947-6.11
+     C52.198,44.291,51.419,42.135,50.122,40.187z M48.557,47.402c-0.063,2.163-0.869,4.836-2.63,6.493
+     c-1.761,1.653-4.457,1.782-6.62,0.827c-2.166-0.956-2.313-2.864-2.313-3.544c0-0.678,0-4.711,0-4.711v-3.332
+     c0,0-0.106-2.504,0.722-3.098c0.827-0.594,1.93-1.337,4.456-1.337c2.524,0,4.435,1.847,5.241,3.353
+     C48.219,43.561,48.621,45.238,48.557,47.402z" />
+            </g>
+            <g>
+                <path fill="#FFFFFF"
+                    d="M12.399,38.514v1.675l-9.151,4.272v0.058l9.151,4.301v1.645L1.17,45.155v-1.3L12.399,38.514z" />
+            </g>
+            <path fill="#FFFFFF" d="M55.356,52.836h-1.674l6.033-20.264h1.674L55.356,52.836z" />
+            <path fill="#FFFFFF"
+                d="M73.574,43.855v1.3l-11.229,5.31V48.82l9.15-4.301v-0.058l-9.15-4.272v-1.675L73.574,43.855z" />
+        </svg>
+
+    </div>
+
+
+    <div class="logo-kpvc">
+
+        <svg class="svg-container" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="86.667px"
+                viewBox="0 0 75 86.667" enable-background="new 0 0 75 86.667" xml:space="preserve">
+
+                <!-- Define the mask -->
+                <mask id="mask">
+                    <!-- Use a rectangle for the masking animation -->
+                    <rect id="mask-rect" x="0" y="86.667" width="75" height="86.667" fill="grey">
+                        <animate attributeName="y" id="mask-animate" from="86.667" to="0" dur="0.5s" fill="freeze" />
+                    </rect>
+                </mask>
+
+                <!-- Overlay the mask to show yellow fill on hover -->
+                <g mask="url(#mask)">
+                    <path fill="#FFFF00" d="M35.938,64.458c0-1.582,0-9.104,0-9.104c-0.559-0.633-6.659-7.473-7.757-9.018
+      c-1.099-1.545-0.875-1.637-0.875-1.637s-0.224-0.596,0.968-1.713c1.191-1.117,7.501-7.314,9.566-8.58s2.438-1.805,6.589-2.364
+      c0.093-0.409,0.056-0.651-0.057-0.968c-1.34,0.112-6.699,0.67-15.279,0.67c-0.149,0.484-0.112,0.782,0.037,0.949
+      c0.893,0.13,3.033,0.373,3.536,0.596c0.502,0.223,1.433,0.894,0.502,2.103c-0.931,1.21-2.661,3.239-4.987,5.677
+      c-2.327,2.438-4.523,5.063-7.649,5.007c-1.378-0.037-1.638-0.261-1.861-0.577s-0.261-1.601-0.261-3.629s-0.056-34.878,0.279-37.54
+      c0,0,0.019-0.093-0.148-0.093c0,0-3.108,1.489-4.486,1.954c-1.377,0.465-4.225,1.415-4.56,1.545
+      c-0.037,0.223-0.13,0.614,0.037,0.707c0.168,0.093,2.438,1.322,2.997,2.308c0.558,0.986,0.744,1.34,0.744,7.035
+      s0.037,37.688,0.019,38.396s0.242,5.044-1.116,6.197c-1.359,1.154-2.755,0.838-4.393,1.229c-0.094,0.279-0.112,0.689,0.056,0.969
+      c0.316-0.02,5.677-0.54,16.136,0c0.112-0.205,0.299-0.67,0.094-0.969c-0.67-0.074-3.853-0.242-4.69-1.433
+      c0,0-1.136-1.062-0.931-6.216v-6.775c0,0,0-1.991,1.396-2.047c1.396-0.057,2.587-0.148,3.853,1.303s9.566,10.888,10.311,12.004
+      c0.744,1.117,0.67,1.992,0.187,2.309c-0.484,0.316-2.364,0.744-3.667,0.855c-0.093,0.391-0.056,0.615,0.149,0.949
+      C33.112,64.446,34.438,64.395,35.938,64.458z" />
+                    <path fill="#FFFF00" d="M65.398,38.76c-2.035-3.053-6.279-5.881-11.441-5.311c-5.16,0.57-9.105,3.175-9.627,3.473
+      s-0.993,0.471-1.489,0.149c-0.497-0.322-0.653-1.662-0.549-2.363c0,0-0.81,0.049-1.798,0.585c-1,0.542-2.702,1.832-4.649,3.833
+      c0.502,0.373,1.555-0.33,1.629,1.717c0.075,2.048,0.081,29.827,0.03,33.005c0,0,0.305,6.601-1.184,7.513
+      c-1.489,0.912-2.476,0.837-3.965,1.079c-0.093,0.41-0.074,0.596,0.075,0.838c1.823-0.094,6.327-0.205,7.798-0.205
+      s8.431,0.168,8.71,0.242c0.131-0.335,0.205-0.559,0.075-0.875c-0.614-0.111-3.854-0.354-4.933-0.93
+      c-1.079-0.578-1.693-2.457-1.675-7.762v-4.728c0,0-0.168-2.122,1.749-2.513c1.303,0.187,4.448,0.67,8.189,0.057
+      c3.741-0.615,6.607-2.066,8.338-3.48c1.731-1.415,5.509-4.411,6.924-10.721C69.042,45.958,67.675,42.177,65.398,38.76z
+       M62.655,51.415c-0.111,3.797-1.526,8.486-4.615,11.391c-3.09,2.903-7.817,3.127-11.614,1.451
+      c-3.797-1.675-4.057-5.025-4.057-6.216c0-1.191,0-8.264,0-8.264v-5.845c0,0-0.187-4.392,1.266-5.434
+      c1.451-1.042,3.387-2.345,7.816-2.345s7.779,3.239,9.194,5.881C62.06,44.677,62.768,47.618,62.655,51.415z" />
+                </g>
+
+                <style>
+                    svg.svg-container {
+                        cursor: pointer;
+                    }
+
+                    svg.svg-container:hover #mask-rect {
+                        animation: animateMaskForward 0.5s forwards;
+                    }
+
+                    svg.svg-container:not(:hover) #mask-rect {
+                        animation: animateMaskReverse 0.5s forwards;
+                    }
+
+                    @keyframes animateMaskForward {
+                        0% {
+                            y: 86.667;
+                        }
+
+                        100% {
+                            y: 0;
+                        }
+                    }
+
+                    @keyframes animateMaskReverse {
+                        0% {
+                            y: 0;
+                        }
+
+                        100% {
+                            y: 86.667;
+                        }
+                    }
+                </style>
+
+            </svg>
+
+
+
+    </div>
+
+
+    <!-- Navigation Menu -->
+   <!--
+    <div class="nav">
+
+        <div class="socialstack">
+
+
+
+            <a href="https://github.com/kpvc1" target="_blank" rel="noopener">
+                <div class="svg-icon grow">
+                    <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z">
+                        </path>
+                    </svg>
+
+                </div>
+            </a>
+
+
+
+            <a href="https://x.com/_kpvc" target="_blank" rel="noopener">
+                <div class="svg-icon grow">
+                    <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M 17.476562 2.9902344 A 1.0001 1.0001 0 0 0 16.724609 3.3691406 L 12.509766 8.5546875 L 9.0566406 3.7714844 C 8.7066406 3.2874844 8.1458281 3 7.5488281 3 L 4.078125 3 C 3.420125 3 3.0388281 3.7462969 3.4238281 4.2792969 L 9.3339844 12.462891 L 3.7246094 19.369141 A 1.0001 1.0001 0 1 0 5.2753906 20.630859 L 10.548828 14.142578 L 14.943359 20.228516 C 15.293359 20.712516 15.854172 21 16.451172 21 L 19.921875 21 C 20.579875 21 20.961172 20.253703 20.576172 19.720703 L 13.724609 10.232422 L 18.275391 4.6308594 A 1.0001 1.0001 0 0 0 17.476562 2.9902344 z M 6.4101562 5 L 7.4765625 5 L 17.587891 19 L 16.523438 19 L 6.4101562 5 z">
+                        </path>
+                    </svg>
+                </div>
+            </a>
+
+
+            <a href="https://www.instagram.com/octopolaras/" target="_blank" rel="noopener">
+                <div class="svg-icon grow">
+                    <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M 8 3 C 5.2475888 3 3 5.2475888 3 8 L 3 16 C 3 18.752411 5.2475888 21 8 21 L 16 21 C 18.752411 21 21 18.752411 21 16 L 21 8 C 21 5.2475888 18.752411 3 16 3 L 8 3 z M 8 4.5 L 16 4.5 C 17.941589 4.5 19.5 6.0584112 19.5 8 L 19.5 16 C 19.5 17.941589 17.941589 19.5 16 19.5 L 8 19.5 C 6.0584112 19.5 4.5 17.941589 4.5 16 L 4.5 8 C 4.5 6.0584112 6.0584112 4.5 8 4.5 z M 17.25 6 A 0.75 0.75 0 0 0 17.25 7.5 A 0.75 0.75 0 0 0 17.25 6 z M 12 7 C 10.395834 7 9.0977407 7.6285667 8.2519531 8.5800781 C 7.4061656 9.5315896 7 10.770833 7 12 C 7 13.229167 7.4061656 14.46841 8.2519531 15.419922 C 9.0977407 16.371433 10.395834 17 12 17 C 13.604166 17 14.902259 16.371433 15.748047 15.419922 C 16.593834 14.46841 17 13.229167 17 12 C 17 10.770833 16.593834 9.5315896 15.748047 8.5800781 C 14.902259 7.6285667 13.604166 7 12 7 z M 12 8.5 C 13.229166 8.5 14.056075 8.9339333 14.626953 9.5761719 C 15.197832 10.21841 15.5 11.104167 15.5 12 C 15.5 12.895833 15.197832 13.78159 14.626953 14.423828 C 14.056075 15.066067 13.229166 15.5 12 15.5 C 10.770834 15.5 9.9439254 15.066067 9.3730469 14.423828 C 8.8021684 13.78159 8.5 12.895833 8.5 12 C 8.5 11.104167 8.8021684 10.21841 9.3730469 9.5761719 C 9.9439254 8.9339333 10.770834 8.5 12 8.5 z">
+                        </path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="navList">
+            <a data-navbar-item="true" class="navLink" aria-current="" href="index.html#projects" title="Work">Work</a>
+            <a data-navbar-item="true" class="navLink" aria-current="" href="index.html#about" title="About">About</a>
+            <a data-navbar-item="true" class="navLink" aria-current="" href="index.html#details"
+                title="Process">Process</a>
+            <a data-navbar-item="true" class="navLink" aria-current="" href="index.html#message"
+                title="Contact">Contact</a>
+        </div>
+        <button class="navToggle" aria-label="Toggle navigation">
+            <span class="navToggleIcon"></span>
+            <span class="navToggleIcon"></span>
+            <span class="navToggleIcon"></span>
+        </button>
+    </div>
+    -->
+
+
+    <div class="project-hero splash-img project-img">
+
+        <div class="splash-img-bg1"></div>
+
+        <img class="splash-img-logo rotate" src="uploads/decadance-splash-logo.png" draggable="false">
+
+
+    </div>
+
+    <div class="grid has-centered">
+
+
+        <div class="grid has-centered column is-9">
+
+            <div class="column is-full b-folio mt-5 mb-s aos-item" data-aos="fade-down">
+                <h3 class="h-folio">Branding a Toronto Jazz Café</h3>
+            </div>
+
+            <div class="column is-4 aos-item" data-aos="fade-down">
+
+                <p class="lh-x1">Decadance aims to carve out a unique space that invites patrons to immerse themselves
+                    in the joy of live jazz and culinary excellence. Every element was curated to establish a cohesive
+                    identity aligned with the mission of providing an exceptional dining experience in the city of Toronto. </p>
+
+                <p class="lh-x1">The selected colors, typography, and decorative motifs evoke sophistication and warmth,
+                    reflecting on the history of jazz while appealing to modern sensibilities, making the space an
+                    inviting atmosphere that encourages customers to dine, dance and enjoy live performances.</p>
+
+
+            </div>
+            <div class="column is-8 aos-item" data-aos="fade-down">
+                <img src="uploads/decadance-sketches.jpg">
+            </div>
+
+
+
+
+            <div class="column is-half ">
+                <h5 class="rolehead aos-item" data-aos="fade-up">Role</h5>
+
+                <ul class="role-list aos-item" data-aos="fade-down">
+                    <li></li>
+                    <li>Brand Identity</li>
+                    <li>Advertising</li>
+                    <li>Web Development</li>
+                    <li>Front-End</li>
+
+                    <li></li>
+
+                </ul>
+            </div>
+            <div class="column is-half ">
+                <h5 class="rolehead aos-item" data-aos="fade-up">Tech</h5>
+
+                <ul class="role-list aos-item" data-aos="fade-down">
+                    <li></li>
+                    <li>Illustrator</li>
+                    <li>Photostop</li>
+                    <li>React</li>
+                    <li>Tailwind</li>
+                    <li></li>
+                </ul>
+            </div>
+
+
+            <div class="column is-full b-folio mt-10 mb-s aos-item" data-aos="fade-down">
+                <h3 class="h-folio">Brainstorming + Research</h3>
+            </div>
+
+            <div class="column is-4 aos-item" data-aos="fade-down">
+                <p class="lh-x1">The research and brainstorming process began by analyzing the café's cultural and
+                    aesthetic context.
+                    Jazz, rooted in history and creativity, called for a visual identity that would reflect both its
+                    vintage charm and timeless appeal.</p>
+
+                <p class="lh-x1">Inspiration was drawn from the Art Deco movement and post-war modernism. I aimed to
+                    combine the sleek
+                    geometric elegance of the 1920's Art Deco style and the cultural and artistic Jazz movement of the
+                    1940's to portray a complex and introspective style of abstract expression with minimalist forms.
+                </p>
+            </div>
+
+            <div class="column is-8 aos-item" data-aos="fade-down">
+                <img src="uploads/decadance-poster.jpg">
+            </div>
+
+            <div class="column is-full b-folio mt-10 mb-s aos-item" data-aos="fade-down">
+                <h3 class="h-folio">Brand Planning</h3>
+            </div>
+            <div class="column is-5 aos-item" data-aos="fade-down">
+                <h3 class="c-folio">Typography</h3>
+                <p>A bold Art Deco styled font was chosen for it's lines and sharp angles, reinforcing a sense of
+                    sophistication and modernity.</p>
+                <img src="uploads/decadance-typograhy.png">
+            </div>
+            <div class="column is-5 is-offset-1 aos-item" data-aos="fade-down">
+                <h3 class="c-folio">Color Guide</h3>
+                <p>A colour palette of light tan and pale blue, complemented with shades of black and white, evoke a
+                    sense
+                    of class, rustic charm and elegance. </p>
+                <img src="uploads/decadance-color-guide.png">
+
+            </div>
+
+
+            <div class="column is-full b-folio mt-10 mb-s">
+                <h3 class="h-folio">Logo Design</h3>
+            </div>
+
+            <div class="column is-8 mt-5 aos-item" data-aos="fade-down">
+                <h3 class="c-folio">Wordmark</h3>
+
+                <p>A wordmark design featuring the chosen typeface embodies the energy and sophistication of the brand.
+                    The strong lines and angular details of the typeface evoke the sleek, geometric aesthetics of Art
+                    Deco, while still feeling modern. Small diamond ornaments add a touch of decorative flair while
+                    enhancing the luxurious and timeless appeal of the overall design.</p>
+
+            </div>
+
+            <div class="column is-8 aos-item" data-aos="fade-down">
+                <img src="uploads/decadance-splash-logo.png">
+            </div>
+
+            <div class="column is-8 mt-5 aos-item" data-aos="fade-down">
+                <h3 class="c-folio">Stylized Art-Deco Logo</h3>
+                <p>To better capture the essence of the café, an alternate stylized logo alongside the wordmark was
+                    designed. This decision was driven by the desire to create a visual identity that not only reflects
+                    the vibrant jazz culture but also resonates with both locals and visitors. To achieve this, I
+                    incorporated sharp Art Deco lines and motifs into a Toronto skyline featuring the
+                    C.N. Tower. </p>
+
+            </div>
+
+            <div class="column is-8 _fc aos-item" data-aos="fade-down">
+                <img src="uploads/decadance-logo-stylized.png">
+            </div>
+
+
+
+            <div class="column is-full b-folio mt-10 mb-s aos-item" data-aos="fade-down">
+                <h3 class="h-folio">Signage</h3>
+            </div>          
+
+            <div class="column is-3 aos-item" data-aos="fade-down">
+                <p class="lh-x1">The signage for Decadance features a large full-window logo, designed to create a
+                    striking visual impact. The choice of a white vinyl allows for excellent visibility against the
+                    café's interior, ensuring that the branding is easily recognizable both during the day and at night.
+                </p>
+            </div>
+            <div class="column is-9 aos-item" data-aos="fade-down">
+                <img src="uploads/decadance-signage.jpg">
+            </div>
+
+            <div class="column is-full b-folio mt-10 mb-s aos-item" data-aos="fade-down">
+                <h3 class="h-folio">Packaging</h3>
+            </div>
+            <div class="column is-3 aos-item" data-aos="fade-down">
+                <p class="lh-x1">A thoughtfully designed range of items, including takeout bowls and boxes, containers,
+                    coffee mugs, cups, coasters, and more. Each piece features the café's distinct logo and color
+                    palette, creating a cohesive visual identity that enhances the customer experience. These branding
+                    elements create a memorable and cohesive impression, reinforcing the café’s commitment to quality
+                    and aesthetic appeal.</p>
+            </div>
+            <div class="column is-9 aos-item" data-aos="fade-down">
+                <img src="uploads/decadance-packaging.jpg">
+            </div>
+
+        </div>
+
+<!--
+        <div class="breadcrumbs aos-item mt-10" data-aos="fade-down">
+
+            <div class="">
+
+            </div>
+
+
+
+            <a href="./intragreen.html">
+                <div class="bc-btn">
+                    <img width="50" height="50" src="https://img.icons8.com/FFFFFF/ios/50/long-arrow-right--v1.png"
+                        alt="long-arrow-right--v1" />
+                </div>
+            </a>
+        </div>
+-->
+
+
+    </div>
+
+
+
+
+    <!-- Footer-->
+    <div class="crafted">
+
+
+        <div class="column is-12 aos-item footernote">
+            <p>© 2024 Paolo Castro. <a target="_blank" href="humans.txt">Crafted by yours truly.</a></p>
+        </div>
+
+    </div>
+    <!--End Footer-->
+
+
+    <div id="aos-demo" class="aos-all">
+    </div>
+
+    <script src="includes/aos.js"></script>
+    <script src="includes/lightbox2.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+    <script>
+        [].forEach.call(document.querySelectorAll('[lightbox]'), function (el) {
+            el.lightbox = new Lightbox(el);
+        });
+    </script>
+
+
+    <script>
+        // Set a timeout to fade out and hide the SVG Loader after animation
+        setTimeout(function () {
+            const div = document.getElementById("logo");
+            div.style.opacity = "0"; // Fade out the DIV
+
+            // After fading out, set display to 'none'
+            setTimeout(function () {
+                div.style.display = "none";
+            }, 900); // Wait for the opacity transition to complete
+        }, 900); // Start fade-out 900 milliseconds after the page loads
+    </script>
+
+    <script>
+        // Rotate Perspective
+        let constrain = 180;
+        let mouseOverContainer = document.getElementById("ex1");
+        let ex1Layer = document.getElementById("ex1-layer");
+
+        function transforms(x, y, el) {
+            let box = el.getBoundingClientRect();
+            let calcX = -(y - box.y - (box.height / 2)) / constrain;
+            let calcY = (x - box.x - (box.width / 2)) / constrain;
+
+            return "perspective(135px) "
+                + "rotateX(" + calcX + "deg) "
+                + "rotateY(" + calcY + "deg)";
+        }
+
+        function transformElement(el, x, y) {
+            el.style.transform = transforms(x, y, el);
+        }
+
+        mouseOverContainer.onmousemove = function (e) {
+            let x = e.clientX;
+            let y = e.clientY;
+
+            window.requestAnimationFrame(function () {
+                transformElement(ex1Layer, x, y);
+            });
+        };
+
+    </script>
+
+
+
+    <!-- Project Image Rotation -->
+    <script>
+        // Select all containers and loop through each one
+        const containers = document.querySelectorAll('.project-img');
+
+        containers.forEach(container => {
+            const image = container.querySelector('.rotate');
+
+            // Add mousemove event listener to the current container
+            container.addEventListener('mousemove', (e) => {
+                const containerWidth = container.offsetWidth;
+                const containerHeight = container.offsetHeight;
+                const centerX = containerWidth / 2;
+                const centerY = containerHeight / 2;
+
+                // Get mouse position relative to the container
+                const mouseX = e.clientX - container.getBoundingClientRect().left;
+                const mouseY = e.clientY - container.getBoundingClientRect().top;
+
+                // Calculate rotation angles based on mouse position
+                const rotateX = ((mouseY - centerY) / centerY) * 20; // Vertical rotation
+                const rotateY = ((centerX - mouseX) / centerX) * 20; // Horizontal rotation
+
+                // Apply the rotation to the image inside the current container
+                image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            // Reset the rotation when the mouse leaves the container
+            container.addEventListener('mouseleave', () => {
+                image.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+        });
+    </script>
+
+    <!-- Nav Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.navToggle');
+            const navList = document.querySelector('.navList');
+
+            navToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navToggle = document.querySelector(".navToggle");
+            const navList = document.querySelector(".navList");
+            const navLinks = document.querySelectorAll(".navLink");
+
+            // Function to check if the viewport is mobile or in landscape mode
+            function isMobileViewport() {
+                return window.innerWidth <= 768 || window.innerHeight <= 768;
+                // Now accounts for wider screens in landscape mode (height ≤ 500px)
+            }
+
+            // Toggle navigation visibility on click of the hamburger menu icon
+            navToggle.addEventListener("click", function (event) {
+                if (isMobileViewport()) {
+                    navList.style.display = navList.style.display === "flex" ? "none" : "flex";
+                    event.stopPropagation(); // Prevent the event from bubbling up
+                }
+            });
+
+            // Close the navigation when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    if (isMobileViewport()) {
+                        navList.style.display = "none";
+                    }
+                });
+            });
+
+            // Hide navList when clicking outside of it
+            document.addEventListener("click", function (event) {
+                if (isMobileViewport() && navList.style.display === "flex") {
+                    const isClickInsideNav = navList.contains(event.target) || navToggle.contains(event.target);
+                    if (!isClickInsideNav) {
+                        navList.style.display = "none";
+                    }
+                }
+            });
+
+            // Optional: Reset navList to visible if viewport width changes and is above the mobile threshold
+            window.addEventListener("resize", function () {
+                if (!isMobileViewport()) {
+                    navList.style.display = "flex"; // Show the nav when viewport is wider than mobile
+                }
+            });
+        });
+    </script>
+
+
+
+    <!--Active Section-->
+
+    <script>
+        // Grab all custom sections and navigation links
+        const customSections = document.querySelectorAll(".active");
+        const navLinks = document.querySelectorAll(".navLink");
+
+        // Create an IntersectionObserver to track which custom section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute("id");
+                const activeLink = document.querySelector(`.navLink[href="#${id}"]`);
+
+                if (entry.isIntersecting) {
+                    // Remove active class from all links
+                    navLinks.forEach(link => link.classList.remove("active"));
+
+                    // Add active class to the current link
+                    activeLink.classList.add("active");
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the section is in view
+        });
+
+        // Observe each custom section
+        customSections.forEach(customSection => {
+            observer.observe(customSection);
+        });
+    </script>
+
+    <script>
+
+        const words = document.getElementsByTagName('span')
+
+        const animate = () => {
+            let maxDelay = 0
+            let maxDuration = 0
+
+            for (let i = 0; i < words.length; i++) {
+                const word = words[i]
+                const duration = (word.dataset.duration)
+                const delay = (word.dataset.delay)
+                const blur = word.dataset.blur
+
+                maxDelay = Math.max(delay, maxDelay)
+                maxDuration = Math.max(duration, maxDuration)
+
+                TweenLite.set(word, {
+                    'webkitFilter': `blur(${blur}px)`
+                })
+                TweenLite.set(word, {
+                    className: "+=animate",
+                    transition: `all ${duration}s ease-in ${delay}s`
+                })
+            }
+
+            TweenLite.set(cite, {
+                className: "+=animate",
+                transition: `all ${maxDuration}s ease-in ${maxDelay}s`
+            })
+
+            TweenLite.delayedCall((maxDuration + maxDelay), () => {
+                const baseDelay = 3
+                TweenLite.set(words, { className: "-=animate", delay: baseDelay });
+                TweenLite.set(cite, { className: "-=animate", delay: (baseDelay) });
+                TweenLite.delayedCall((baseDelay + (maxDuration * 2)), animate)
+            })
+        }
+
+        animate()
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const words = document.getElementsByClassName('custom-span');
+            const blockquote = document.querySelector('.custom-blockquote');
+
+            const animateText = () => {
+                for (let i = 0; i < words.length; i++) {
+                    const word = words[i];
+                    const delay = parseFloat(word.dataset.delay) * 1000; // Convert to milliseconds, keep it smaller
+                    const duration = parseFloat(word.dataset.duration) * 100; // Adjust the duration multiplier as needed
+
+
+                    setTimeout(() => {
+                        word.classList.add('animate'); // Fade-in
+                    }, delay);
+                }
+            };
+
+            // Set up Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateText(); // Start animation when in view
+                        observer.disconnect(); // Stop observing after animation starts
+                    }
+                });
+            }, { threshold: 0.3 }); // Trigger when at least 10% of the blockquote is in view
+
+            observer.observe(blockquote); // Start observing the blockquote
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const words = document.getElementsByClassName('custom-span-s');
+            const blockquote = document.querySelector('.custom-blockquote-s');
+
+            const animateText = () => {
+                for (let i = 0; i < words.length; i++) {
+                    const word = words[i];
+                    const delay = parseFloat(word.dataset.delay) * 8000; // Convert to milliseconds, keep it smaller
+                    const duration = parseFloat(word.dataset.duration) * 100; // Adjust the duration multiplier as needed
+
+
+                    setTimeout(() => {
+                        word.classList.add('animate'); // Fade-in
+                    }, delay);
+                }
+            };
+
+            // Set up Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateText(); // Start animation when in view
+                        observer.disconnect(); // Stop observing after animation starts
+                    }
+                });
+            }, { threshold: 0.3 }); // Trigger when at least 10% of the blockquote is in view
+
+            observer.observe(blockquote); // Start observing the blockquote
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const words = document.getElementsByClassName('custom-span-s2');
+            const blockquote = document.querySelector('.custom-blockquote-s');
+
+            const animateText = () => {
+                for (let i = 0; i < words.length; i++) {
+                    const word = words[i];
+                    const delay = parseFloat(word.dataset.delay) * 8000; // Convert to milliseconds, keep it smaller
+                    const duration = parseFloat(word.dataset.duration) * 100; // Adjust the duration multiplier as needed
+
+
+                    setTimeout(() => {
+                        word.classList.add('animate'); // Fade-in
+                    }, delay);
+                }
+            };
+
+            // Set up Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateText(); // Start animation when in view
+                        observer.disconnect(); // Stop observing after animation starts
+                    }
+                });
+            }, { threshold: 0.3 }); // Trigger when at least 10% of the blockquote is in view
+
+            observer.observe(blockquote); // Start observing the blockquote
+        });
+    </script>
+
+    <script>
+        const root = document.documentElement;
+        const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+        const marqueeContent = document.querySelector("ul.marquee-content");
+
+        root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+        for (let i = 0; i < marqueeElementsDisplayed; i++) {
+            marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const box = document.querySelector('.bt-1');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        box.classList.add('start-animation'); // Starts animation
+                    }
+                });
+            });
+
+            observer.observe(box);
+        });
+    </script>
+
+</body>
+
+</html>
+
+</body>
