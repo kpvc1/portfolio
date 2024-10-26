@@ -75,7 +75,7 @@ class Particle {
         const distanceToLight = Math.sqrt(dx * dx + dy * dy);
         
         // Calculate brightness based on distance (closer = brighter)
-        const brightness = Math.max(0, 1 - (distanceToLight / 700)); // Adjust divisor for distance sensitivity
+        const brightness = Math.max(0, 1 - (distanceToLight / 500)); // Adjust divisor for distance sensitivity
 
         // Set the fill color with brightness
         ctx.fillStyle = `rgba(255, 255, 222, ${brightness})`;
