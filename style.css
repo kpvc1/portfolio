@@ -31,15 +31,6 @@ body {
 
 }
 
-canvas {
-  display: block;
-  image-rendering: pixelated;
-  background-color: transparent;
-}
-
-#plexusCanvas {
-  z-index: 99;
-}
 
 .cube {
   position: absolute;
@@ -57,13 +48,16 @@ canvas {
   animation: rotate 180s infinite linear;
   /* Continuous rotation */
 }
+
 .cube-face {
   position: absolute;
   width: 500px;
   height: 500px;
-  border-radius: 1px; /* Slightly rounded corners */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-  
+  border-radius: 1px;
+  /* Slightly rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  /* Shadow for depth */
+
 }
 
 .cube-face-front {
@@ -104,10 +98,11 @@ canvas {
 
 @keyframes rotate {
   from {
-      transform: rotateX(30deg) rotateY(0deg);
+    transform: rotateX(30deg) rotateY(0deg);
   }
+
   to {
-      transform: rotateX(30deg) rotateY(360deg);
+    transform: rotateX(30deg) rotateY(360deg);
   }
 }
 
@@ -608,14 +603,13 @@ a {
   height: 80vh;
   width: 7vw;
   left: 0;
-  top: 15vh;
-  transform-origin: left top;
+  bottom: 0%;
   background: none;
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   z-index: 20;
 }
 
@@ -626,6 +620,7 @@ a {
   background: none;
   border: none;
   padding: 0.5rem;
+  z-index: 10;
 }
 
 /* Icon for the hamburger menu */
@@ -784,9 +779,10 @@ a.navLink:hover {
   flex-direction: column;
   align-items: center;
   height: 10vh;
-  width: 100%;
+  width: fit-content;
   position: absolute;
-  bottom: 5vh;
+  bottom: 2vh;
+  right: 50%;
 
 }
 
@@ -905,7 +901,21 @@ svg.loader:hover path:hover {
   ;
 }
 
-
+.custom-faq {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  border-radius: 0px;
+  overflow: hidden;
+  padding: 3vh 0;
+  display: flex;
+  align-items: center;
+  ;
+}
 
 .custom-s {
   background: #111;
@@ -1374,6 +1384,7 @@ hr.afterfoot {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-container2 a {
@@ -1503,9 +1514,6 @@ div.leaveamessage a:hover {
   display: block;
   margin-right: 9px;
 }
-
-
-
 
 
 #example-element {
@@ -1942,7 +1950,7 @@ a.download {
 
 
 .mb-s {
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
 }
 
 .mb-5 {
@@ -1965,10 +1973,18 @@ a.download {
   margin-top: -5vh;
 }
 
+
+.mt-1 {
+  margin-top: 1vh;
+}
+
 .mt-3 {
   margin-top: 3vh;
 }
 
+.mt-s {
+  margin-top: 2vh;
+}
 
 .mt-5 {
   margin-top: 5vh;
@@ -2528,6 +2544,70 @@ section.bg3>div {
 
 }
 
+
+h1.faq {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6vw;
+  letter-spacing: 12px;
+  line-height: 6vw;
+  font-weight: 100;
+  color: #fff;
+  white-space: nowrap;
+  margin-bottom: 3vh;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1.faq:after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  position: absolute;
+  bottom: -10%;
+  right: 0px;
+  transform: translateY(100%);
+}
+
+h2.faq-subhead {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6vw;
+  letter-spacing: 6px;
+  font-weight: 150;
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+  text-align: center;
+}
+
+h2.question {
+  color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+div.q-container p {
+  text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.1rem;
+    font-weight: 200;
+}
+
+
+
+h2.about {
+  color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+
 h1.process {
   font-family: 'Montserrat', sans-serif;
   font-size: 6vw;
@@ -2541,7 +2621,7 @@ h1.process {
   text-transform: uppercase;
 }
 
-h1.process::after {
+h1.process:after {
   content: "";
   display: block;
   width: 100%;
@@ -2854,7 +2934,7 @@ h5.subhead {
 .down {
   position: absolute;
   right: 1vw;
-  bottom: 50%;
+  bottom: 1vw;
   z-index: 5;
   margin: 0 auto;
   opacity: 0.8;
@@ -3191,10 +3271,9 @@ h3.center {
 h2.about {
   color: #fafafa;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.3em;
-  line-height: 1em;
-  font-weight: 500;
-  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
 
@@ -3402,6 +3481,20 @@ h3 {
   position: relative;
 }
 
+#faq {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: url(uploads/bg-splash.jpg) bottom;
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+
 
 /* video background */
 #background-video {
@@ -3411,11 +3504,175 @@ h3 {
   z-index: 1;
   height: 105vh;
   width: 100%;
-  background-position: bottom center;
+  background-image: url('uploads/splash-lines.jpg');
+  background-position: top center;
   background-size: cover;
-  background: url('uploads/bg-splash.jpg');
   overflow: hidden;
 }
+
+div#background-video div.blurred {
+  backdrop-filter: blur(5px) brightness(0.5);
+  filter: saturate(0);
+  width: 100%;
+  height: 100%;
+  z-index: 0;  
+}
+
+#plexusCanvas {
+  position: absolute;
+  /* Full-screen canvas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Canvas below the cube */
+  background: transparent;
+  /* Set canvas background to transparent */
+  display: block;
+  image-rendering: pixelated;
+  backdrop-filter:;
+}
+
+.outer-cube {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  right: 12%;
+  top: 25%;
+  transform-style: preserve-3d;
+  animation: rotate 100s infinite linear;
+  /* Animation for rotation */
+  animation-direction: alternate;
+  transform: rotateX(45deg);
+  opacity: 1;
+  /* Add 45-degree X rotation for perspective */
+}
+
+
+.inner-cube {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.face {
+  position: absolute;
+  border: 2px solid white;
+  /* White outline */
+  background-color: transparent;
+  /* No fill color */
+  opacity: 0.3;
+}
+
+.inner-face {
+  position: absolute;
+  border: 2px solid white;
+  /* White outline */
+  background-color: transparent;
+  /* No fill color */
+  opacity: 0.5;
+}
+
+.outer-front {
+  width: 100%;
+  height: 100%;
+  transform: translateZ(calc(25vw / 2));
+  /* Move face forward */
+}
+
+.outer-back {
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg) translateZ(calc(25vw / 2));
+  /* Move face backward */
+}
+
+.outer-left {
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-90deg) translateZ(calc(25vw / 2));
+  /* Move left face */
+}
+
+.outer-right {
+  width: 100%;
+  height: 100%;
+  transform: rotateY(90deg) translateZ(calc(25vw / 2));
+  /* Move right face */
+}
+
+.outer-top {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(90deg) translateZ(calc(25vw / 2));
+  /* Move top face */
+}
+
+.outer-bottom {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(-90deg) translateZ(calc(25vw / 2));
+  /* Move bottom face */
+}
+
+.inner-front {
+  width: 100%;
+  height: 100%;
+  transform: translateZ(calc(20vw / 2));
+  /* Move bottom face */
+}
+
+.inner-back {
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg) translateZ(calc(20vw / 2));
+  /* Move bottom face */
+}
+
+.inner-left {
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-90deg) translateZ(calc(20vw / 2));
+  /* Move bottom face */
+}
+
+.inner-right {
+  width: 100%;
+  height: 100%;
+  transform: rotateY(90deg) translateZ(calc(20vw / 2));
+  /* Move bottom face */
+}
+
+.inner-top {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(90deg) translateZ(calc(20vw / 2));
+  /* Move bottom face */
+}
+
+.inner-bottom {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(-90deg) translateZ(calc(20vw / 2));
+  /* Move bottom face */
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotateX(30deg) rotateY(30deg);
+  }
+
+  to {
+    transform: rotateX(330deg) rotateY(330deg);
+  }
+}
+
 
 
 .hidden-of {
@@ -3679,14 +3936,31 @@ cite {
 
 .custom-paragraph-s3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: .9rem;
-  line-height: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px #111;
+  text-transform: uppercase;
+  font-weight: 250;
+}
+
+.custom-paragraph-s3 b {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.custom-paragraph-s4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
   color: #fff;
   text-align: left;
   letter-spacing: 1px;
-  margin: 25px 0;
-  max-width: 60%;
   text-shadow: 1px 1px 2px #111;
+  max-width: 50%;
 }
 
 .questions {
@@ -3704,7 +3978,6 @@ cite {
   opacity: 0;
   filter: blur(10px);
   transition: all 1.2s ease;
-  min-width: 180px;
 }
 
 .custom-span-s.animate {
@@ -3935,16 +4208,7 @@ cite {
   }
 
 
-  .custom-paragraph-s3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: .9rem;
-    line-height: 1.4rem;
-    color: #fff;
-    text-align: left;
-    letter-spacing: 1px;
-    margin: 25px 0;
-    max-width: 80%;
-  }
+
 
   .splash-about {
 
@@ -4083,11 +4347,10 @@ cite {
   }
 
   .btn-connect:hover {
-    background: #030073;
-    font-weight: 500;
+    background: #f9f971ce;
+    font-weight: 600;
     text-decoration: none;
     border: none;
-
   }
 
   .cta-splash {
@@ -4104,7 +4367,7 @@ cite {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0px 12px;
+    padding: 0px;
   }
 
 
@@ -4412,6 +4675,50 @@ cite {
 
 
 @media only screen and (max-width: 768px) {
+
+  .custom-paragraph-s3 {
+    line-height: 1.4rem;
+    font-size: 1.1rem;
+}
+
+  .custom-paragraph-s4 {
+    max-width: 100%;
+  }
+  
+  .custom-paragraph-s3 b {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+  }
+
+  div#faq iframe {
+    display: none
+  }
+
+  h1.faq {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6.5rem;
+    letter-spacing: 12px;
+    line-height: 7rem;
+    font-weight: 100;
+    color: #fff;
+    white-space: normal;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2.faq-subhead {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 6px;
+    font-weight: 150;
+    color: #fff;
+    white-space: normal;
+    position: relative;
+    text-align: center;
+  }
 
   .psvg1 {
     display: none;
@@ -4974,15 +5281,6 @@ cite {
     margin-top: 0vh;
   }
 
-  .custom-paragraph-s3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.9rem;
-    color: #fff;
-    text-align: left;
-    letter-spacing: 1px;
-    margin: 20px 0 20px;
-  }
 
 }
 
@@ -4999,16 +5297,6 @@ cite {
     align-items: flex-end;
   }
 
-  .custom-paragraph-s3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.9rem;
-    color: #fff;
-    text-align: left;
-    letter-spacing: 1px;
-    margin: 20px 0 20px;
-    min-width: 100%;
-  }
 
   h2.hello {
 
