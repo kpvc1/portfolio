@@ -31,6 +31,86 @@ body {
 
 }
 
+canvas {
+  display: block;
+  image-rendering: pixelated;
+  background-color: transparent;
+}
+
+#plexusCanvas {
+  z-index: 99;
+}
+
+.cube {
+  position: absolute;
+  top: 20%;
+  /* Center vertically */
+  right: 15%;
+  /* Position to the right */
+  transform: translateY(-50%);
+  /* Adjust for true vertical centering */
+  width: 25vw;
+  height: 25vw;
+  transform-style: preserve-3d;
+  /* Enable 3D transformations for child elements */
+  transform: rotateX(30deg) rotateY(30deg);
+  animation: rotate 180s infinite linear;
+  /* Continuous rotation */
+}
+.cube-face {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 1px; /* Slightly rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  
+}
+
+.cube-face-front {
+  background: transparent;
+  transform: translateZ(75px);
+  border: 5px solid #fff;
+}
+
+.cube-face-back {
+  background: transparent;
+  transform: rotateY(180deg) translateZ(75px);
+  border: 5px solid #fff;
+}
+
+.cube-face-left {
+  background: transparent;
+  transform: rotateY(-90deg) translateZ(75px);
+  border: 5px solid #fff;
+}
+
+.cube-face-right {
+  background: transparent;
+  transform: rotateY(90deg) translateZ(75px);
+  border: 5px solid #fff;
+}
+
+.cube-face-top {
+  background: transparent;
+  transform: rotateX(90deg) translateZ(75px);
+  border: 5px solid #fff;
+}
+
+.cube-face-bottom {
+  background: transparent;
+  transform: rotateX(-90deg) translateZ(75px);
+  border: 5px solid #fff;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotateX(30deg) rotateY(0deg);
+  }
+  to {
+      transform: rotateX(30deg) rotateY(360deg);
+  }
+}
+
 ::selection {
   background: #0011ff98;
   color: #ccc;
@@ -448,7 +528,7 @@ textarea::placeholder {
 }
 
 .bc-home {
-  color:#fff;
+  color: #fff;
 }
 
 .bc-btn {
@@ -456,7 +536,7 @@ textarea::placeholder {
   width: 200px;
   height: 200px;
   position: relative;
-  background:#111;
+  background: #111;
   transition: all 0.4s ease-in-out;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
@@ -466,7 +546,7 @@ textarea::placeholder {
   width: 200px;
   height: 200px;
   position: relative;
-  background:#111;
+  background: #111;
   transition: all 0.4s ease-in-out;
   clip-path: polygon(0 1%, 75% 0, 100% 100%, 25% 100%);
 
@@ -2880,7 +2960,9 @@ h5.num-r {
   position: absolute;
   top: 0;
   left: 0;
+  /*
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.9) inset;
+  */
 }
 
 
@@ -3301,6 +3383,12 @@ h3 {
   shape-outside: circle();
 }
 
+
+.overlay {
+  pointer-events: none;
+  /* Allow mouse events to pass through */
+}
+
 .pe {
   pointer-events: initial !important;
 }
@@ -3325,6 +3413,7 @@ h3 {
   width: 100%;
   background-position: bottom center;
   background-size: cover;
+  background: url('uploads/bg-splash.jpg');
   overflow: hidden;
 }
 
@@ -3791,7 +3880,7 @@ cite {
     position: relative;
     text-align: center;
     white-space: normal;
-}
+  }
 
 
   .splash-img-logo {
@@ -3799,7 +3888,7 @@ cite {
     inset: 0;
     margin: auto;
     max-width: 50vw;
-}
+  }
 
   .btn-container {
     display: flex;
