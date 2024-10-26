@@ -2587,16 +2587,37 @@ h2.question {
   font-size: 1.2em;
   line-height: 1.5rem;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 }
+
+summary {
+  cursor: pointer;
+  color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  margin:10px 0;
+}
+
 
 div.q-container p {
-  text-align: center;
-    font-size: 0.95rem;
-    line-height: 1.1rem;
-    font-weight: 200;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.1rem;
+  font-weight: 200;
 }
 
+
+h2.question {
+  color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+}
 
 
 h2.about {
@@ -2834,6 +2855,11 @@ h4.year {
   font-weight: 500;
 }
 
+
+details summary > * {
+  display: inline;
+}
+
 summary.jobtitle {
   cursor: pointer;
   color: #f9f871;
@@ -2845,7 +2871,9 @@ summary.jobtitle {
 }
 
 
+
 details {
+  position: relative;
   height: calc-size(auto);
   min-height: 100%;
 }
@@ -3511,11 +3539,11 @@ h3 {
 }
 
 div#background-video div.blurred {
-  backdrop-filter: blur(5px) brightness(0.5);
+  backdrop-filter: blur(5px) brightness(0.7);
   filter: saturate(0);
   width: 100%;
   height: 100%;
-  z-index: 0;  
+  z-index: 0;
 }
 
 #plexusCanvas {
@@ -3531,7 +3559,7 @@ div#background-video div.blurred {
   /* Set canvas background to transparent */
   display: block;
   image-rendering: pixelated;
-  backdrop-filter:;
+  backdrop-filter: ;
 }
 
 .outer-cube {
@@ -3936,31 +3964,35 @@ cite {
 
 .custom-paragraph-s3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1rem;
+  font-size: 0.9rem;
+  line-height: 0.1rem;
   color: #fff;
   text-align: left;
   letter-spacing: 3px;
   text-shadow: 1px 1px 2px #111;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 250;
 }
 
 .custom-paragraph-s3 b {
-  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 0.8rem;
+  font-weight: 555;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
+
 }
 
 .custom-paragraph-s4 {
+  margin-top: 10px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.3rem;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
   color: #fff;
   text-align: left;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px #111;
-  max-width: 50%;
+  max-width: 60%;
 }
 
 .questions {
@@ -4494,7 +4526,7 @@ cite {
 }
 
 
-@media only screen and (orientation: landscape) and (max-height: 600px) {
+@media only screen and (orientation: landscape) and (max-height: 768px) {
   /* Your styles for landscape mode with a max height of 600px */
 
   .nav {
@@ -4679,12 +4711,12 @@ cite {
   .custom-paragraph-s3 {
     line-height: 1.4rem;
     font-size: 1.1rem;
-}
+  }
 
   .custom-paragraph-s4 {
     max-width: 100%;
   }
-  
+
   .custom-paragraph-s3 b {
     font-weight: 500;
     text-transform: uppercase;
