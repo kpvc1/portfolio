@@ -862,7 +862,7 @@ svg.loader {
   /* Full viewport height */
   background: transparent;
   backdrop-filter: blur(10px) brightness(50%);
-  
+
 
 
   /* SVG background color */
@@ -970,6 +970,7 @@ svg.loader:hover path:hover {
   display: flex;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .custom-s1 {
@@ -1084,13 +1085,14 @@ hr.gv {
   width: 100%;
   background: url("uploads/splash-lines.jpg") no-repeat;
   background-color: #111;
-    background-position: top;
+  background-position: top;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow-y: hidden;
+  padding: 5vh 0 10vh;
 }
 
 .blur {
@@ -2655,6 +2657,7 @@ div.q-container p {
   font-size: 0.95rem;
   line-height: 1.1rem;
   font-weight: 200;
+  margin-left: 1.1em;
 }
 
 
@@ -3010,7 +3013,7 @@ h5.subhead {
 
 .down {
   position: absolute;
-  right: 1vw;
+  right: 50%;
   bottom: 1vw;
   z-index: 5;
   margin: 0 auto;
@@ -3097,7 +3100,7 @@ h5.num-r {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  }
+}
 
 .project-bg>img {
   height: 100%;
@@ -3105,7 +3108,7 @@ h5.num-r {
   object-fit: cover;
   object-position: bottom right;
   opacity: 1;
-  
+
 }
 
 
@@ -3138,6 +3141,7 @@ h5.num-r {
   object-fit: cover;
   object-position: bottom center;
   opacity: 1;
+  filter: blur(5px) brightness(70%);
 
 }
 
@@ -3568,7 +3572,26 @@ h3 {
   background: url(uploads/bg-splash.jpg) bottom fixed;
   background-size: cover;
   overflow: hidden;
-  
+}
+
+#pan-container {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+}
+
+
+.panning-image {
+  position: absolute;
+  width: 30vw;
+  /* Slightly larger than the container for panning room */
+  height: auto;
+  top: 30%;
+  left: 5%;
+  transform: translate(0, 0);
+  transition: transform 0.1s ease-out;
+  will-change: transform;
 }
 
 
@@ -4091,7 +4114,7 @@ cite {
 @media only screen and (max-width: 1200px) {
 
   .content {
-    padding: 2vw 4vh 2vh 10vw;
+    padding: 6vw 6vh 10vh 12vw;
   }
 
 
@@ -4253,7 +4276,7 @@ cite {
 
   .down {
     position: absolute;
-    right: 1vw;
+    right: 47%;
     bottom: 1vw;
     z-index: 5;
     margin: 0 auto;
@@ -4292,10 +4315,7 @@ cite {
 
 
 
-  .splash-about {
 
-    margin-top: 10vh;
-  }
 
   .pl-10 {
     padding-left: 10vw;
@@ -4758,6 +4778,30 @@ cite {
 
 @media only screen and (max-width: 768px) {
 
+  h1.process {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8vw;
+    letter-spacing: 12px;
+    line-height: 9vw;
+    font-weight: 100;
+    color: #fff;
+    white-space: nowrap;
+    margin-bottom: 2vh;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  h2.steps {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2vw;
+    letter-spacing: 6px;
+    font-weight: 150;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    white-space: normal;
+  }
+
   .custom-paragraph-s3 {
     line-height: 1.4rem;
     font-size: 1.1rem;
@@ -4775,6 +4819,10 @@ cite {
 
   div#faq iframe {
     display: none
+  }
+
+  .panning-image {
+    display: none;
   }
 
   h1.faq {
@@ -4848,7 +4896,7 @@ cite {
   }
 
   .mb-10 {
-    margin-bottom: 0vh;
+    margin-bottom: 10vh;
   }
 
   .content {
@@ -5210,12 +5258,7 @@ cite {
     height: 100%;
   }
 
-  .splash-about {
-
-    margin-top: 10vh;
-  }
-
-
+  
   .typehead {
     font-family: 'Monita Signature', sans-serif;
     font-size: 12vw;
@@ -5816,10 +5859,6 @@ cite {
 
 
 
-  .splash-about {
-
-    margin-top: 10vh;
-  }
 
 
   .typehead {
