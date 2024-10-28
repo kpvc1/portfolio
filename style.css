@@ -1082,7 +1082,7 @@ hr.gv {
 .splash-about {
   height: 100%;
   width: 100%;
-  background: url("uploads/bg-lines-large.jpg") no-repeat;
+  background: url("uploads/splash-lines.jpg") no-repeat;
   background-color: #111;
   background-position: top;
   background-size: cover;
@@ -1091,7 +1091,15 @@ hr.gv {
   justify-content: center;
   position: relative;
   overflow-y: hidden;
+}
 
+.blur {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px) brightness(50%);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
