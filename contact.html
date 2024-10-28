@@ -34,59 +34,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-  <style>
-    svg.loader {
-      width: 50vh;
-      /* Full viewport width */
-      height: 50vh;
-      /* Full viewport height */
-      background: none;
-      /* SVG background color */
-      opacity: 1;
-      transition: opacity 0.5s ease-in-out;
-      /* Smooth transition for fading out */
-      z-index: 11;
-      cursor: pointer;
-    }
-
-
-    #logo {
-      width: 100vw;
-      /* Full viewport width */
-      height: 100vh;
-      /* Full viewport height */
-      background: #111;
-      /* SVG background color */
-      opacity: 1;
-      transition: opacity 1s ease-out;
-      /* Smooth transition for fading out */
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      z-index: 11;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    body {
-      overflow: hidden;
-
-      /* Hide scrollbars */
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .example::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .example {
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-      }
-  </style>
-
   <!-- JS -->
 
   <!-- Favicons -->
@@ -145,47 +92,70 @@
 
 
 
-
-
   <body>
+ <!-- Footer-->
+ <div class="custom-s2">
+
+    <div class="container content">
 
 
-    <!-- Footer-->
-    <section class="bg3">
-      <div>
 
-        <div class="container content tm">
-          <div class="grid has-centered">
-            <div class="column is-half">
-              <hr>
-            </div>
+
+
+      <div class="sp-20"></div>
+
+
+
+      <div class="grid has-centered footer">
+
+
+
+
+        <div class="column is-4 is-offset-2 aos-item _wt r-foot" data-aos="fade-right">
+          <h4 class="worktogether">Let's Work Together</h4>
+
+          <p class="aos-item footer-ct" data-aos="fade-right">I love learning about what my
+            clients are passionate about and helping them visualize what they would like to
+            portray to their audiences. I’m always interested in hearing about new projects, from
+            non-profits and tiny start-ups to large social networks. <i><b>Feel free to drop me a line!</b></i>
+          </p>
+
+
+        </div>
+
+
+
+
+        <div class="column is-5 aos-item cta2 r-foot" data-aos="fade-right">
+
+
+          <div class="contact-form-container aos-item" data-aos="fade-right">
+            <div id="message" class="active"></div>
+            <form class="contact-form" action="https://formspree.io/f/xpwaedbp" method="POST">
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message.." required></textarea>
+
+              <button type="submit">Send Message</button>
+            </form>
           </div>
         </div>
 
 
-        <div id="message" class="grid has-centered ">
-          <div class="column is-4">
-            <div class="contact-form-container">
 
-              <form class="contact-form" action="https://formspree.io/f/xpwaedbp" method="POST">
-
-                <h2>Leave a message</h2>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email.." required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message.." required></textarea>
-
-                <button class="blue-btn grow" type="submit">Send Message</button>
-              </form>
-            </div>
-          </div>
-
-
-        </div>
       </div>
-    </section>
+    </div>
+
+
+
+    <!--End Footer-->
+
+
+
+
 
 
 
@@ -200,6 +170,11 @@
     <script>
       AOS.init({
         easing: 'ease-in-out-sine'
+      });
+    </script>
+    <script>
+      [].forEach.call(document.querySelectorAll('[lightbox]'), function (el) {
+        el.lightbox = new Lightbox(el);
       });
     </script>
 
@@ -247,9 +222,13 @@
         // After fading out, set display to 'none'
         setTimeout(function () {
           div.style.display = "none";
-        }, 900); // Wait for the opacity transition to complete
-      }, 100); // Start fade-out 900 milliseconds after the page loads
+        }, 500); // Wait for the opacity transition to complete
+      }, 500); // Start fade-out 900 milliseconds after the page loads
+
+
     </script>
+
+
 
 
   </body>
