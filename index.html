@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="typewriter.css">
 
   <style>
-   
+
   </style>
 
 
@@ -1065,17 +1065,17 @@
       </div>
 
 
-      <div class="container content">
+      <div class="container content mt-5 mb-5">
 
         <div class="grid has-centered">
 
 
-          <div class="column is-12 h-container">
+          <div class="column is-12 h-container mt-s">
             <h1 class="process">The Process<span class="caret"></span></h1>
             <h2 class="steps">a step by step guide to creative solutions</h2>
           </div>
 
-          <div class="grid column is-12 has-centered aos-item" data-aos="fade-up">
+          <div class="grid column is-12 has-centered aos-item mt-s mb-10" data-aos="fade-up">
 
             <div class="column is-2 is-mobile-2 is-desktop-1 aos-item process-sq" data-aos="fade-up">
               <h5 class="r">01.</h5>
@@ -1171,7 +1171,7 @@
             </div>
 
 
-            <div class="grid column is-shrink is-full has-centered btn-container2">
+            <div class="grid column is-shrink is-full has-centered btn-container2 mt-5">
 
               <a class="cta-btn-s pe" href="#faq">Frequently Asked Questions <img class="view-ico2" width="20"
                   height="20" src="https://img.icons8.com/FFFFFF/ios/50/expand-arrow--v2.png" alt="down--v1" /></a>
@@ -1191,15 +1191,6 @@
       </div>
     </div>
 
-
-    <div class="container content">
-      <div class="grid has-centered">
-        <div class="column is-6">
-          <hr>
-        </div>
-      </div>
-    </div>
-
   </div>
 
 
@@ -1213,8 +1204,10 @@
 
 
     <div id="faq" class="active">
-      <iframe src="https://my.spline.design/glasscubecopycopy-611ef83cea3353e3c56a891586c1f9c1/" frameborder="0"
-        width="100%" height="110%"></iframe>
+      <div id="pan-container">
+        <img class="panning-image" src="uploads/spline-cube.png">
+        <div class="iridescent-light"></div>
+      </div>
     </div>
 
 
@@ -1222,28 +1215,42 @@
 
       <div class="grid pe-0">
 
-        <div class="column is-half is-end" style="position: relative">
+        <div class="column is-8 is-end" style="position: relative">
           <h1 class="faq">F.A.Q.</h1>
           <h2 class="faq-subhead mb-s">Frequently Asked Questions</h2>
 
           <div class="column mt-s q-container">
 
-            <details open>
+            <details open class="pe">
               <summary class="question">What is "kp"?</summary>
               <p>Just the initials of my name, Khristian Paolo.
               </p>
             </details>
 
-            <details class="pe">
+            <details open class="pe">
+              <summary class="question">What services do you offer?</summary>
+              <p>I’m always interested in hearing about new projects and offer consultation, search engine optimization,
+                web design and devlopment, art direction., logo design, full brand identity, advertising, print design,
+                and copywriting.
+              </p>
+            </details>
+
+            <details open class="pe">
               <summary class="question">What is your rate?</summary>
               <p>I prefer to do fixed price billing on a per project basis because if I screw up I don't want to charge
                 you per hour for my mistake.
               </p>
             </details>
 
-            <details class="pe">
+            <details open class="pe">
               <summary class="question">Will you work for exposure or anything else of dubious value?</summary>
               <p>No. I typically transact in Canadian or US Dollars.</p>
+            </details>
+
+            <details open class="pe">
+              <summary class="question">What types of business do you work with?</summary>
+              <p>My clients range from solo entrepreneurs and family businesses to innovative startups and established
+                social networks, adapting my approach to meet the unique needs of each."</p>
             </details>
 
 
@@ -1718,7 +1725,22 @@
     <script src="script.js"></script>
     <script src="plexus.js"></script>
 
+    <script>
+      const panContainer = document.getElementById('pan-container');
+      const image = panContainer.querySelector('.panning-image');
 
+      panContainer.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX / panContainer.clientWidth;
+        const mouseY = e.clientY / panContainer.clientHeight;
+
+        const translateX = (mouseX - 0.5) * -10;
+        const translateY = (mouseY - 0.5) * -10;
+
+        image.style.transform = `translate(${translateX}%, ${translateY}%)`;
+      });
+
+
+    </script>
 
 
 </body>
