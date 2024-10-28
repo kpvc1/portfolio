@@ -29,6 +29,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="typewriter.css">
 
+    <style>
+        svg.loader {
+            width: 50vh;
+            /* Full viewport width */
+            height: 50vh;
+            /* Full viewport height */
+            background: none;
+            /* SVG background color */
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            /* Smooth transition for fading out */
+            cursor: pointer;
+        }
+
+        #logo {
+            width: 100vw;
+            /* Full viewport width */
+            height: 100vh;
+            /* Full viewport height */
+            background: #111;
+            /* SVG background color */
+            opacity: 1;
+            transition: opacity 1s ease-out;
+            /* Smooth transition for fading out */
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 11;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+    </style>
 
     <!-- JS -->
     <script src="https://kit.fontawesome.com/25fb8fb3cd.js" crossorigin="anonymous"></script>
@@ -95,21 +129,23 @@
 
     <div class="logo-kpvc">
 
-        <svg class="svg-container" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="86.667px"
-            viewBox="0 0 75 86.667" enable-background="new 0 0 75 86.667" xml:space="preserve">
+        <a href="#" title="KPVC">
 
-            <!-- Define the mask -->
-            <mask id="mask">
-                <!-- Use a rectangle for the masking animation -->
-                <rect id="mask-rect" x="0" y="86.667" width="75" height="86.667" fill="grey">
-                    <animate attributeName="y" id="mask-animate" from="86.667" to="0" dur="0.5s" fill="freeze" />
-                </rect>
-            </mask>
+            <svg class="svg-container" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="86.667px"
+                viewBox="0 0 75 86.667" enable-background="new 0 0 75 86.667" xml:space="preserve">
 
-            <!-- Overlay the mask to show yellow fill on hover -->
-            <g mask="url(#mask)">
-                <path fill="#FFFF00" d="M35.938,64.458c0-1.582,0-9.104,0-9.104c-0.559-0.633-6.659-7.473-7.757-9.018
+                <!-- Define the mask -->
+                <mask id="mask">
+                    <!-- Use a rectangle for the masking animation -->
+                    <rect id="mask-rect" x="0" y="86.667" width="75" height="86.667" fill="grey">
+                        <animate attributeName="y" id="mask-animate" from="86.667" to="0" dur="0.5s" fill="freeze" />
+                    </rect>
+                </mask>
+
+                <!-- Overlay the mask to show yellow fill on hover -->
+                <g mask="url(#mask)">
+                    <path fill="#FFFF00" d="M35.938,64.458c0-1.582,0-9.104,0-9.104c-0.559-0.633-6.659-7.473-7.757-9.018
       c-1.099-1.545-0.875-1.637-0.875-1.637s-0.224-0.596,0.968-1.713c1.191-1.117,7.501-7.314,9.566-8.58s2.438-1.805,6.589-2.364
       c0.093-0.409,0.056-0.651-0.057-0.968c-1.34,0.112-6.699,0.67-15.279,0.67c-0.149,0.484-0.112,0.782,0.037,0.949
       c0.893,0.13,3.033,0.373,3.536,0.596c0.502,0.223,1.433,0.894,0.502,2.103c-0.931,1.21-2.661,3.239-4.987,5.677
@@ -121,7 +157,7 @@
       c0,0-1.136-1.062-0.931-6.216v-6.775c0,0,0-1.991,1.396-2.047c1.396-0.057,2.587-0.148,3.853,1.303s9.566,10.888,10.311,12.004
       c0.744,1.117,0.67,1.992,0.187,2.309c-0.484,0.316-2.364,0.744-3.667,0.855c-0.093,0.391-0.056,0.615,0.149,0.949
       C33.112,64.446,34.438,64.395,35.938,64.458z" />
-                <path fill="#FFFF00" d="M65.398,38.76c-2.035-3.053-6.279-5.881-11.441-5.311c-5.16,0.57-9.105,3.175-9.627,3.473
+                    <path fill="#FFFF00" d="M65.398,38.76c-2.035-3.053-6.279-5.881-11.441-5.311c-5.16,0.57-9.105,3.175-9.627,3.473
       s-0.993,0.471-1.489,0.149c-0.497-0.322-0.653-1.662-0.549-2.363c0,0-0.81,0.049-1.798,0.585c-1,0.542-2.702,1.832-4.649,3.833
       c0.502,0.373,1.555-0.33,1.629,1.717c0.075,2.048,0.081,29.827,0.03,33.005c0,0,0.305,6.601-1.184,7.513
       c-1.489,0.912-2.476,0.837-3.965,1.079c-0.093,0.41-0.074,0.596,0.075,0.838c1.823-0.094,6.327-0.205,7.798-0.205
@@ -131,51 +167,50 @@
        M62.655,51.415c-0.111,3.797-1.526,8.486-4.615,11.391c-3.09,2.903-7.817,3.127-11.614,1.451
       c-3.797-1.675-4.057-5.025-4.057-6.216c0-1.191,0-8.264,0-8.264v-5.845c0,0-0.187-4.392,1.266-5.434
       c1.451-1.042,3.387-2.345,7.816-2.345s7.779,3.239,9.194,5.881C62.06,44.677,62.768,47.618,62.655,51.415z" />
-            </g>
+                </g>
 
-            <style>
-                svg.svg-container {
-                    cursor: pointer;
-                }
-
-                svg.svg-container:hover #mask-rect {
-                    animation: animateMaskForward 0.5s forwards;
-                }
-
-                svg.svg-container:not(:hover) #mask-rect {
-                    animation: animateMaskReverse 0.5s forwards;
-                }
-
-                @keyframes animateMaskForward {
-                    0% {
-                        y: 86.667;
+                <style>
+                    svg.svg-container {
+                        cursor: pointer;
                     }
 
-                    100% {
-                        y: 0;
-                    }
-                }
-
-                @keyframes animateMaskReverse {
-                    0% {
-                        y: 0;
+                    svg.svg-container:hover #mask-rect {
+                        animation: animateMaskForward 0.5s forwards;
                     }
 
-                    100% {
-                        y: 86.667;
+                    svg.svg-container:not(:hover) #mask-rect {
+                        animation: animateMaskReverse 0.5s forwards;
                     }
-                }
-            </style>
 
-        </svg>
+                    @keyframes animateMaskForward {
+                        0% {
+                            y: 86.667;
+                        }
 
+                        100% {
+                            y: 0;
+                        }
+                    }
 
+                    @keyframes animateMaskReverse {
+                        0% {
+                            y: 0;
+                        }
+
+                        100% {
+                            y: 86.667;
+                        }
+                    }
+                </style>
+
+            </svg>
+
+        </a>
 
     </div>
 
 
     <!-- Navigation Menu -->
-    <!--
     <div class="nav">
 
         <div class="socialstack">
@@ -233,12 +268,11 @@
             <span class="navToggleIcon"></span>
         </button>
     </div>
-    -->
 
 
     <div class="project-hero splash-img project-img">
 
-        <div class="splash-img-bg1"></div>
+        <div class="splash-img-bg2"></div>
 
         <img class="splash-img-logo rotate" src="uploads/decadance-splash-logo.png" draggable="false">
 
@@ -257,13 +291,12 @@
             <div class="column is-4 aos-item" data-aos="fade-down">
 
                 <p class="lh-x1">Decadance aims to carve out a unique space that invites patrons to immerse themselves
-                    in the joy of live jazz and culinary excellence. Every element was curated to establish a cohesive
-                    identity aligned with the mission of providing an exceptional dining experience in the city of
-                    Toronto. </p>
+                    in the joy of live music and culinary excellence. Every element was curated to establish a cohesive
+                    identity aligned with the mission of providing an exceptional experience. </p>
 
                 <p class="lh-x1">The selected colors, typography, and decorative motifs evoke sophistication and warmth,
-                    reflecting on the history of jazz while appealing to modern sensibilities, making the space an
-                    inviting atmosphere that encourages customers to dine, dance and enjoy live performances.</p>
+                    reflecting the rich history of jazz while appealing to modern sensibilities, making the space an
+                    inviting atmosphere that encourages customers to dance and enjoy live performances.</p>
 
 
             </div>
@@ -315,7 +348,7 @@
                 <p class="lh-x1">Inspiration was drawn from the Art Deco movement and post-war modernism. I aimed to
                     combine the sleek
                     geometric elegance of the 1920's Art Deco style and the cultural and artistic Jazz movement of the
-                    1940's to portray a complex and introspective style of abstract expression with minimalist forms.
+                    1940's to portray a complex and introspective style with abstract expression and minimalist forms.
                 </p>
             </div>
 
@@ -365,7 +398,7 @@
                 <p>To better capture the essence of the café, an alternate stylized logo alongside the wordmark was
                     designed. This decision was driven by the desire to create a visual identity that not only reflects
                     the vibrant jazz culture but also resonates with both locals and visitors. To achieve this, I
-                    incorporated sharp Art Deco lines and motifs into a Toronto skyline featuring the
+                    incorporated stylized Art Deco motifs into the design, with an iconic Toronto skyline featuring the
                     C.N. Tower. </p>
 
             </div>
@@ -380,14 +413,15 @@
                 <h3 class="h-folio">Signage</h3>
             </div>
 
+            <div class="column is-9 aos-item" data-aos="fade-down">
+                <img src="uploads/decadance-signage.jpg">
+            </div>
+
             <div class="column is-3 aos-item" data-aos="fade-down">
                 <p class="lh-x1">The signage for Decadance features a large full-window logo, designed to create a
                     striking visual impact. The choice of a white vinyl allows for excellent visibility against the
                     café's interior, ensuring that the branding is easily recognizable both during the day and at night.
                 </p>
-            </div>
-            <div class="column is-9 aos-item" data-aos="fade-down">
-                <img src="uploads/decadance-signage.jpg">
             </div>
 
             <div class="column is-full b-folio mt-10 mb-s aos-item" data-aos="fade-down">
@@ -406,23 +440,27 @@
 
         </div>
 
-        <!--
+
         <div class="breadcrumbs aos-item mt-10" data-aos="fade-down">
 
-            <div class="">
+            <a href="./decadance.html">
+                <div class="bc-btn-prev _fc">
+                    <img width="50" height="50" src="https://img.icons8.com/FFFFFF/ios/50/long-arrow-left--v1.png"
+                        alt="long-arrow-right--v1" />
+                </div>
+            </a>
 
-            </div>
 
-
+            <spam>Home</spam>
 
             <a href="./intragreen.html">
-                <div class="bc-btn">
+                <div class="bc-btn _fc">
                     <img width="50" height="50" src="https://img.icons8.com/FFFFFF/ios/50/long-arrow-right--v1.png"
                         alt="long-arrow-right--v1" />
                 </div>
             </a>
         </div>
--->
+
 
 
     </div>
