@@ -15,7 +15,39 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+}
+
+/* Apply scroll-snap-type to the container */
+html,
+body {
+  height: 100%;
+  scroll-snap-type: y proximity;
+  margin: 0;
+  overflow-y: visible;
+}
+
+/* Style for scroll-snap sections */
+.scroll-snap {
+  min-height: 100vh;
+  /* Full viewport height */
+  scroll-snap-align: start;
+
+}
+
+
+.scroll-snap-half {
+  min-height: 50vh;
+  /* Full viewport height */
+  scroll-snap-align: middle;
+
+}
+
+.scroll-snap-end {
+  min-height: 100vh;
+  /* Full viewport height */
+  scroll-snap-align: end;
+
 }
 
 body {
@@ -28,8 +60,6 @@ body {
   background-color: #111111 !important;
   cursor: crosshair;
   overflow-x: visible;
-
-
 }
 
 
@@ -1001,12 +1031,11 @@ svg.loader:hover path:hover {
 .custom-s3 {
   background: #111;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   background-size: cover;
   background-position: top 0px left 0px;
   background-attachment: scroll;
   z-index: 4;
-
 }
 
 .copyright {
@@ -1219,15 +1248,33 @@ hr.afterfoot {
 }
 
 
-.to-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  animation-duration: 0.7s;
-  display: flex;
-  bottom: 0px;
+.go-to-top {
+  position: fixed;
+  /* Fix the button position */
+  bottom: 20px;
+  /* Distance from the bottom */
+  right: 20px;
+  /* Distance from the right */
+  z-index: 1000;
+  /* Ensure it's above other content */
+  opacity: 0;
+  /* Start hidden */
+  visibility: hidden;
+  /* Start hidden */
+  border-top: 2px #fff solid;
+  border-radius: 0px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* Fade-in transition */
 }
+
+.go-to-top.visible {
+  opacity: 1;
+  /* Fully visible */
+  visibility: visible;
+  /* Make visible */
+}
+
+
 
 .cta-1 {
   margin-top: 20px;
@@ -3142,6 +3189,16 @@ h5.num-r {
   object-position: bottom center;
   opacity: 1;
   filter: blur(5px) brightness(70%);
+
+}
+
+.custom-s4 {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+  z-index: 4;
 
 }
 
@@ -5258,7 +5315,7 @@ cite {
     height: 100%;
   }
 
-  
+
   .typehead {
     font-family: 'Monita Signature', sans-serif;
     font-size: 12vw;
