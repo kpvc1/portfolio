@@ -165,7 +165,8 @@
                 <li class="aos-item" data-aos="fade-down">Keyboard - Corsair Vengeance K65 Compact</li>
                 <li class="aos-item" data-aos="fade-down">Mouse - Logitech G403</li>
                 <li class="aos-item" data-aos="fade-down">Laptop - Macbook Pro 13″</li>
-                <li class="aos-item" data-aos="fade-down">Headphones - Sony MDR-XB500<BR>Earbuds - Panasonic RP-HJE120K</li>
+                <li class="aos-item" data-aos="fade-down">Headphones - Sony MDR-XB500<BR>Earbuds - Panasonic RP-HJE120K
+                </li>
 
               </ul>
             </div>
@@ -182,73 +183,79 @@
 
         </div>
 
+      </div>
+
+      
+    </div>
 
 
-        <div id="aos-demo" class="aos-all">
-        </div>
 
-        <script src="includes/aos.js"></script>
-        <script src="includes/lightbox2.js"></script>
-        <script>
-          AOS.init({
-            easing: 'ease-in-out-sine'
-          });
-        </script>
-        <script>
-          [].forEach.call(document.querySelectorAll('[lightbox]'), function (el) {
-            el.lightbox = new Lightbox(el);
-          });
-        </script>
 
-        <script>
-          $(document).ready(function () {
-            $('[svg="animated"]').css({
-              opacity: 0,
-              transition: "opacity 400ms ease"
+    <div id="aos-demo" class="aos-all">
+    </div>
+
+    <script src="includes/aos.js"></script>
+    <script src="includes/lightbox2.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
+    <script>
+      [].forEach.call(document.querySelectorAll('[lightbox]'), function (el) {
+        el.lightbox = new Lightbox(el);
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $('[svg="animated"]').css({
+          opacity: 0,
+          transition: "opacity 400ms ease"
+        });
+
+        $(window).on("load resize scroll", function () {
+          $('[svg="animated"] path').each(function () {
+            var pathLength = this.getTotalLength();
+            $(this).attr({
+              "stroke-dasharray": pathLength,
+              "stroke-dashoffset": pathLength
             });
+            var svgAnimated = $(this).closest('[svg="animated"]');
+            var svgAnimatedTop = svgAnimated.offset().top;
+            var svgAnimatedHeight = svgAnimated.outerHeight();
+            var windowHeight = $(window).height();
+            var windowScrollTop = $(window).scrollTop();
+            var animationDuration = svgAnimated.attr('svg-animation-time') || 5000;
 
-            $(window).on("load resize scroll", function () {
-              $('[svg="animated"] path').each(function () {
-                var pathLength = this.getTotalLength();
-                $(this).attr({
-                  "stroke-dasharray": pathLength,
-                  "stroke-dashoffset": pathLength
-                });
-                var svgAnimated = $(this).closest('[svg="animated"]');
-                var svgAnimatedTop = svgAnimated.offset().top;
-                var svgAnimatedHeight = svgAnimated.outerHeight();
-                var windowHeight = $(window).height();
-                var windowScrollTop = $(window).scrollTop();
-                var animationDuration = svgAnimated.attr('svg-animation-time') || 5000;
-
-                if (windowScrollTop + windowHeight > svgAnimatedTop && windowScrollTop < svgAnimatedTop + svgAnimatedHeight) {
-                  $(svgAnimated).css("opacity", 1);
-                  $(this).css({
-                    transition: "stroke-dashoffset " + animationDuration + "ms ease-out",
-                    "stroke-dashoffgset": 0
-                  });
-                }
+            if (windowScrollTop + windowHeight > svgAnimatedTop && windowScrollTop < svgAnimatedTop + svgAnimatedHeight) {
+              $(svgAnimated).css("opacity", 1);
+              $(this).css({
+                transition: "stroke-dashoffset " + animationDuration + "ms ease-out",
+                "stroke-dashoffgset": 0
               });
-            });
+            }
           });
-        </script>
+        });
+      });
+    </script>
 
 
 
-        <script>
-          // Set a timeout to fade out and hide the SVG Loader after animation
-          setTimeout(function () {
-            const div = document.getElementById("logo");
-            div.style.opacity = "0"; // Fade out the DIV
+    <script>
+      // Set a timeout to fade out and hide the SVG Loader after animation
+      setTimeout(function () {
+        const div = document.getElementById("logo");
+        div.style.opacity = "0"; // Fade out the DIV
 
-            // After fading out, set display to 'none'
-            setTimeout(function () {
-              div.style.display = "none";
-            }, 500); // Wait for the opacity transition to complete
-          }, 500); // Start fade-out 900 milliseconds after the page loads
+        // After fading out, set display to 'none'
+        setTimeout(function () {
+          div.style.display = "none";
+        }, 500); // Wait for the opacity transition to complete
+      }, 500); // Start fade-out 900 milliseconds after the page loads
 
 
-        </script>
+    </script>
 
 
 
