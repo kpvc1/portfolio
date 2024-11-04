@@ -5,12 +5,12 @@ canvas.height = window.innerHeight;
 
 // Global settings
 const PARTICLE_SPEED = 0.1;
-const CONNECTION_RANGE = 100;
-const NUM_PARTICLES = 200;
+const CONNECTION_RANGE = 150;
+const NUM_PARTICLES = 150;
 const PARTICLE_MIN_SIZE = 1;
 const PARTICLE_MAX_SIZE = 3;
 const MOUSE_ATTRACTION_RADIUS = 150;  // Radius within which particles are attracted to the mouse
-const MOUSE_ATTRACTION_STRENGTH = 0.1; // Controls how strongly particles are pulled to the mouse
+const MOUSE_ATTRACTION_STRENGTH = 0.5; // Controls how strongly particles are pulled to the mouse
 const MAX_PARTICLE_SPEED = 0.05;          // Maximum speed of particles when not attracted
 
 const particles = [];
@@ -151,7 +151,7 @@ let particleCount = NUM_PARTICLES;
 
 // Function to set particle count based on viewport width
 function adjustParticleCount() {
-    particleCount = window.innerWidth < 768 ? 100 : NUM_PARTICLES;
+    particleCount = window.innerWidth < 922 ? 70 : NUM_PARTICLES;
     
     particles.length = 0; // Clear current particles
     for (let i = 0; i < particleCount; i++) {
