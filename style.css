@@ -27,11 +27,16 @@ body {
   overflow-y: visible;
 }
 
+.m-snap {
+  scroll-snap-type: y mandatory;
+}
+
 /* Style for scroll-snap sections */
 .scroll-snap {
   min-height: 100vh;
   /* Full viewport height */
   scroll-snap-align: start;
+  scroll-padding: 20px 0;
 
 }
 
@@ -39,7 +44,7 @@ body {
 .scroll-snap-half {
   min-height: 50vh;
   /* Full viewport height */
-  scroll-snap-align: middle;
+  scroll-snap-align: center;
 
 }
 
@@ -83,6 +88,7 @@ section {
   transform: rotateX(30deg) rotateY(30deg);
   animation: rotate 180s infinite linear;
   /* Continuous rotation */
+
 }
 
 .cube-face {
@@ -461,7 +467,6 @@ textarea::placeholder {
   width: 100%;
   padding: 0px;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 15px;
 }
 
@@ -650,14 +655,14 @@ a {
   z-index: 20;
 }
 
+/* Burger Menu (Hidden on Desktop) */
 .navToggle {
   display: none;
   flex-direction: column;
-  cursor: pointer;
+  gap: 5px;
   background: none;
   border: none;
-  padding: 0.5rem;
-  z-index: 10;
+  cursor: pointer;
 }
 
 /* Icon for the hamburger menu */
@@ -1121,7 +1126,6 @@ hr.gv {
   justify-content: center;
   position: relative;
   overflow-y: hidden;
-  padding: 5vh 0 10vh;
 }
 
 .blur {
@@ -2058,6 +2062,10 @@ a.download {
   margin-bottom: 10vh;
 }
 
+.mb-15 {
+  margin-bottom: 15vh;
+}
+
 .mb-20 {
   margin-bottom: 20vh;
 }
@@ -2123,8 +2131,9 @@ a.download {
 
 .bt-1 {
   border-top: 1px solid #ddd;
-
-  max-width: 60%;
+  animation: draw-border 7s forwards;
+  max-width: 80%;
+  margin-bottom: 4vh;
 }
 
 
@@ -2890,6 +2899,15 @@ h3.h-folio {
 
 }
 
+h3.b-quote {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: normal;
+  letter-spacing: 1px;
+}
+
+
 h3.c-folio {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
@@ -3058,13 +3076,26 @@ h5.subhead {
 }
 
 
-.down {
+div.down {
   position: absolute;
-  right: 50%;
-  bottom: 1vw;
-  z-index: 5;
+  right: 1%;
+  bottom: 47%;
+  z-index: 99;
   margin: 0 auto;
   opacity: 0.8;
+
+}
+
+div.down img {
+  background: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  padding: 3px;
+}
+
+
+div.down img:hover {
+  background: #ffffff54;
 }
 
 
@@ -3689,7 +3720,7 @@ div#background-video div.blurred {
   /* Set canvas background to transparent */
   display: block;
   image-rendering: pixelated;
-  backdrop-filter: ;
+
 }
 
 .outer-cube {
@@ -3705,6 +3736,7 @@ div#background-video div.blurred {
   transform: rotateX(45deg);
   opacity: 1;
   /* Add 45-degree X rotation for perspective */
+
 }
 
 
@@ -3724,7 +3756,7 @@ div#background-video div.blurred {
   /* White outline */
   background-color: transparent;
   /* No fill color */
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .inner-face {
@@ -3733,7 +3765,7 @@ div#background-video div.blurred {
   /* White outline */
   background-color: transparent;
   /* No fill color */
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .outer-front {
@@ -4094,22 +4126,22 @@ cite {
 
 .custom-paragraph-s3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  line-height: 0.5em;
+  font-size: 1.5rem;
+  line-height: 1.2rem;
   color: #fff;
   text-align: left;
   letter-spacing: 3px;
-  text-shadow: 1px 1px 2px #111;
-  text-transform: lowercase;
+  text-shadow: 4px 4px 8px #000000ba;
+  text-transform: none;
   font-weight: 250;
 }
 
 .custom-paragraph-s3 b {
-  font-size: 1.1rem;
-  line-height: 0.8rem;
-  font-weight: 555;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
 
 }
 
@@ -4306,15 +4338,56 @@ cite {
 @media only screen and (max-width: 922px) {
 
 
+  h1.process {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12vw;
+    letter-spacing: 12px;
+    line-height: 11vw;
+    font-weight: 100;
+    color: #fff;
+    white-space: normal;
+    margin-bottom: 3vh;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   h2.steps {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2vw;
+    font-size: 5vw;
     letter-spacing: 6px;
+    line-height: 5vw;
     font-weight: 150;
     color: #fff;
     position: relative;
     text-align: center;
     white-space: normal;
+    margin-top: 3vh;
+  }
+
+  h1.faq {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13vw;
+    letter-spacing: 12px;
+    line-height: 13vw;
+    font-weight: 100;
+    color: #fff;
+    white-space: nowrap;
+    margin-bottom: 3vh;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2.faq-subhead {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vw;
+    letter-spacing: 6px;
+    font-weight: 150;
+    color: #fff;
+    white-space: normal;
+    position: relative;
+    text-align: center;
   }
 
 
@@ -4824,6 +4897,7 @@ cite {
 
   .navToggle {
     display: flex;
+
   }
 
   .socialstack {
@@ -4835,32 +4909,64 @@ cite {
 
 @media only screen and (max-width: 768px) {
 
+  .nav {
+    position: fixed;
+    top: 1vh;
+    left: 88vw;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    z-index: 11;
+    display: flex;
+    margin-top: 0;
+  }
+
   h1.process {
     font-family: 'Montserrat', sans-serif;
-    font-size: 8vw;
+    font-size: 10vw;
     letter-spacing: 12px;
-    line-height: 9vw;
+    line-height: 11vw;
     font-weight: 100;
     color: #fff;
-    white-space: nowrap;
-    margin-bottom: 2vh;
+    white-space: normal;
+    margin-bottom: 3vh;
     position: relative;
     text-transform: uppercase;
+    text-align: center;
   }
 
   h2.steps {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.2vw;
+    font-size: 4vw;
     letter-spacing: 6px;
+    line-height: 5vw;
     font-weight: 150;
     color: #fff;
     position: relative;
     text-align: center;
     white-space: normal;
+    margin-top: 1vh;
+  }
+
+  .bt-1 {
+    border-top: 1px solid #ddd;
+    animation: draw-border 7s forwards;
+    max-width: 80%;
+    margin-bottom: 4vh;
+  }
+
+  .custom-paragraph-s {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7vw;
+    font-weight: 100;
+    line-height: 8vw;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: left;
   }
 
   .custom-paragraph-s3 {
-    line-height: 1.4rem;
+    line-height: 1rem;
     font-size: 1.1rem;
   }
 
@@ -4872,6 +4978,8 @@ cite {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1rem;
   }
 
   div#faq iframe {
@@ -4956,9 +5064,23 @@ cite {
     margin-bottom: 10vh;
   }
 
+
   .content {
-    padding: 2vh 4vw;
+    padding: 7vh 10vw 15vh;
   }
+
+  .custom-s2 {
+    background: #111;
+    position: relative;
+    overflow: hidden;
+    background-image: url(uploads/hadouken.jpg);
+    background-size: cover;
+    background-position: top 0px left 0px;
+    background-attachment: scroll;
+    z-index: 4;
+    padding: 0 10vw;
+  }
+
 
   .logo-kpvc {
     display: none;
@@ -5159,6 +5281,7 @@ cite {
     z-index: -1;
   }
 
+
   a.navLink {
     color: #ddd;
     font-size: 8vh;
@@ -5298,6 +5421,24 @@ cite {
 
   .navToggle {
     display: flex;
+    flex-direction: column;
+    gap: 0px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  /* Transform the burger icon into an X */
+  .navToggle.active .navToggleIcon:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navToggle.active .navToggleIcon:nth-child(2) {
+    opacity: 0;
+    /* Hide the middle line */
+  }
+
+  .navToggle.active .navToggleIcon:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .socialstack {
