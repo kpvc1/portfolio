@@ -1833,8 +1833,16 @@
       });
 
 
+    </script>
 
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.querySelector(".navToggle");
+        const navList = document.querySelector(".navList");
 
+        navToggle.addEventListener("click", function () {
+          navList.classList.toggle("active");
+        });
+      });
     </script>
 
 
