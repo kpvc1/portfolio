@@ -659,7 +659,6 @@ a {
 .navToggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
@@ -676,7 +675,6 @@ a {
 }
 
 
-
 .navList {
   display: flex;
   justify-content: space-evenly;
@@ -687,6 +685,7 @@ a {
   height: 50vh;
 
 }
+
 
 .navLink {
   color: #ddd;
@@ -2132,7 +2131,7 @@ a.download {
 .bt-1 {
   border-top: 1px solid #ddd;
   animation: draw-border 7s forwards;
-  max-width: 80%;
+  max-width: 100%;
   margin-bottom: 4vh;
 }
 
@@ -3090,7 +3089,9 @@ div.down img {
   background: none;
   border-radius: 50px;
   transition: all 0.3s ease;
-  padding: 3px;
+  padding: 5px;
+  width: 30px;
+  margin: 10px 0;
 }
 
 
@@ -4726,20 +4727,22 @@ cite {
 }
 
 
-@media only screen and (orientation: landscape) and (max-height: 768px) {
+@media only screen and (orientation: landscape) and (max-height: 600px) {
   /* Your styles for landscape mode with a max height of 600px */
 
   .nav {
     position: fixed;
-    top: 1vh;
-    left: 90vw;
+    top: 3vh;
+    left: 94vw;
     justify-content: flex-end;
     align-items: center;
     background: none;
     z-index: 11;
     display: flex;
     margin-top: 0;
-  }
+    height: 6vh;
+    width: fit-content;
+}
 
 
   .navList {
@@ -4775,9 +4778,7 @@ cite {
     padding: 0px;
   }
 
-  .navList.active {
-    display: flex;
-  }
+
 
   .navLink.active {
     color: #ebebeb;
@@ -5078,7 +5079,7 @@ cite {
     background-position: top 0px left 0px;
     background-attachment: scroll;
     z-index: 4;
-    padding: 0 10vw;
+    padding: 0;
   }
 
 
@@ -5254,14 +5255,15 @@ cite {
 
   .nav {
     position: fixed;
-    top: 1vh;
-    left: 90vw;
+    top: 2vh;
+    left: 86vw;
     justify-content: flex-end;
     align-items: center;
     background: none;
     z-index: 11;
     display: flex;
     margin-top: 0;
+    height:5vh;
   }
 
 
@@ -5279,6 +5281,19 @@ cite {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(6.5px);
     z-index: -1;
+  }
+
+  .navList.active {
+    animation: circularExpand 0.6s ease forwards;
+  }
+
+  @keyframes circularExpand {
+    from {
+      clip-path: circle(0% at 50% 50%);
+    }
+    to {
+      clip-path: circle(150% at 50% 50%);
+    }
   }
 
 
@@ -5299,33 +5314,6 @@ cite {
     padding: 0px;
   }
 
-  .navList.active {
-    display: flex;
-  }
-
-  .navLink.active {
-    color: #ebebeb;
-  }
-
-  /* Active link styling: keep underline when link is active */
-  .navLink.active:before {
-    background: #1a1a1ad5;
-
-
-    /* Different color for active */
-    width: 100%;
-    /* Fully expanded */
-    transition: width 0.5s ease;
-  }
-
-  /* Active right underline also hidden */
-  .navLink.active:after {
-    background: transparent;
-    /* Keep transparent */
-    width: 100%;
-    transition: 0.5s ease;
-    /* Smooth transition */
-  }
 
   .navLink {
     color: #ddd;
@@ -5422,23 +5410,8 @@ cite {
   .navToggle {
     display: flex;
     flex-direction: column;
-    gap: 0px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-
-  /* Transform the burger icon into an X */
-  .navToggle.active .navToggleIcon:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .navToggle.active .navToggleIcon:nth-child(2) {
-    opacity: 0;
-    /* Hide the middle line */
-  }
-
-  .navToggle.active .navToggleIcon:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .socialstack {
