@@ -3125,10 +3125,10 @@ div.down {
 
 div.down img {
   background: none;
-  border-radius: 50px;
+  border-radius: 0px;
   transition: all 0.3s ease;
   padding: 5px;
-  width: 70px;
+  width: 60px;
   margin: 0px 0px;
   z-index: 99;
 }
