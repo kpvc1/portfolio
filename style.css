@@ -281,6 +281,11 @@ h6 {
 }
 
 
+.hidden {
+  display: none !important;
+}
+
+
 
 .fadein {
   animation: fadein 1s forwards;
@@ -640,15 +645,20 @@ a {
 }
 
 
+#kpvclogo {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+
 .nav {
   position: fixed;
-  height: 80vh;
-  width: 7vw;
-  left: 0;
-  bottom: 0%;
+  height: 11vh;
+  width: 100vw;
+  left: 0%;
+  top: 0%;
   background: none;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
@@ -681,8 +691,9 @@ a {
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
-  flex-direction: column;
-  height: 50vh;
+  flex-direction: row;
+  height: 10vh;
+  width: 60vw;
 
 }
 
@@ -699,8 +710,8 @@ a {
 
 a.navLink {
 
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   float: left;
   justify-content: center;
@@ -709,15 +720,17 @@ a.navLink {
   display: block;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
   width: 100%;
   text-align: center;
   text-decoration: none;
+  letter-spacing: 8px;
+  text-transform: uppercase;
 
 }
 
 a.navLink:hover {
-  color: #ebebeb;
+  color: #e5ff51dc;
 }
 
 .navLink:hover {
@@ -731,8 +744,8 @@ a.navLink:hover {
   position: absolute;
   width: 0%;
   /* Hidden initially */
-  height: 500%;
-  bottom: 0%;
+  height: 160%;
+  bottom: -30%;
   /* Positioned at the bottom of the link */
   background: transparent;
   transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -749,12 +762,12 @@ a.navLink:hover {
 .navLink:after {
   right: 0;
   /* Expand from right */
-  background: #7e7e7eb6;
+  background: rgba(255, 253, 134, 0.548);
 }
 
 /* Hover effect: expand underline from left to right */
 .navLink:hover:before {
-  background: #7e7e7eb6;
+  background: #7e7e7e2d;
   /* Change color on hover */
   width: 100%;
   /* Expand fully */
@@ -773,12 +786,12 @@ a.navLink:hover {
 }
 
 .navLink.active {
-  color: #ebebeb;
+  color: #eaff71;
 }
 
 /* Active link styling: keep underline when link is active */
 .navLink.active:before {
-  background: #88888888;
+  background: #b4b4b425;
 
 
   /* Different color for active */
@@ -851,17 +864,25 @@ svg #wheel {
   animation: scroll ease 1.5s infinite;
 }
 
+.socialstack {
+  position: relative;
+  display: flex;
+  right: 0px;
+  top: auto;
+  flex-direction: column;
+  width: 1vw;
+}
 
 
 .logo-kpvc {
-  position: fixed;
-  top: 35px;
-  left: 2vw;
+  display: flex;
+  position: relative;
   height: 84.667px;
   width: 76px;
   z-index: 5;
   background: url(uploads/kpvc-logo-sw.svg) no-repeat center;
   background-size: contain;
+  left: 3vw;
 }
 
 svg.svg-container {
@@ -895,7 +916,7 @@ svg.loader {
   height: 100vh;
   /* Full viewport height */
   background: transparent;
-  backdrop-filter: blur(10px) brightness(50%);
+  backdrop-filter: blur(30px) brightness(25%);
 
 
 
@@ -1383,6 +1404,10 @@ hr.afterfoot {
   width: fit-content;
 }
 
+.fitted {
+  width: 100% !important;
+}
+
 .cta-btn-s {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
@@ -1405,7 +1430,7 @@ hr.afterfoot {
   white-space: nowrap;
   width: fit-content;
   margin: 12px 0;
-
+  z-index: 10;
 }
 
 .cta-btn-s:hover {
@@ -2328,8 +2353,18 @@ p.profile {
 }
 
 .socialstack {
+
   display: flex;
-  flex-direction: column;
+  position: relative;
+  right: 1vw;
+  top: 0px;
+  flex-direction: row;
+  width: 10vw;
+
+}
+
+.socialstack a {
+  padding: 10px;
 
 }
 
@@ -3077,11 +3112,14 @@ h5.subhead {
 
 div.down {
   position: absolute;
-  right: 1%;
-  bottom: 47%;
-  z-index: 99;
+  left: 0%;
+  bottom: 50%;
   margin: 0 auto;
-  opacity: 0.8;
+  opacity: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
 
 }
 
@@ -3090,8 +3128,9 @@ div.down img {
   border-radius: 50px;
   transition: all 0.3s ease;
   padding: 5px;
-  width: 30px;
-  margin: 10px 0;
+  width: 70px;
+  margin: 0px 0px;
+  z-index: 99;
 }
 
 
@@ -4336,7 +4375,7 @@ cite {
 
 }
 
-@media only screen and (max-width: 922px) {
+@media only screen and (max-width: 1024px) {
 
 
   h1.process {
@@ -4489,8 +4528,20 @@ cite {
 
   }
 
+  .navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 10vh;
+    width: 40vw;
+  }
+
+
   a.navLink {
-    font-size: 0.75em;
+    font-size: 0.65em;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     float: left;
@@ -4501,8 +4552,8 @@ cite {
     display: block;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    transform: rotate(-90deg);
-    padding: 0 3px 6px;
+    transform: rotate(0deg);
+    letter-spacing: 4px;
     width: 80%;
     text-align: center;
     text-decoration: none;
@@ -4719,11 +4770,6 @@ cite {
     display: none;
   }
 
-  .socialstack {
-    display: flex;
-    flex-direction: column;
-
-  }
 }
 
 
@@ -4742,7 +4788,8 @@ cite {
     margin-top: 0;
     height: 6vh;
     width: fit-content;
-}
+
+  }
 
 
   .navList {
@@ -4872,7 +4919,7 @@ cite {
   }
 
   .navLink.active {
-    color: #ebebeb;
+    color: #ebebeb00;
   }
 
   /* Active link styling: keep underline when link is active */
@@ -4910,17 +4957,179 @@ cite {
 
 @media only screen and (max-width: 768px) {
 
+  .hidden {
+    display: block !important;
+  }
+
   .nav {
     position: fixed;
-    top: 1vh;
-    left: 88vw;
+    top: 0%;
+    left: 0%;
     justify-content: flex-end;
     align-items: center;
     background: none;
     z-index: 11;
     display: flex;
     margin-top: 0;
+    height: 5vh;
+    width: 100%
   }
+
+
+  .navList {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #232323b5;
+    border-radius: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px) brightness(0.5);
+    -webkit-backdrop-filter: blur(6.5px);
+    z-index: -1;
+  }
+
+  .navList.active {
+    animation: circularExpand 0.6s ease forwards;
+  }
+
+  @keyframes circularExpand {
+    from {
+      clip-path: circle(0% at 50% 50%);
+    }
+
+    to {
+      clip-path: circle(150% at 50% 50%);
+    }
+  }
+
+
+  a.navLink {
+    color: #ddd;
+    font-size: 5vh;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0);
+    padding: 0px;
+  }
+
+
+  .navLink {
+    color: #ddd;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    display: block;
+
+  }
+
+
+  a.navLink:hover {
+    color: #eeff57;
+  }
+
+  .navLink:hover {
+    text-decoration: none;
+  }
+
+  /* Default link underline (before and after hidden initially) */
+  .navLink:before,
+  .navLink:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    /* Hidden initially */
+    height: 100%;
+    bottom: 0%;
+    /* Positioned at the bottom of the link */
+    background: transparent;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Smooth transition for both */
+    z-index: -1;
+
+  }
+
+  .navLink:before {
+    left: 0;
+    /* Expand from left */
+  }
+
+  .navLink:after {
+    right: 0;
+    /* Expand from right */
+    background: #7e7e7eb6;
+  }
+
+  /* Hover effect: expand underline from left to right */
+  .navLink:hover:before {
+    background: none;
+    /* Change color on hover */
+    width: 100%;
+    /* Expand fully */
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Smooth expansion */
+  }
+
+  /* Hover effect: hide right underline */
+  .navLink:hover:after {
+    background: transparent;
+    /* Disappear */
+    width: 100%;
+    /* Fully expand, but transparent */
+    transition: 0.5s ease;
+    /* Ensure smooth transition */
+  }
+
+  .navLink.active {
+    color: #ebebeb;
+  }
+
+  /* Active link styling: keep underline when link is active */
+  .navLink.active:before {
+    background: none;
+
+
+    /* Different color for active */
+    width: 100%;
+    /* Fully expanded */
+    transition: width 0.5s ease;
+  }
+
+  /* Active right underline also hidden */
+  .navLink.active:after {
+    background: transparent;
+    /* Keep transparent */
+    width: 100%;
+    transition: 0.5s ease;
+    /* Smooth transition */
+  }
+
+
+  .navToggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .socialstack {
+    display: none;
+    flex-direction: column;
+
+  }
+
+
 
   h1.process {
     font-family: 'Montserrat', sans-serif;
@@ -5082,6 +5291,9 @@ cite {
     padding: 0;
   }
 
+  .hidden {
+    display: block;
+  }
 
   .logo-kpvc {
     display: none;
@@ -5253,172 +5465,6 @@ cite {
     text-align: left;
   }
 
-  .nav {
-    position: fixed;
-    top: 2vh;
-    left: 86vw;
-    justify-content: flex-end;
-    align-items: center;
-    background: none;
-    z-index: 11;
-    display: flex;
-    margin-top: 0;
-    height:5vh;
-  }
-
-
-  .navList {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0;
-    background: #232323b5;
-    border-radius: 0px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(6.5px);
-    z-index: -1;
-  }
-
-  .navList.active {
-    animation: circularExpand 0.6s ease forwards;
-  }
-
-  @keyframes circularExpand {
-    from {
-      clip-path: circle(0% at 50% 50%);
-    }
-    to {
-      clip-path: circle(150% at 50% 50%);
-    }
-  }
-
-
-  a.navLink {
-    color: #ddd;
-    font-size: 8vh;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-    float: left;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 20px;
-    position: relative;
-    display: block;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: rotate(0);
-    padding: 0px;
-  }
-
-
-  .navLink {
-    color: #ddd;
-    float: left;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 20px;
-    display: block;
-
-  }
-
-
-  a.navLink:hover {
-    color: #ebebeb;
-  }
-
-  .navLink:hover {
-    text-decoration: none;
-  }
-
-  /* Default link underline (before and after hidden initially) */
-  .navLink:before,
-  .navLink:after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    /* Hidden initially */
-    height: 100%;
-    bottom: 0%;
-    /* Positioned at the bottom of the link */
-    background: transparent;
-    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-    /* Smooth transition for both */
-    z-index: -1;
-
-  }
-
-  .navLink:before {
-    left: 0;
-    /* Expand from left */
-  }
-
-  .navLink:after {
-    right: 0;
-    /* Expand from right */
-    background: #7e7e7eb6;
-  }
-
-  /* Hover effect: expand underline from left to right */
-  .navLink:hover:before {
-    background: none;
-    /* Change color on hover */
-    width: 100%;
-    /* Expand fully */
-    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-    /* Smooth expansion */
-  }
-
-  /* Hover effect: hide right underline */
-  .navLink:hover:after {
-    background: transparent;
-    /* Disappear */
-    width: 100%;
-    /* Fully expand, but transparent */
-    transition: 0.5s ease;
-    /* Ensure smooth transition */
-  }
-
-  .navLink.active {
-    color: #ebebeb;
-  }
-
-  /* Active link styling: keep underline when link is active */
-  .navLink.active:before {
-    background: none;
-
-
-    /* Different color for active */
-    width: 100%;
-    /* Fully expanded */
-    transition: width 0.5s ease;
-  }
-
-  /* Active right underline also hidden */
-  .navLink.active:after {
-    background: transparent;
-    /* Keep transparent */
-    width: 100%;
-    transition: 0.5s ease;
-    /* Smooth transition */
-  }
-
-
-  .navToggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .socialstack {
-    display: none;
-    flex-direction: column;
-
-  }
 
   .footernote p {
     color: #fff;
