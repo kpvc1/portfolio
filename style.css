@@ -652,13 +652,13 @@ a {
 
 .nav {
   position: fixed;
-  height: 11vh;
-  width: 100vw;
+  height: 100vh;
+  width: 10vw;
   left: 0%;
   top: 0%;
   background: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
@@ -691,9 +691,9 @@ a {
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
-  flex-direction: row;
-  height: 10vh;
-  width: 60vw;
+  flex-direction: column-reverse;
+  height: 100vh;
+  width: 6vw;
 
 }
 
@@ -710,7 +710,7 @@ a {
 
 a.navLink {
 
-  font-size: 0.75rem;
+  font-size: 0.66rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   float: left;
@@ -720,11 +720,11 @@ a.navLink {
   display: block;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
   width: 100%;
   text-align: center;
   text-decoration: none;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   text-transform: uppercase;
 
 }
@@ -865,12 +865,11 @@ svg #wheel {
 }
 
 .socialstack {
-  position: relative;
   display: flex;
-  right: 0px;
-  top: auto;
+  position: relative;
   flex-direction: column;
-  width: 1vw;
+  width: 10vw;
+  align-items: center;
 }
 
 
@@ -882,7 +881,7 @@ svg #wheel {
   z-index: 5;
   background: url(uploads/kpvc-logo-sw.svg) no-repeat center;
   background-size: contain;
-  left: 3vw;
+  left: 0vw;
 }
 
 svg.svg-container {
@@ -2356,15 +2355,14 @@ p.profile {
 
   display: flex;
   position: relative;
-  right: 1vw;
-  top: 0px;
-  flex-direction: row;
+  flex-direction: column;
   width: 10vw;
+  align-items: center;
 
 }
 
 .socialstack a {
-  padding: 10px;
+  padding: 5px;
 
 }
 
@@ -3112,15 +3110,15 @@ h5.subhead {
 
 div.down {
   position: absolute;
-  left: 0%;
+  right: 0%;
   bottom: 50%;
   margin: 0 auto;
   opacity: 1;
-  width: 100%;
+  width: 3vw;
   display: flex;
   justify-content: space-between;
   z-index: 10;
-
+  flex-direction: column;
 }
 
 div.down img {
@@ -4966,13 +4964,13 @@ cite {
     top: 0%;
     left: 0%;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     background: none;
     z-index: 11;
     display: flex;
     margin-top: 0;
     height: 5vh;
-    width: 100%
+    width: 100%;
   }
 
 
@@ -4983,10 +4981,10 @@ cite {
     position: fixed;
     top: 0;
     left: 0;
-    background: #232323b5;
+    background: #23232300;
     border-radius: 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px) brightness(0.5);
+    backdrop-filter: blur(35px) brightness(0.3);
     -webkit-backdrop-filter: blur(6.5px);
     z-index: -1;
   }
