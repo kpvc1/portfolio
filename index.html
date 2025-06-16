@@ -93,25 +93,29 @@
   </div>
 
 
-  <div class="logo-kpvc">
 
-    <a href="#" title="KPVC">
+  <!-- Navigation Menu -->
+  <div id="navbar" class="nav">
 
-      <svg class="svg-container" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="86.667px"
-        viewBox="0 0 75 86.667" enable-background="new 0 0 75 86.667" xml:space="preserve">
+    <div id="kpvc" class="logo-kpvc">
 
-        <!-- Define the mask -->
-        <mask id="mask">
-          <!-- Use a rectangle for the masking animation -->
-          <rect id="mask-rect" x="0" y="86.667" width="75" height="86.667" fill="grey">
-            <animate attributeName="y" id="mask-animate" from="86.667" to="0" dur="0.5s" fill="freeze" />
-          </rect>
-        </mask>
+      <a href="#" title="KPVC">
 
-        <!-- Overlay the mask to show yellow fill on hover -->
-        <g mask="url(#mask)">
-          <path fill="#FFFF00" d="M35.938,64.458c0-1.582,0-9.104,0-9.104c-0.559-0.633-6.659-7.473-7.757-9.018
+        <svg id="kpvchover" class="svg-container" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="86.667px"
+          viewBox="0 0 75 86.667" enable-background="new 0 0 75 86.667" xml:space="preserve">
+
+          <!-- Define the mask -->
+          <mask id="mask">
+            <!-- Use a rectangle for the masking animation -->
+            <rect id="mask-rect" x="0" y="86.667" width="75" height="86.667" fill="grey">
+              <animate attributeName="y" id="mask-animate" from="86.667" to="0" dur="0.5s" fill="freeze" />
+            </rect>
+          </mask>
+
+          <!-- Overlay the mask to show yellow fill on hover -->
+          <g mask="url(#mask)">
+            <path fill="#FFFF00" d="M35.938,64.458c0-1.582,0-9.104,0-9.104c-0.559-0.633-6.659-7.473-7.757-9.018
       c-1.099-1.545-0.875-1.637-0.875-1.637s-0.224-0.596,0.968-1.713c1.191-1.117,7.501-7.314,9.566-8.58s2.438-1.805,6.589-2.364
       c0.093-0.409,0.056-0.651-0.057-0.968c-1.34,0.112-6.699,0.67-15.279,0.67c-0.149,0.484-0.112,0.782,0.037,0.949
       c0.893,0.13,3.033,0.373,3.536,0.596c0.502,0.223,1.433,0.894,0.502,2.103c-0.931,1.21-2.661,3.239-4.987,5.677
@@ -123,7 +127,7 @@
       c0,0-1.136-1.062-0.931-6.216v-6.775c0,0,0-1.991,1.396-2.047c1.396-0.057,2.587-0.148,3.853,1.303s9.566,10.888,10.311,12.004
       c0.744,1.117,0.67,1.992,0.187,2.309c-0.484,0.316-2.364,0.744-3.667,0.855c-0.093,0.391-0.056,0.615,0.149,0.949
       C33.112,64.446,34.438,64.395,35.938,64.458z" />
-          <path fill="#FFFF00" d="M65.398,38.76c-2.035-3.053-6.279-5.881-11.441-5.311c-5.16,0.57-9.105,3.175-9.627,3.473
+            <path fill="#FFFF00" d="M65.398,38.76c-2.035-3.053-6.279-5.881-11.441-5.311c-5.16,0.57-9.105,3.175-9.627,3.473
       s-0.993,0.471-1.489,0.149c-0.497-0.322-0.653-1.662-0.549-2.363c0,0-0.81,0.049-1.798,0.585c-1,0.542-2.702,1.832-4.649,3.833
       c0.502,0.373,1.555-0.33,1.629,1.717c0.075,2.048,0.081,29.827,0.03,33.005c0,0,0.305,6.601-1.184,7.513
       c-1.489,0.912-2.476,0.837-3.965,1.079c-0.093,0.41-0.074,0.596,0.075,0.838c1.823-0.094,6.327-0.205,7.798-0.205
@@ -133,51 +137,56 @@
        M62.655,51.415c-0.111,3.797-1.526,8.486-4.615,11.391c-3.09,2.903-7.817,3.127-11.614,1.451
       c-3.797-1.675-4.057-5.025-4.057-6.216c0-1.191,0-8.264,0-8.264v-5.845c0,0-0.187-4.392,1.266-5.434
       c1.451-1.042,3.387-2.345,7.816-2.345s7.779,3.239,9.194,5.881C62.06,44.677,62.768,47.618,62.655,51.415z" />
-        </g>
+          </g>
 
-        <style>
-          svg.svg-container {
-            cursor: pointer;
-          }
-
-          svg.svg-container:hover #mask-rect {
-            animation: animateMaskForward 0.5s forwards;
-          }
-
-          svg.svg-container:not(:hover) #mask-rect {
-            animation: animateMaskReverse 0.5s forwards;
-          }
-
-          @keyframes animateMaskForward {
-            0% {
-              y: 86.667;
+          <style>
+            svg.svg-container {
+              cursor: pointer;
             }
 
-            100% {
-              y: 0;
-            }
-          }
-
-          @keyframes animateMaskReverse {
-            0% {
-              y: 0;
+            svg.svg-container:hover #mask-rect {
+              animation: animateMaskForward 0.5s forwards;
             }
 
-            100% {
-              y: 86.667;
+            svg.svg-container:not(:hover) #mask-rect {
+              animation: animateMaskReverse 0.5s forwards;
             }
-          }
-        </style>
 
-      </svg>
+            @keyframes animateMaskForward {
+              0% {
+                y: 86.667;
+              }
 
-    </a>
+              100% {
+                y: 0;
+              }
+            }
 
-  </div>
+            @keyframes animateMaskReverse {
+              0% {
+                y: 0;
+              }
 
+              100% {
+                y: 86.667;
+              }
+            }
+          </style>
 
-  <!-- Navigation Menu -->
-  <div class="nav">
+        </svg>
+
+      </a>
+
+    </div>
+
+    <div class="navList">
+      <a data-navbar-item="true" class="navLink hidden" aria-current="" href="#top" title="Home">↑ Home</a>
+      <a data-navbar-item="true" class="navLink" aria-current="" href="#projects" title="Work">_Work</a>
+      <a data-navbar-item="true" class="navLink" aria-current="" href="#about" title="About">_About</a>
+      <a data-navbar-item="true" class="navLink" aria-current="" href="#details" title="Process">_Process</a>
+      <a data-navbar-item="true" class="navLink" aria-current="" href="#faq" title="FAQ">_FAQ</a>
+      <a data-navbar-item="true" class="navLink" aria-current="" href="#message" title="Contact">_Contact</a>
+    </div>
 
     <div class="socialstack">
 
@@ -220,13 +229,8 @@
         </div>
       </a>
     </div>
-    <div class="navList">
-      <a data-navbar-item="true" class="navLink" aria-current="" href="#projects" title="Work">Work</a>
-      <a data-navbar-item="true" class="navLink" aria-current="" href="#about" title="About">About</a>
-      <a data-navbar-item="true" class="navLink" aria-current="" href="#details" title="Process">Process</a>
-      <a data-navbar-item="true" class="navLink" aria-current="" href="#faq" title="FAQ">FAQ</a>
-      <a data-navbar-item="true" class="navLink" aria-current="" href="#message" title="Contact">Contact</a>
-    </div>
+
+
     <button class="navToggle pe" aria-label="Toggle navigation">
       <span class="navToggleIcon"></span>
       <span class="navToggleIcon"></span>
@@ -287,7 +291,7 @@
 
           <blockquote class="custom-blockquote-s">
             <p class="custom-paragraph-s">
-              <span class="custom-span-s fw-100" data-duration="1" data-delay=".15"
+              <span class="custom-span-s fw-600" data-duration="1" data-delay=".15"
                 data-blur="9">Transforming<BR></span>
               <span class="custom-span-s fw-400" data-duration="1" data-delay=".21" data-blur="9">ideas</span>
               <span class="custom-span-s fw-400" data-duration="1" data-delay=".26" data-blur="9">into<BR></span>
@@ -890,12 +894,13 @@
 
 
                 <div class="column is-full has-centered btn-container">
-                  <a class="blue-btn iframe-lightbox-link aos-item" data-aos="fade-down"
+
+                  <a class="cta-btn-s fitted grow iframe-lightbox-link aos-item" data-aos="fade-down"
                     href="./uploads/castroPaolo_printPortfolio.pdf">View Print Portfolio <img class="view-ico2"
                       width="24" height="24" src="https://img.icons8.com/FFFFFF/fluency-systems-regular/24/view.png"
                       alt="view" /></a>
 
-                  <a class="blue-btn grow iframe-lightbox-link aos-item" data-aos="fade-down"
+                  <a class="cta-btn-s fitted grow iframe-lightbox-link aos-item" data-aos="fade-down"
                     href="./uploads/castroPaolo_resume.pdf">View Resume <img class="view-ico2" width="24" height="24"
                       src="https://img.icons8.com/FFFFFF/fluency-systems-regular/24/view.png" alt="view" /></a>
 
@@ -1845,6 +1850,48 @@
       });
     </script>
 
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("navbar");
+        const kpvclogo = document.getElementById("kpvc");
+        const kpvchover = document.getElementById("kpvchover");
+
+
+        // Set transition once
+        navbar.style.transition = "all 0.5s ease";
+        kpvc.style.transition = "all 0.5s ease";
+
+
+        // Run scroll function immediately on load
+        scrollFunction();
+
+        // Add scroll listener
+        window.addEventListener("scroll", scrollFunction);
+
+        function scrollFunction() {
+          if (window.innerWidth <= 768) return;
+
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.style.padding = "0px 0px";
+            navbar.style.backdropFilter = "blur(25px) brightness(100%)";
+            navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.2)";
+            kpvclogo.style.width = "50px";
+            kpvclogo.style.height = "84.667px";
+            kpvchover.style.width = "50px";
+
+          } else {
+            navbar.style.padding = "100px 0px";
+            navbar.style.backdropFilter = "blur(0px)";
+            navbar.style.boxShadow = "none";
+            kpvclogo.style.width = "76px";
+            kpvclogo.style.height = "84.667px";
+            kpvchover.style.width = "76px";
+
+          }
+        }
+      });
+    </script>
 
 </body>
 

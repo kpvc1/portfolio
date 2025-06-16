@@ -4,13 +4,13 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Global settings
-const PARTICLE_SPEED = 0.1;
-const CONNECTION_RANGE = 150;
-const NUM_PARTICLES = 150;
+const PARTICLE_SPEED = 0.5;
+const CONNECTION_RANGE = 100;
+const NUM_PARTICLES = 200;
 const PARTICLE_MIN_SIZE = 1;
 const PARTICLE_MAX_SIZE = 3;
-const MOUSE_ATTRACTION_RADIUS = 150;  // Radius within which particles are attracted to the mouse
-const MOUSE_ATTRACTION_STRENGTH = 0.5; // Controls how strongly particles are pulled to the mouse
+const MOUSE_ATTRACTION_RADIUS = 250;  // Radius within which particles are attracted to the mouse
+const MOUSE_ATTRACTION_STRENGTH = 0.1; // Controls how strongly particles are pulled to the mouse
 const MAX_PARTICLE_SPEED = 0.05;          // Maximum speed of particles when not attracted
 
 const particles = [];
@@ -24,7 +24,7 @@ class Particle {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.velocityX = (Math.random() - 0.5) * 2;
+        this.velocityX = (Math.random() - 0.5) * 3;
         this.velocityY = (Math.random() - 0.5) * 2;
         this.speed = PARTICLE_SPEED;
         this.radius = Math.random() * (PARTICLE_MAX_SIZE - PARTICLE_MIN_SIZE) + PARTICLE_MIN_SIZE;
@@ -75,10 +75,10 @@ class Particle {
         const distanceToLight = Math.sqrt(dx * dx + dy * dy);
         
         // Calculate brightness based on distance (closer = brighter)
-        const brightness = Math.max(0, 1 - (distanceToLight / 400)); // Adjust divisor for distance sensitivity
+        const brightness = Math.max(0, 1 - (distanceToLight / 600)); // Adjust divisor for distance sensitivity
 
         // Set the fill color with brightness
-        ctx.fillStyle = `rgba(255, 255, 222, ${brightness})`;
+        ctx.fillStyle = `rgba(255, 255, 255, ${brightness})`;
 
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
