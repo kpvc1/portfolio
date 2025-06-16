@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking Caret</title>
+    <style>
+        /* Styling for the text */
+        .text-with-caret {
+            font-family: monospace;
+            white-space: nowrap;
+        }
+
+        /* Blinking caret */
+        .caret {
+            border-right: 0.1em solid black;
+            animation: blinkCaret 0.75s step-end infinite;
+        }
+
+        @keyframes blinkCaret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-with-caret">The Process<span class="caret"></span></h1>
+</body>
+</html>
