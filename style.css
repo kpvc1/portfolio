@@ -691,7 +691,7 @@ a {
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
-  flex-direction: column-reverse;
+  flex-direction: column;
   height: 100vh;
   width: 6vw;
 
@@ -709,8 +709,7 @@ a {
 }
 
 a.navLink {
-
-  font-size: 0.66rem;
+  font-size: 0.6rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   float: left;
@@ -724,9 +723,8 @@ a.navLink {
   width: 100%;
   text-align: center;
   text-decoration: none;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-
 }
 
 a.navLink:hover {
@@ -4526,16 +4524,7 @@ cite {
 
   }
 
-  .navList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    height: 10vh;
-    width: 40vw;
-  }
+
 
 
   a.navLink {
@@ -4550,7 +4539,7 @@ cite {
     display: block;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    transform: rotate(0deg);
+    transform: rotate(-90deg);
     letter-spacing: 4px;
     width: 80%;
     text-align: center;
@@ -4767,6 +4756,36 @@ cite {
   .navToggle {
     display: none;
   }
+
+}
+
+
+@media only screen and (orientation: landscape) and (max-height: 740px) {
+
+  a.navLink {
+    font-size: 0.6rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+
+  .socialstack a {
+    padding: 1px;
+  }
+
 
 }
 
