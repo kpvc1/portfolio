@@ -652,13 +652,13 @@ a {
 
 .nav {
   position: fixed;
-  height: 100vh;
-  width: 10vw;
+  height: 11vh;
+  width: 100vw;
   left: 0%;
   top: 0%;
   background: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
@@ -691,9 +691,9 @@ a {
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
-  flex-direction: column;
-  height: 100vh;
-  width: 6vw;
+  flex-direction: row;
+  height: 10vh;
+  width: 60vw;
 
 }
 
@@ -709,7 +709,8 @@ a {
 }
 
 a.navLink {
-  font-size: 0.6rem;
+
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   float: left;
@@ -719,12 +720,13 @@ a.navLink {
   display: block;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
   width: 100%;
   text-align: center;
   text-decoration: none;
-  letter-spacing: 4px;
+  letter-spacing: 8px;
   text-transform: uppercase;
+
 }
 
 a.navLink:hover {
@@ -863,11 +865,12 @@ svg #wheel {
 }
 
 .socialstack {
-  display: flex;
   position: relative;
+  display: flex;
+  right: 0px;
+  top: auto;
   flex-direction: column;
-  width: 10vw;
-  align-items: center;
+  width: 1vw;
 }
 
 
@@ -879,7 +882,7 @@ svg #wheel {
   z-index: 5;
   background: url(uploads/kpvc-logo-sw.svg) no-repeat center;
   background-size: contain;
-  left: 0vw;
+  left: 3vw;
 }
 
 svg.svg-container {
@@ -2353,14 +2356,15 @@ p.profile {
 
   display: flex;
   position: relative;
-  flex-direction: column;
+  right: 1vw;
+  top: 0px;
+  flex-direction: row;
   width: 10vw;
-  align-items: center;
 
 }
 
 .socialstack a {
-  padding: 5px;
+  padding: 10px;
 
 }
 
@@ -3108,15 +3112,15 @@ h5.subhead {
 
 div.down {
   position: absolute;
-  right: 0%;
+  left: 0%;
   bottom: 50%;
   margin: 0 auto;
   opacity: 1;
-  width: 3vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  flex-direction: column;
+
 }
 
 div.down img {
@@ -4524,7 +4528,16 @@ cite {
 
   }
 
-
+  .navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 10vh;
+    width: 40vw;
+  }
 
 
   a.navLink {
@@ -4539,7 +4552,7 @@ cite {
     display: block;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     letter-spacing: 4px;
     width: 80%;
     text-align: center;
@@ -4760,36 +4773,6 @@ cite {
 }
 
 
-@media only screen and (orientation: landscape) and (max-height: 740px) {
-
-  a.navLink {
-    font-size: 0.6rem;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-    float: left;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    display: block;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: rotate(-90deg);
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-  }
-
-
-  .socialstack a {
-    padding: 1px;
-  }
-
-
-}
-
-
 @media only screen and (orientation: landscape) and (max-height: 600px) {
   /* Your styles for landscape mode with a max height of 600px */
 
@@ -4983,13 +4966,13 @@ cite {
     top: 0%;
     left: 0%;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     background: none;
     z-index: 11;
     display: flex;
     margin-top: 0;
     height: 5vh;
-    width: 100%;
+    width: 100%
   }
 
 
@@ -5000,10 +4983,10 @@ cite {
     position: fixed;
     top: 0;
     left: 0;
-    background: #23232300;
+    background: #232323b5;
     border-radius: 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(35px) brightness(0.3);
+    backdrop-filter: blur(15px) brightness(0.5);
     -webkit-backdrop-filter: blur(6.5px);
     z-index: -1;
   }
