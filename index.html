@@ -102,13 +102,13 @@
       <a href="#" title="KPVC">
 
         <svg id="kpvchover" class="svg-container" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76px" height="86.667px"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="86.667px"
           viewBox="0 0 75 86.667" enable-background="new 0 0 75 86.667" xml:space="preserve">
 
           <!-- Define the mask -->
           <mask id="mask">
             <!-- Use a rectangle for the masking animation -->
-            <rect id="mask-rect" x="0" y="86.667" height="86.667" fill="grey">
+            <rect id="mask-rect" x="0" y="86.667" width="75" height="86.667" fill="grey">
               <animate attributeName="y" id="mask-animate" from="86.667" to="0" dur="0.5s" fill="freeze" />
             </rect>
           </mask>
@@ -1873,22 +1873,20 @@
           if (window.innerWidth <= 768) return;
 
           if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.style.padding = "60px 0px";
-            navbar.style.width = "7vw";
-            navbar.style.backdropFilter = "blur(30px) brightness(80%)";
-            navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.3)";
-            
+            navbar.style.padding = "0px 0px";
+            navbar.style.backdropFilter = "blur(25px) brightness(100%)";
+            navbar.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.2)";
+            kpvclogo.style.width = "50px";
+            kpvclogo.style.height = "84.667px";
             kpvchover.style.width = "50px";
 
-
-
           } else {
-            navbar.style.padding = "40px 0px";
-            navbar.style.width = "10vw";
+            navbar.style.padding = "100px 0px";
             navbar.style.backdropFilter = "blur(0px)";
             navbar.style.boxShadow = "none";
+            kpvclogo.style.width = "76px";
+            kpvclogo.style.height = "84.667px";
             kpvchover.style.width = "76px";
-
 
           }
         }
