@@ -4,13 +4,13 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Global settings
-const PARTICLE_SPEED = 0.5;
+const PARTICLE_SPEED = 0.05;
 const CONNECTION_RANGE = 100;
 const NUM_PARTICLES = 200;
 const PARTICLE_MIN_SIZE = 1;
 const PARTICLE_MAX_SIZE = 3;
-const MOUSE_ATTRACTION_RADIUS = 250;  // Radius within which particles are attracted to the mouse
-const MOUSE_ATTRACTION_STRENGTH = 0.1; // Controls how strongly particles are pulled to the mouse
+const MOUSE_ATTRACTION_RADIUS = 300;  // Radius within which particles are attracted to the mouse
+const MOUSE_ATTRACTION_STRENGTH = 0.005; // Controls how strongly particles are pulled to the mouse
 const MAX_PARTICLE_SPEED = 0.05;          // Maximum speed of particles when not attracted
 
 const particles = [];

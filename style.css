@@ -1768,7 +1768,7 @@ h2.signature {
 
 
 .hs-c img {
-  border-radius: 1%;
+  border-radius: 3%;
 }
 
 .hs-c {
@@ -1782,7 +1782,7 @@ h2.signature {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  clip-path: polygon(93% 7%, 50% 95%, 7% 7%);
+  clip-path:;
 
 
 
@@ -1792,7 +1792,7 @@ h2.signature {
 }
 
 .hs-c:hover {
-  clip-path: polygon(50% 95%, 5% 3%, 95% 3%);
+  clip-path:;
 
 
 
@@ -3120,6 +3120,7 @@ div.down {
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  display:none;
 
 }
 
